@@ -1,0 +1,58 @@
+[
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "030_2025",
+    "section": "",
+    "text": "This is a Quarto website.\nTo learn more about Quarto websites visit https://quarto.org/docs/websites.\n\n1 + 1\n\n[1] 2"
+  },
+  {
+    "objectID": "03_pesquisa.html#slide-1",
+    "href": "03_pesquisa.html#slide-1",
+    "title": "Projeto de Pesquisa",
+    "section": "Slide 1",
+    "text": "Slide 1\nConteúdo do primeiro slide…"
+  },
+  {
+    "objectID": "03_pesquisa.html#slide-2",
+    "href": "03_pesquisa.html#slide-2",
+    "title": "Projeto de Pesquisa",
+    "section": "Slide 2",
+    "text": "Slide 2\nConteúdo do segundo slide…"
+  },
+  {
+    "objectID": "01_aula.html#slide-1",
+    "href": "01_aula.html#slide-1",
+    "title": "Aula: Tópico",
+    "section": "Slide 1",
+    "text": "Slide 1\nConteúdo do primeiro slide…"
+  },
+  {
+    "objectID": "01_aula.html#slide-2",
+    "href": "01_aula.html#slide-2",
+    "title": "Aula: Tópico",
+    "section": "Slide 2",
+    "text": "Slide 2\nConteúdo do segundo slide…"
+  },
+  {
+    "objectID": "02_memorial.html#slide-1",
+    "href": "02_memorial.html#slide-1",
+    "title": "Memorial",
+    "section": "Slide 1",
+    "text": "Slide 1\nConteúdo do primeiro slide…"
+  },
+  {
+    "objectID": "02_memorial.html#slide-2",
+    "href": "02_memorial.html#slide-2",
+    "title": "Memorial",
+    "section": "Slide 2",
+    "text": "Slide 2\nConteúdo do segundo slide…"
+  },
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About",
+    "section": "",
+    "text": "About this site\n\n1 + 1\n\n[1] 2"
+  }
+]
