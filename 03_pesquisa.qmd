@@ -2,6 +2,7 @@
 title: "Projeto de Pesquisa"
 author: "Magno T. F. Severino"
 format: revealjs
+lang: pt-br
 ---
 
 ## Slide 1
