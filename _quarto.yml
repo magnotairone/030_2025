@@ -4,7 +4,6 @@ project:
 
 website:
   title: "Material Ataac 030_2025"
-  lang: pt-br
   navbar:
     left:
       - href: index.qmd
