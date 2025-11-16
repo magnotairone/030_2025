@@ -1,14 +1,277 @@
 ---
-title: "Memorial"
-author: "Magno T. F. Severino"
-format: revealjs
+title: "Memorial Circunstanciado" 
+author: "Magno Tairone de Freitas Severino" 
+format: 
+  revealjs: 
+    theme: moon
+    chalkboard: false 
+    footer: "Magno T. F. Severino | Memorial"
+    vertical-center: true 
+    slide-aspect: 16x9
+    slide-number: true
 lang: pt-br
+editor_options: 
+  chunk_output_type: console
 ---
 
-## Slide 1
 
-Conteúdo do primeiro slide...
+## Minha trajetória está na interseção entre:
 
-## Slide 2
+- Rigor estatístico
+- Computação científica
+- Impacto aplicado e interdisciplinar
 
-Conteúdo do segundo slide...
+:::{.notes}
+Minha trajetória foi construída na fronteira entre estatística, computação e aplicações reais.
+É nesse espaço que vejo minha maior capacidade de contribuição — tanto acadêmica quanto aplicada.
+Ao longo da apresentação, vou mostrar como essa interseção guiou a minha formação, minhas escolhas,
+minhas pesquisas, meu trabalho no mercado e meu papel como educador.
+:::
+
+
+
+# Formação acadêmica
+
+## Uma trajetória multidisciplinar
+
+- Técnico Informática Industrial (CEFET–MG)
+- Bacharelado Matemática Computacional (UFMG)
+- Intercâmbio acadêmico (QMUL — Londres)
+- Mestrado em Estatística (UFMG)
+- Doutorado em Probabilidade e Estatística (IME–USP)
+
+:::{.notes}
+Minha formação começa em computação, passa pela matemática e encontra na estatística um ponto de convergência.
+No CEFET desenvolvi base técnica e de programação.  
+Na UFMG, a matemática computacional me trouxe abstração e rigor.  
+O intercâmbio na QMUL ampliou minha visão internacional e acesso a métodos modernos.  
+No mestrado aprofundei modelagem estatística e computação Bayesiana, com dissertação premiada no Encontro Mineiro de Estatística.  
+No doutorado no IME–USP, meu foco se consolidou em dependência, alta dimensionalidade e métodos computacionais.
+Essa trajetória diversa molda como penso problemas estatísticos hoje.
+:::
+
+
+
+# Linha de pesquisa
+
+## Pilares da minha atuação científica
+
+- Dependência e estrutura em séries multivariadas  
+- Alta dimensionalidade e regularização  
+- Modelos gráficos e métodos Bayesianos  
+- Computação reprodutível e software científico  
+
+:::{.notes}
+Esses pilares nasceram ainda no doutorado e evoluíram ao longo de colaborações diversas.
+Todos respondem a desafios contemporâneos: complexidade crescente dos dados, necessidade
+de interpretar dependências e desenvolver métodos escaláveis e confiáveis.
+:::
+
+
+
+# Contribuições científicas
+
+## Resultados selecionados
+
+- Modelos para dependência multivariada com desempenho superior em séries complexas  
+- Resultados teóricos de consistência e regularização  
+- Aplicações em saúde, risco, hidrologia e finanças  
+
+:::{.notes}
+Aqui destaco contribuições que sintetizam meu trabalho:  
+estruturas de dependência mais flexíveis, inferência escalável e aplicações em áreas onde
+esses métodos geram impacto imediato. São problemas tanto científicos quanto sociais e econômicos.
+:::
+
+
+
+# Produção computacional
+
+## Ferramentas abertas
+
+- **GeoJAGS** — modelos gráficos + MCMC  
+- **MixingGraph** — regularização e dependência  
+- Pipelines reprodutíveis para pesquisa aplicada  
+
+:::{.notes}
+Sempre acreditei que pesquisa só ganha vida quando se torna acessível.
+Essas ferramentas abrem caminho para uso real em disciplinas, projetos, colaborações e extensão.
+Também aceleram pesquisas futuras e estimulam práticas reprodutíveis.
+:::
+
+
+
+# Experiência no setor produtivo
+
+## Vivência em problemas reais de grande escala
+
+- Engenharia de software  
+- Modelos de risco de crédito  
+- Ciência de dados em marketing e produto no setor bancário  
+
+## O que isso traz para minha atuação acadêmica
+
+- Fundamentação prática para métodos modernos  
+- Visão completa dos ciclos de modelagem e validação  
+- Capacidade de trabalhar com dados massivos e sistemas críticos  
+- Maturidade para orientar projetos aplicados  
+- Conexão natural com interdisciplinaridade  
+
+:::{.notes}
+Minha trajetória no mercado ampliou meu repertório:  
+engenharia de software deu solidez técnica;  
+o trabalho com risco de crédito trouxe maturidade metodológica e dados massivos;  
+no marketing bancário aprendi sobre experimentação, personalização e impacto no negócio.  
+Essas experiências me ajudam a formular perguntas de pesquisa relevantes,
+identificar gargalos reais e preparar estudantes para atuar em ambientes modernos.
+:::
+
+
+
+# Pesquisa aplicada e interdisciplinar
+
+## Exemplos de atuação
+
+- COVID-19: modelagem, análise e apoio técnico  
+- Hidrologia e clima  
+- Finanças, risco e crédito  
+- Transparência pública e dados governamentais  
+
+:::{.notes}
+Esses projetos mostram como a estatística se conecta a problemas concretos.
+São ambientes desafiadores, com dados ruidosos, decisões rápidas e impacto real —
+locais onde a integração entre teoria, computação e aplicação faz diferença.
+:::
+
+
+
+# Atuação em ensino
+
+## Experiência acumulada
+
+- Monitorias e aulas totalizando mais de 1500 horas  
+- Graduação, pós-graduação e educação executiva  
+- Disciplinas teóricas e computacionais  
+- Projetos práticos com dados reais  
+
+:::{.notes}
+O ensino foi parte constitutiva da minha formação.  
+Desde monitorias iniciais até disciplinas completas, sempre busquei promover autonomia,
+rigor metodológico e capacidade de aplicar técnicas a problemas reais.  
+Essa visão dialoga com a formação moderna em estatística e ciência de dados.
+:::
+
+
+
+# Contribuição imediata à formação em Ciência de Dados
+
+## Disciplinas que posso ofertar
+
+- Modelagem Estatística para Ciência de Dados  
+- Aprendizado Estatístico em Altas Dimensões  
+- Projetos integrados baseados em dados reais  
+
+:::{.notes}
+Essas disciplinas combinam estatística, probabilidade e computação de forma natural.
+São conteúdos que já desenvolvo e posso oferecer imediatamente, ampliando a formação
+técnica do departamento e fortalecendo competências essenciais para a área.
+:::
+
+
+
+# Extensão e impacto
+
+## Projetos e iniciativas
+
+- Análises e comunicação da COVID-19  
+- Cursos de difusão no IME  
+- Consultorias técnicas  
+- Projetos de dados públicos  
+
+:::{.notes}
+Busco sempre usar estatística para produzir impacto social.
+O trabalho durante a pandemia, por exemplo, integrou análise, comunicação clara e suporte técnico.
+Assim, a extensão se torna parte natural da atividade de pesquisa e ensino.
+:::
+
+
+
+# Integração com o CEA
+
+## Propostas
+
+- 1–2 projetos aplicados anuais  
+- Integração com ensino e extensão  
+- Parcerias externas e internas  
+- Projetos com dados reais  
+
+:::{.notes}
+Vejo no CEA uma oportunidade de fortalecer a ponte entre pesquisa, ensino e impacto prático.
+Minha experiência me permite contribuir desde o início com projetos aplicados.
+:::
+
+
+
+## Plano para os próximos anos
+
+### Primeiros anos
+
+- Ofertar disciplinas alinhadas à minha linha de pesquisa
+
+- Iniciar orientações em temas de modelagem, dependência e computação estatística
+
+- Ampliar a produção científica com projetos já em andamento
+
+- Desenvolver projetos aplicados envolvendo dados reais e colaboração interdisciplinar
+
+## Plano para os próximos anos
+
+### Médio prazo
+
+- Consolidar um grupo de pesquisa integrado a problemas modernos de dados
+
+- Estabelecer parcerias acadêmicas e aplicadas dentro e fora da USP
+
+- Expandir ferramentas computacionais abertas e pipelines reprodutíveis
+
+## Plano para os próximos anos
+
+### Visão de longo prazo
+
+- Contribuir para que o IME se destaque em modelagem estatística para dados complexos
+
+- Formar pesquisadores e profissionais capazes de atuar na interseção entre teoria e aplicação
+
+- Fortalecer colaborações internacionais e intercâmbio científico
+
+
+# Síntese
+
+## Minha contribuição
+
+- Trajetória multidisciplinar  
+- Pesquisa sólida e atual  
+- Experiência prática diferenciada  
+- Atuação ampla em ensino  
+- Interdisciplinaridade real  
+- Compromisso com extensão  
+- Visão clara de futuro  
+
+:::{.notes}
+Minha trajetória reúne elementos que se complementam:
+formação diversa, rigor teórico, ferramentas computacionais,
+experiência aplicada e compromisso educacional.
+:::
+
+
+
+# Encerramento
+
+**“Minha trajetória foi construída na fronteira entre estatística, computação e impacto aplicado.  
+É nessa fronteira que pretendo contribuir e colaborar para o futuro do Departamento.”**
+
+**Obrigado.**
+
+:::{.notes}
+Obrigado.
+:::
