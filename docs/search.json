@@ -320,5 +320,264 @@
     "title": "Memorial Circunstanciado",
     "section": "Plano para os próximos anos",
     "text": "Plano para os próximos anos\nVisão de longo prazo\n\nContribuir para que o IME se destaque em modelagem estatística para dados complexos\nFormar pesquisadores e profissionais capazes de atuar na interseção entre teoria e aplicação\nFortalecer colaborações internacionais e intercâmbio científico"
+  },
+  {
+    "objectID": "02_memorial_v3.html#memorial-circunstanciado",
+    "href": "02_memorial_v3.html#memorial-circunstanciado",
+    "title": "Memorial Circunstanciado",
+    "section": "Memorial Circunstanciado",
+    "text": "Memorial Circunstanciado\n\n\nAbertura simples e elegante. Foto do IME cria conexão institucional imediata."
+  },
+  {
+    "objectID": "02_memorial_v3.html#uma-trajetória-multidisciplinar",
+    "href": "02_memorial_v3.html#uma-trajetória-multidisciplinar",
+    "title": "Memorial Circunstanciado",
+    "section": "Uma trajetória multidisciplinar",
+    "text": "Uma trajetória multidisciplinar\n\n\nPrimeira geração da família a ingressar na Universidade — e também o primeiro Mestre e Doutor."
+  },
+  {
+    "objectID": "02_memorial_v3.html#uma-trajetória-multidisciplinar-1",
+    "href": "02_memorial_v3.html#uma-trajetória-multidisciplinar-1",
+    "title": "Memorial Circunstanciado",
+    "section": "Uma trajetória multidisciplinar",
+    "text": "Uma trajetória multidisciplinar\n\n\n\nCEFET–MG — Informática Industrial\n\n\nUFMG — Matemática Computacional\n\n\nQueen Mary University of London — Intercâmbio\n\n\nUFMG — Mestrado em Estatística\n\n\nUSP — Doutorado em Probabilidade e Estatística\n\n\n\n\n\nA linha do tempo mostra como computação → matemática → estatística se conectam naturalmente na formação da sua identidade científica."
+  },
+  {
+    "objectID": "02_memorial_v3.html#informática-industrial",
+    "href": "02_memorial_v3.html#informática-industrial",
+    "title": "Memorial Circunstanciado",
+    "section": "Informática Industrial",
+    "text": "Informática Industrial"
+  },
+  {
+    "objectID": "02_memorial_v3.html#ensino-médio-técnico-informática-industrial",
+    "href": "02_memorial_v3.html#ensino-médio-técnico-informática-industrial",
+    "title": "Memorial Circunstanciado",
+    "section": "Ensino Médio Técnico: Informática Industrial",
+    "text": "Ensino Médio Técnico: Informática Industrial\n\n\nCentro Federal de Educação Tecnológica de Minas Gerais (CEFET-MG), 2008-2010\nProgramação em C/C++, algoritmos, redes de computadores, eletrônica digital"
+  },
+  {
+    "objectID": "02_memorial_v3.html#graduação-matemática-computacional",
+    "href": "02_memorial_v3.html#graduação-matemática-computacional",
+    "title": "Memorial Circunstanciado",
+    "section": "Graduação: Matemática Computacional",
+    "text": "Graduação: Matemática Computacional\n\n\n\n\nUniversidade Federal de Minas Gerais (UFMG), 2011–2015\n\nBolsista PET Matemática\nIniciação Científica: métodos numéricos para busca de autovalores e autovetores (C++)"
+  },
+  {
+    "objectID": "02_memorial_v3.html#intercâmbio-queen-mary-university-of-london",
+    "href": "02_memorial_v3.html#intercâmbio-queen-mary-university-of-london",
+    "title": "Memorial Circunstanciado",
+    "section": "Intercâmbio: Queen Mary University of London",
+    "text": "Intercâmbio: Queen Mary University of London\n\nPeríodo: 2013-2024 (12 meses)\nCursos em matemática, estatística, probabilidade e métodos computacionais\nPrimeira experiência em ambiente acadêmico internacional\nAmpliação das competências em comunicação científica e colaboração"
+  },
+  {
+    "objectID": "02_memorial_v3.html#mestrado-estatística",
+    "href": "02_memorial_v3.html#mestrado-estatística",
+    "title": "Memorial Circunstanciado",
+    "section": "Mestrado: Estatística",
+    "text": "Mestrado: Estatística\n\n\n\n\nUniversidade Federal de Minas Gerais (UFMG), 2016–2018\n\nBolsista CAPES\nDissertação: Extending JAGS for spatial data\nModelagem Bayesiana para dados espaciais\nFinalista no Concurso de Melhor Dissertação de Mestrado – SINAPE 2018."
+  },
+  {
+    "objectID": "02_memorial_v3.html#doutorado-probabilidade-e-estatística",
+    "href": "02_memorial_v3.html#doutorado-probabilidade-e-estatística",
+    "title": "Memorial Circunstanciado",
+    "section": "Doutorado: Probabilidade e Estatística",
+    "text": "Doutorado: Probabilidade e Estatística\n\n\n\n\nUniversidade de São Paulo (IME-USP)\n\nPeríodo: 2018–2024\n\nTese: Estimation and model selection for graphical models under mixing conditions\nModelos gráficos para processos estocásticos vetoriais"
+  },
+  {
+    "objectID": "02_memorial_v3.html#artigos-publicados",
+    "href": "02_memorial_v3.html#artigos-publicados",
+    "title": "Memorial Circunstanciado",
+    "section": "Artigos publicados",
+    "text": "Artigos publicados\n\n\n\n📄\n\n Independent block identification in multivariate time series\nLeonardi, F., Lopez-Rosenfeld, M., Rodriguez, D., Severino, M. T. F., & Sued, M.\nJournal of Time Series Analysis, 2021.\n(Q2 – Probability and Statistics, Scimago) \n\n\n\n\n📄\n\n Model selection for Markov random fields on graphs under a mixing condition\nSeverino, M. T. F., & Leonardi, F.\nStochastic Processes and their Applications, 2025.\n(Q1 – Probability and Statistics, Scimago) \n\n\nEstes dois artigos sintetizam minha contribuição teórica em séries temporais multivariadas\ne em modelos gráficos sob condições de mistura — ambos profundamente conectados às\nlinhas prioritárias do edital: modelagem estatística moderna, dados de alta dimensão e\naprendizagem estatística.\n\n\nMostrar um gráfico aqui concreta sua pesquisa."
+  },
+  {
+    "objectID": "02_memorial_v3.html#software-e-produção-computacional",
+    "href": "02_memorial_v3.html#software-e-produção-computacional",
+    "title": "Memorial Circunstanciado",
+    "section": "Software e produção computacional",
+    "text": "Software e produção computacional\n\n\n\n\n\n GeoJAGS  Modelos para dados espaciais com MCMC  Modulo computacional em C++ voltado a inferência Bayesiana em estruturas espaciais  Desenvolvido durante o mestrado \n\n\n\n\n\n\n MixingGraph  Modelos gráficos para dados sob condições de mistura  Ferramentas para modelagem de estruturas de dependência Desenvolvido durante o doutorado \n\n\nPesquisa que vira software: diferencial forte."
+  },
+  {
+    "objectID": "02_memorial_v3.html#atuação-em-ensino",
+    "href": "02_memorial_v3.html#atuação-em-ensino",
+    "title": "Memorial Circunstanciado",
+    "section": "Atuação em ensino",
+    "text": "Atuação em ensino\n\n\n\n\nExperiência ampla e contínua\n- 1500+ horas monitorias - 770h de aulas ministradas - 7 anos de experiência como monitor, nível de graduação e pós-graduação; - 5 anos de experiência como docente na graduação e na pós-graduação; - Mais de 1000 estudantes matriculados em disciplinas que ministrei - Turmas diversas e numerosas"
+  },
+  {
+    "objectID": "02_memorial_v3.html#minha-abordagem-de-ensino",
+    "href": "02_memorial_v3.html#minha-abordagem-de-ensino",
+    "title": "Memorial Circunstanciado",
+    "section": "Minha abordagem de ensino",
+    "text": "Minha abordagem de ensino\n\nNotebooks reprodutíveis\n\nProjetos com dados reais\n\nIntegração entre teoria, computação e interpretação\n\nFormação de autonomia\n\nAvaliações baseadas em experimentação e simulação\n\n\nEnsino moderno, aplicado e reprodutível."
+  },
+  {
+    "objectID": "02_memorial_v3.html#extensão-e-impacto",
+    "href": "02_memorial_v3.html#extensão-e-impacto",
+    "title": "Memorial Circunstanciado",
+    "section": "Extensão e impacto",
+    "text": "Extensão e impacto\n\nCurso de Nivelamento Pré-Cálculo (2012)\nCurso de Difusão em Aprendizagem Estatística (2021-\n\n\n\n\n\nDivulgação Científica: Tendência de Novos Casos de Covid-19 (2020)\n\n\n\nMostra impacto real e compromisso social."
+  },
+  {
+    "objectID": "02_memorial_v3.html#curto-prazo",
+    "href": "02_memorial_v3.html#curto-prazo",
+    "title": "Memorial Circunstanciado",
+    "section": "Curto prazo",
+    "text": "Curto prazo\n\nDisciplinas alinhadas à minha pesquisa\n\nInício de orientações\n\nProjetos aplicados imediatos\n\nArtigos em andamento"
+  },
+  {
+    "objectID": "02_memorial_v3.html#médio-prazo",
+    "href": "02_memorial_v3.html#médio-prazo",
+    "title": "Memorial Circunstanciado",
+    "section": "Médio prazo",
+    "text": "Médio prazo\n\nGrupo de pesquisa consolidado\n\nParcerias acadêmicas e aplicadas\n\nFerramentas computacionais ampliadas"
+  },
+  {
+    "objectID": "02_memorial_v3.html#longo-prazo",
+    "href": "02_memorial_v3.html#longo-prazo",
+    "title": "Memorial Circunstanciado",
+    "section": "Longo prazo",
+    "text": "Longo prazo\n\nIME como referência em modelagem moderna\n\nInternacionalização e cooperação científica\n\nFormação de pesquisadores independentes\n\n\nPlano orgânico e coerente com sua trajetória."
+  },
+  {
+    "objectID": "02_memorial_v3.html#apresentação-de-trabalhos-em-eventos",
+    "href": "02_memorial_v3.html#apresentação-de-trabalhos-em-eventos",
+    "title": "Memorial Circunstanciado",
+    "section": "Apresentação de Trabalhos em Eventos",
+    "text": "Apresentação de Trabalhos em Eventos\n\nEventos selecionados:\n\n\n📌\n\nEBEB – Rio de Janeiro (2018)\nPôster: Extending JAGS for spatial data\n\n\n\n\n📌\n\nEMR – Pirenópolis (2019)\nPôster: As desigualdades existentes no Brasil vistas no ENEM 2017\n\n\n\n\n🎤\n\nBernoulli–IMS One World Symposium (2020)\nApresentação oral: Independent block identification in multivariate time series\n\n\n\n\n📌\n\nCLAPEM – São Paulo (2023)\nPôster: Estimation and model selection for mixing graphical models\n\n\n\n\n🎓\n\nSINAPE – Fortaleza (2024)\nTutorial: Modelos de IA Generativa com R e Python"
+  },
+  {
+    "objectID": "02_memorial_v3.html#artigos-publicados-1",
+    "href": "02_memorial_v3.html#artigos-publicados-1",
+    "title": "Memorial Circunstanciado",
+    "section": "Artigos publicados",
+    "text": "Artigos publicados\n\n\n📄\n\n Independent block identification in multivariate time series\nLeonardi, F., Lopez-Rosenfeld, M., Rodriguez, D., Severino, M. T. F., & Sued, M.\nJournal of Time Series Analysis, 42(1), 2021.\n(Q2 – Probability and Statistics)"
+  },
+  {
+    "objectID": "02_memorial_v3.html#section",
+    "href": "02_memorial_v3.html#section",
+    "title": "Memorial Circunstanciado",
+    "section": "",
+    "text": "Monitoria (2017–2023)\n\nInstituições - Graduação: DEST UFMG, MAE IME USP, Insper\n- Pós-graduação: MAE IME USP (stricto sensu), Insper (lato sensu)\nDisciplinas - Introdução à Probabilidade e Estatística\n- Estatística I\n- Análise Combinatória\n- Métodos Quantitativos para Tomada de Decisão\n- Aprendizagem Estatística\n- Modelagem Preditiva\n- R e Python para Ciência de Dados\n- Visualização de Dados\n\n\n\nDocência (2020–atual)\n\nNíveis e Instituições - Graduação: IME USP (programa de verão)\n- Pós-graduação: Insper (lato sensu)\n- Educação Executiva: Insper\nDisciplinas - Análise Combinatória\n- Probabilidade e Aplicações\n- Aprendizado Estatístico Supervisionado\n- Aprendizado Estatístico Não-Supervisionado\n- Visualização de Dados\n- Transformando Negócios com Dados"
+  },
+  {
+    "objectID": "02_memorial_v3.html#t",
+    "href": "02_memorial_v3.html#t",
+    "title": "Memorial Circunstanciado",
+    "section": "T",
+    "text": "T\n\n\n2018\n2019\n2020\n2023\n2024\n\n📌\n📌\n🎤\n📌\n🎓\n\nEBEB – Rio de Janeiro (2018)\nPôster: Extending JAGS for spatial data\n\nEMR – Pirenópolis (2019)\nPôster: As desigualdades existentes no Brasil vistas no ENEM 2017\n\nBernoulli–IMS One World Symposium (2020)\nApresentação oral: Independent block identification in multivariate time series\n\nCLAPEM – São Paulo (2023)\nPôster: Estimation and model selection for mixing graphical models\n\nSINAPE – Fortaleza (2024)\nTutorial: Modelos de IA Generativa com R e Python"
+  },
+  {
+    "objectID": "02_memorial_v3.html#apresentação-de-trabalhos-em-eventos-1",
+    "href": "02_memorial_v3.html#apresentação-de-trabalhos-em-eventos-1",
+    "title": "Memorial Circunstanciado",
+    "section": "Apresentação de Trabalhos em Eventos",
+    "text": "Apresentação de Trabalhos em Eventos\n\n\n2018\n2019\n2020\n2023\n2024\n2024\n\n📌\n📌\n🎤\n📌\n🎓\n📌\n\nEBEB – Rio de Janeiro (2018)\nPôster: Extending JAGS for spatial data\n—\nEMR – Pirenópolis (2019)\nPôster: As desigualdades existentes no Brasil vistas no ENEM 2017\n—\nBernoulli–IMS One World Symposium (2020)\nApresentação oral: Independent block identification in multivariate time series\n—\nCLAPEM – São Paulo (2023)\nPôster: Estimation and model selection for mixing graphical models\n—\nSINAPE – Fortaleza (2024)\nTutorial: Modelos de IA Generativa com R e Python\n—\n\n\nAgora tudo está organizado em um grid preciso e limpo: anos, ícones e descrições ficam rigorosamente alinhados, mesmo com textos longos."
+  },
+  {
+    "objectID": "02_memorial_v3.html#apresentação-de-trabalhos-em-eventos-r-fontawesomefalaptop-code-2661a5",
+    "href": "02_memorial_v3.html#apresentação-de-trabalhos-em-eventos-r-fontawesomefalaptop-code-2661a5",
+    "title": "Memorial Circunstanciado",
+    "section": "Apresentação de Trabalhos em Eventos r fontawesome::fa(\"laptop-code\", \"#2661A5\")",
+    "text": "Apresentação de Trabalhos em Eventos r fontawesome::fa(\"laptop-code\", \"#2661A5\")\n\n\nr fontawesome::fa(\"laptop-code\", \"#2661A5\")\n\nEBEB – Rio de Janeiro (2018)\nPôster: Extending JAGS for spatial data\n\n\n\n\n📌\n\nEMR – Pirenópolis (2019)\nPôster: As desigualdades existentes no Brasil vistas no ENEM 2017\n\n\n\n\n🎤\n\nBernoulli–IMS One World Symposium (2020)\nApresentação oral: Independent block identification in multivariate time series\n\n\n\n\n📌\n\nCLAPEM – São Paulo (2023)\nPôster: Estimation and model selection for mixing graphical models\n\n\n\n\n🎓\n\nSINAPE – Fortaleza (2024)\nTutorial: Modelos de IA Generativa com R e Python"
+  },
+  {
+    "objectID": "02_memorial_v3.html#durante-o-doutorado",
+    "href": "02_memorial_v3.html#durante-o-doutorado",
+    "title": "Memorial Circunstanciado",
+    "section": "Durante o doutorado",
+    "text": "Durante o doutorado\n\nAtuei como monitor e estagiário PAE em disciplinas de graduação durante 7 semestres\nMonitor da disciplina de pós-graduação Aprendizagem Estatística em Altas Dimensões (MAE0501) por 2 semestres\nFui contemplado com bolsa PRINT-USP para estágio na UBA, Argentina em 2020\nApresentei trabalhos em congressos nacionais e internacionais\nRepresentante discente:\n\nComissão de Recepção da Pós-Graduação (RPG)\nComissão Coordenadora do Programa de Pós-Graduação em Estatística (CPP-MAE)\nConselho do Departamento de Estatística"
+  },
+  {
+    "objectID": "02_memorial_v3.html#ensino",
+    "href": "02_memorial_v3.html#ensino",
+    "title": "Memorial Circunstanciado",
+    "section": "Ensino",
+    "text": "Ensino\n\n\n\nMonitoria (2017–2023)\n\nInstituições\nGraduação: DEST UFMG, MAE IME USP, Insper\nPós-graduação: MAE IME USP (stricto sensu), Insper (lato sensu)\nDisciplinas\nIntrodução à Probabilidade e Estatística; Estatística I;\nAnálise Combinatória; Métodos Quantitativos para Tomada de Decisão;\nAprendizagem Estatística; Modelagem Preditiva;\nR e Python para Ciência de Dados; Visualização de Dados\n\n\n\nDocência (2020–atual)\n\nNíveis e Instituições\nGraduação: IME USP (programa de verão)\nPós-graduação: Insper (lato sensu)\nEducação Executiva: Insper\nDisciplinas\nAnálise Combinatória; Probabilidade e Aplicações;\nAprendizado Estatístico Supervisionado;\nAprendizado Estatístico Não-Supervisionado;\nVisualização de Dados; Transformando Negócios com Dados"
+  },
+  {
+    "objectID": "02_memorial_v3.html#experiência",
+    "href": "02_memorial_v3.html#experiência",
+    "title": "Memorial Circunstanciado",
+    "section": "Experiência",
+    "text": "Experiência\n\n\n\n\nMonitoria (2017–2023)\n\nNíveis e Instituições\n\nGraduação: DEST UFMG, MAE IME USP, Insper\n\nPós-graduação: MAE IME USP (stricto sensu), Insper (lato sensu)\n\nDisciplinas\n\nIntrodução à Probabilidade e Estatística;\nEstatística I;\n\nAnálise Combinatória;\nMQ para Tomada de Decisão;\n\nAprendizagem Estatística;\nModelagem Preditiva;\n\nR e Python para Ciência de Dados;\nVisualização de Dados\n\n\n\n\n\nDocência (2020–atual)\n\nNíveis e Instituições\n\nGraduação: IME USP (programa de verão)\n\nPós-graduação: Insper (lato sensu)\n\nEducação Executiva: Insper\n\nDisciplinas\n\nAnálise Combinatória; Probabilidade e Aplicações;\n\nAprendizado Estatístico Supervisionado;\n\nAprendizado Estatístico Não-Supervisionado;\n\nVisualização de Dados;\nTransformando Negócios com Dados"
+  },
+  {
+    "objectID": "02_memorial_v3.html#meu-plano-para-os-próximos-anos",
+    "href": "02_memorial_v3.html#meu-plano-para-os-próximos-anos",
+    "title": "Memorial Circunstanciado",
+    "section": "Meu plano para os próximos anos",
+    "text": "Meu plano para os próximos anos\n\nCurto prazo\n\nDisciplinas alinhadas à minha pesquisa\n\nInício de orientações\n\nProjetos aplicados imediatos\n\nArtigos em andamento\n\nMédio prazo\n\nGrupo de pesquisa consolidado\n\nParcerias acadêmicas e aplicadas\n\nFerramentas computacionais ampliadas\n\nLongo prazo\n\nIME como referência em modelagem moderna\n\nInternacionalização e cooperação científica\n\nFormação de pesquisadores independentes\n\n\n\nPlano orgânico e coerente com sua trajetória."
+  },
+  {
+    "objectID": "02_memorial_v3.html#f-ensino-médio-técnico-informática-industrial",
+    "href": "02_memorial_v3.html#f-ensino-médio-técnico-informática-industrial",
+    "title": "Memorial Circunstanciado",
+    "section": "F Ensino Médio Técnico: Informática Industrial",
+    "text": "F Ensino Médio Técnico: Informática Industrial\n\n\nCentro Federal de Educação Tecnológica de Minas Gerais (CEFET-MG), 2008-2010\nProgramação em C/C++, algoritmos, redes de computadores, eletrônica digital"
+  },
+  {
+    "objectID": "02_memorial_v3.html#f-intercâmbio-queen-mary-university-of-london",
+    "href": "02_memorial_v3.html#f-intercâmbio-queen-mary-university-of-london",
+    "title": "Memorial Circunstanciado",
+    "section": "F Intercâmbio: Queen Mary University of London",
+    "text": "F Intercâmbio: Queen Mary University of London\n\n\nPeríodo: 2013-2024 (12 meses)\nCursos em matemática, estatística, probabilidade e métodos computacionais\nPrimeira experiência em ambiente acadêmico internacional\nAmpliação das competências em comunicação científica e colaboração"
+  },
+  {
+    "objectID": "02_memorial_v3.html#f-durante-o-doutorado",
+    "href": "02_memorial_v3.html#f-durante-o-doutorado",
+    "title": "Memorial Circunstanciado",
+    "section": "F Durante o doutorado",
+    "text": "F Durante o doutorado\n\natuei como monitor e estagiário PAE em disciplinas de graduação e pós de 2019 a 2022\nfui contemplado com bolsa PRINT-USP para estágio na UBA, Argentina em 2020"
+  },
+  {
+    "objectID": "02_memorial_v3.html#experiência-ampla-e-contínua",
+    "href": "02_memorial_v3.html#experiência-ampla-e-contínua",
+    "title": "Memorial Circunstanciado",
+    "section": "Experiência ampla e contínua",
+    "text": "Experiência ampla e contínua\n\n\n\n\n\n1500+ horas monitorias\n770h de aulas ministradas\n7 anos de experiência como monitor, nível de graduação e pós-graduação;\n5 anos de experiência como docente na graduação e na pós-graduação;\nMais de 1000 estudantes matriculados em disciplinas que ministrei\nTurmas diversas e numerosas"
+  },
+  {
+    "objectID": "02_memorial_v3.html#f-experiência-ampla-e-contínua",
+    "href": "02_memorial_v3.html#f-experiência-ampla-e-contínua",
+    "title": "Memorial Circunstanciado",
+    "section": "F Experiência ampla e contínua",
+    "text": "F Experiência ampla e contínua\n\n\n\n\n\n1500+ horas monitorias\n770h de aulas ministradas\n7 anos de experiência como monitor, nível de graduação e pós-graduação;\n5 anos de experiência como docente na graduação e na pós-graduação;\nMais de 1000 estudantes matriculados em disciplinas que ministrei\nTurmas diversas e numerosas"
+  },
+  {
+    "objectID": "02_memorial_v3.html#exp",
+    "href": "02_memorial_v3.html#exp",
+    "title": "Memorial Circunstanciado",
+    "section": "Exp",
+    "text": "Exp\n\n\n\n1500+\n\n\nhoras de monitorias\n\n\n\n\n770 h\n\n\nde aulas ministradas\n\n\n\n\n7 anos\n\n\ncomo monitor  (graduação e pós)\n\n\n\n\n5 anos\n\n\ndocente (graduação e pós)\n\n\n\n\n1000+\n\n\nestudantes ensinados\n\n\n\n\nTurmas\n\n\ndiversas e numerosas"
+  },
+  {
+    "objectID": "02_memorial_v3.html#principais-destaques",
+    "href": "02_memorial_v3.html#principais-destaques",
+    "title": "Memorial Circunstanciado",
+    "section": "Principais Destaques",
+    "text": "Principais Destaques\n\n\n\n\n\n\n\n\n1500+\n\n\nhoras de monitorias\n\n\n\n\n770 h\n\n\nde aulas ministradas\n\n\n\n\n7 anos\n\n\ncomo monitor  (graduação e pós)\n\n\n\n\n5 anos\n\n\ndocente (graduação e pós)\n\n\n\n\n1000+\n\n\nestudantes ensinados\n\n\n\n\nTurmas\n\n\ndiversas e numerosas"
+  },
+  {
+    "objectID": "02_memorial_v3.html#experiência-atual",
+    "href": "02_memorial_v3.html#experiência-atual",
+    "title": "Memorial Circunstanciado",
+    "section": "Experiência atual",
+    "text": "Experiência atual\n\n\nProfessor no Insper desde 2021 (tempo parcial)\nDisciplinas de aprendizagem estatística e ciência de dados\nProgramas: pós-graduação (lato sensu) e educação executiva\nMembro da comissão de desenvolvimento curricular do Mestrado Profissional em Ciência de Dados"
+  },
+  {
+    "objectID": "02_memorial_v3.html#f-software-e-produção-computacional",
+    "href": "02_memorial_v3.html#f-software-e-produção-computacional",
+    "title": "Memorial Circunstanciado",
+    "section": "F Software e produção computacional",
+    "text": "F Software e produção computacional\n\n\n\n\n\n GeoJAGS Modelos para dados espaciais com MCMC\nPacote computacional voltado a inferência Bayesiana em estruturas espaciais  Desenvolvido durante o mestrado \n\n\n\n\n\n\n MixingGraph\nModelos gráficos para dados sob condições de mistura\nFerramentas para modelagem de estruturas de dependência Desenvolvido durante o doutorado \n\n\nPesquisa que vira software: diferencial forte."
+  },
+  {
+    "objectID": "02_memorial_v3.html#experiência-1",
+    "href": "02_memorial_v3.html#experiência-1",
+    "title": "Memorial Circunstanciado",
+    "section": "Experiência",
+    "text": "Experiência\n\n\n\n\n\nMonitoria (2017–2023)\n\nNíveis e Instituições\n\nGraduação: DEST UFMG, MAE IME USP, Insper\n\nPós-graduação: MAE IME USP (stricto sensu), Insper (lato sensu)\n\nDisciplinas\n\nIntrodução à Probabilidade e Estatística;\nEstatística I;\n\nAnálise Combinatória;\nMQ para Tomada de Decisão;\n\nAprendizagem Estatística;\nModelagem Preditiva;\n\nR e Python para Ciência de Dados;\nVisualização de Dados\n\n\n\n\n\nDocência (2020–atual)\n\nNíveis e Instituições\n\nGraduação: IME USP (programa de verão)\n\nPós-graduação: Insper (lato sensu)\n\nEducação Executiva: Insper\n\nDisciplinas\n\nAnálise Combinatória; Probabilidade e Aplicações;\n\nAprendizado Estatístico Supervisionado;\n\nAprendizado Estatístico Não-Supervisionado;\n\nVisualização de Dados;\nTransformando Negócios com Dados"
   }
 ]

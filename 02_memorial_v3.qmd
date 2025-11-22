@@ -1,0 +1,560 @@
+---
+title: "Memorial Circunstanciado"
+# subtitle: "Memorial circunstanciado apresentado como parte do concurso de Professor Doutor no Departamento de Estatística IME-USP."
+author: "Magno T. F. Severino"
+format:
+  revealjs:
+    theme: simple
+    transition: fade
+    slide-number: true
+    # incremental: true
+    fontawesome: true
+    css: styles.css
+    footer: "Magno T. F. Severino | Concurso ATAc-030/2025"
+lang: pt-br
+---
+
+# Formação Acadêmica
+
+<!-- Fotos: -->
+<!-- intercambio -->
+
+## Uma trajetória multidisciplinar {.smaller}
+
+<br>
+
+<div style="text-align: center; font-size: 85%; max-width: 85%; margin: 0 auto;">
+Primeira geração da família a ingressar na Universidade — e também o primeiro Mestre e Doutor.  
+</div>
+
+<div style="margin-top: -4px; margin-bottom: 10px;">
+![](img/intersec.png){width="50%" fig-align="center"}
+</div>
+
+## F Ensino Médio Técnico: Informática Industrial
+![](images/ensino_medio.jpg)
+
+- Centro Federal de Educação Tecnológica de Minas Gerais (CEFET-MG), 2008-2010
+
+- Programação em C/C++, algoritmos, redes de computadores, eletrônica digital
+
+## Graduação: Matemática Computacional {.smaller}
+
+<br>
+
+:::: {.columns}
+
+::: {.column width="50%"}
+
+- Universidade Federal de Minas Gerais (UFMG), 2011–2015  
+- Bolsista PET Matemática
+
+- Iniciação Científica: métodos numéricos para busca de autovalores e autovetores (C++)
+
+:::
+
+::: {.column width="50%"}
+
+![](img/graduacao.JPG){width="100%" fig-align="right"}
+
+:::
+
+::::
+
+
+## F Intercâmbio: Queen Mary University of London {.smaller}  
+
+<!-- incluir imagem -->
+
+- Período: 2013-2024 (12 meses)
+
+- Cursos em matemática, estatística, probabilidade e métodos computacionais
+
+- Primeira experiência em ambiente acadêmico internacional
+
+- Ampliação das competências em comunicação científica e colaboração
+
+## Mestrado: Estatística {.smaller}
+
+<br>
+
+:::: {.columns}
+
+::: {.column width="50%"}
+
+- Universidade Federal de Minas Gerais (UFMG), 2016–2018  
+- Bolsista CAPES
+
+- Dissertação: *Extending JAGS for spatial data*
+
+- Modelagem Bayesiana para dados espaciais
+
+- Finalista no *Concurso de Melhor Dissertação de Mestrado* -- SINAPE 2018.
+
+:::
+
+::: {.column width="50%"}
+
+![](img/mestrado.JPG){width="90%" fig-align="right"}
+
+:::
+
+::::
+
+## Doutorado: Probabilidade e Estatística {.smaller}
+
+<br>
+
+:::: {.columns}
+
+::: {.column width="60%"}
+
+- Universidade de São Paulo (IME-USP)  
+- Período: 2018–2024  
+- Tese: *Estimation and model selection for graphical models under mixing conditions*
+- Modelos gráficos para processos estocásticos vetoriais
+
+:::
+
+::: {.column width="40%"}
+
+![](img/defesa_doutorado.jfif){width="90%" fig-align="right"}
+
+:::
+
+::::
+
+
+## Durante o doutorado {.smaller}
+
+  - Atuei como monitor e estagiário PAE em disciplinas de
+graduação durante 7 semestres
+
+  - Monitor da disciplina de pós-graduação Aprendizagem Estatística em Altas Dimensões (MAE0501) por 2 semestres
+
+  - Fui contemplado com bolsa PRINT-USP para estágio na UBA, Argentina em 2020
+  
+  - Apresentei trabalhos em congressos nacionais e internacionais
+  
+  - Representante discente:
+    
+    - Comissão de Recepção da Pós-Graduação (RPG)
+    -  Comissão Coordenadora do Programa de Pós-Graduação em Estatística (CPP-MAE)
+    - Conselho do Departamento de Estatística
+  
+# Atividades de Pesquisa
+
+## Artigos publicados {.smaller}
+
+
+<br style="line-height:0.6;">
+
+:::: {.columns}
+::: {.column width="10%"}
+<span style="font-size:240%;">📄</span>
+:::
+
+::: {.column width="90%"}
+<span style="font-size:80%;">
+**Independent block identification in multivariate time series**  
+Leonardi, F., Lopez-Rosenfeld, M., Rodriguez, D., **Severino, M. T. F.**, & Sued, M.  
+*Journal of Time Series Analysis*, 2021.  
+(Q2 – Probability and Statistics, Scimago)
+</span>
+:::
+::::
+
+
+<br style="line-height:0.6;">
+
+:::: {.columns}
+::: {.column width="10%"}
+<span style="font-size:240%;">📄</span>
+:::
+
+::: {.column width="90%"}
+<span style="font-size:80%;">
+**Model selection for Markov random fields on graphs under a mixing condition**  
+**Severino, M. T. F.**, & Leonardi, F.  
+*Stochastic Processes and their Applications*, 2025.  
+(Q1 – Probability and Statistics, Scimago)
+</span>
+:::
+::::
+
+:::{.notes}
+Estes dois artigos sintetizam minha contribuição teórica em séries temporais multivariadas  
+e em modelos gráficos sob condições de mistura — ambos profundamente conectados às  
+linhas prioritárias do edital: modelagem estatística moderna, dados de alta dimensão e  
+aprendizagem estatística.
+:::
+:::{.notes}
+Mostrar um gráfico aqui concreta sua pesquisa.
+:::
+
+## Software e produção computacional
+
+<br style="line-height:0.6;">
+
+:::: {.columns}
+::: {.column width="10%"}
+<!-- ![](images/placeholder-geojags.png){width="80%"} -->
+:::
+
+::: {.column width="90%"}
+<span style="font-size:80%;">
+**GeoJAGS** <br>
+Modelos para dados espaciais com MCMC <br> 
+Modulo computacional em C++ voltado a inferência Bayesiana em estruturas espaciais <br>
+Desenvolvido durante o mestrado
+</span>
+:::
+::::
+
+<br style="line-height:0.6;">
+
+:::: {.columns}
+::: {.column width="10%"}
+![](img/mixingraph.png){width="100%"}
+:::
+
+::: {.column width="90%"}
+<span style="font-size:80%;">
+**MixingGraph**  <br>
+Modelos gráficos para dados sob condições de mistura  <br>
+Ferramentas para modelagem de estruturas de dependência
+Desenvolvido durante o doutorado<br>
+</span>
+:::
+::::
+
+:::{.notes}
+Pesquisa que vira software: diferencial forte.
+:::
+
+## Apresentação de Trabalhos em Eventos {.smaller}
+
+<br>
+
+Eventos selecionados:
+
+:::: {.columns}
+::: {.column width="6%"}
+📌
+:::
+::: {.column width="94%"}
+
+**EBEB – Rio de Janeiro (2018)**  
+_Pôster: Extending JAGS for spatial data_
+
+:::
+::::
+
+<hr style="margin:4px 0;">
+
+:::: {.columns}
+::: {.column width="6%"}
+📌
+:::
+::: {.column width="94%"}
+
+**EMR – Pirenópolis (2019)**  
+_Pôster: As desigualdades existentes no Brasil vistas no ENEM 2017_
+
+:::
+::::
+
+<hr style="margin:4px 0;">
+
+:::: {.columns}
+::: {.column width="6%"}
+🎤
+:::
+::: {.column width="94%"}
+
+**Bernoulli–IMS One World Symposium (2020)**  
+_Apresentação oral: Independent block identification in multivariate time series_
+
+:::
+::::
+
+<hr style="margin:4px 0;">
+
+:::: {.columns}
+::: {.column width="6%"}
+📌
+:::
+::: {.column width="94%"}
+
+**CLAPEM – São Paulo (2023)**  
+_Pôster: Estimation and model selection for mixing graphical models_
+
+:::
+::::
+
+<hr style="margin:4px 0;">
+
+:::: {.columns}
+::: {.column width="6%"}
+🎓
+:::
+::: {.column width="94%"}
+
+**SINAPE – Fortaleza (2024)**  
+_Tutorial: Modelos de IA Generativa com R e Python_
+
+:::
+::::
+
+
+# Atividades de Ensino
+
+## Principais Destaques
+
+<br>
+
+:::: {.columns}
+
+::: {.column width="40%"}
+![](img/aula-insper3.jpeg){width="100%"}
+:::
+
+::: {.column width="60%"}
+
+<div class="card-grid">
+
+<div class="card">
+  <div class="card-number">1500+</div>
+  <div class="card-label">horas de monitorias</div>
+</div>
+
+<div class="card">
+  <div class="card-number">770 h</div>
+  <div class="card-label">de aulas ministradas</div>
+</div>
+
+<div class="card">
+  <div class="card-number">7 anos</div>
+  <div class="card-label">como monitor <br> (graduação e pós)</div>
+</div>
+
+<div class="card">
+  <div class="card-number">5 anos</div>
+  <div class="card-label">docente (graduação e pós)</div>
+</div>
+
+<div class="card">
+  <div class="card-number">1000+</div>
+  <div class="card-label">estudantes ensinados</div>
+</div>
+
+<div class="card">
+  <div class="card-number">Turmas</div>
+  <div class="card-label">diversas e numerosas</div>
+</div>
+
+</div>
+
+:::
+
+::::
+
+
+## Experiência {.smaller}
+
+:::: {.columns}
+
+::: {.column width="45%"}
+
+<div class="teaching-card teaching-section">
+
+<div class="teaching-title">Monitoria (2017–2023)</div>
+
+**Níveis e Instituições** 
+
+- Graduação: DEST UFMG, MAE IME USP, Insper  
+- Pós-graduação: MAE IME USP (stricto sensu), Insper (lato sensu)
+
+**Disciplinas**  
+
+- Introdução à Probabilidade e Estatística; 
+- Estatística I;  
+- Análise Combinatória; 
+- MQ para Tomada de Decisão;  
+- Aprendizagem Estatística; 
+- Modelagem Preditiva;  
+- R e Python para Ciência de Dados; 
+- Visualização de Dados
+
+</div>
+
+:::
+
+::: {.column width="55%"}
+
+<div class="teaching-card teaching-section">
+
+<div class="teaching-title">Docência (2020–atual)</div>
+
+**Níveis e Instituições**  
+
+- Graduação: IME USP (programa de verão)  
+- Pós-graduação: Insper (lato sensu)  
+- Educação Executiva: Insper
+
+**Disciplinas**  
+
+- Análise Combinatória; Probabilidade e Aplicações;  
+- Aprendizado Estatístico Supervisionado;  
+- Aprendizado Estatístico Não-Supervisionado;  
+- Visualização de Dados; 
+- Transformando Negócios com Dados
+
+</div>
+
+:::
+
+::::
+
+
+
+
+## Experiência atual {.smaller}
+
+<div style="text-align: left; font-size: 85%;">
+
+- Professor no **Insper** desde 2021 (tempo parcial)
+- Disciplinas de aprendizagem estatística e ciência de dados
+- Programas: pós-graduação (lato sensu) e educação executiva
+- Membro da comissão de desenvolvimento curricular do Mestrado Profissional em Ciência de Dados
+
+</div>
+
+:::: {.columns}
+
+::: {.column width="50%"}
+![](img/aula-insper.jpeg){width="100%" fig-align="center"}
+:::
+
+::: {.column width="50%"}
+![](img/aula-insper2.jpeg){width="85%" fig-align="center"}
+:::
+
+::::
+
+<!-- # Contribuição à formação em Ciência de Dados -->
+
+<!-- - Modelagem Estatística para Ciência de Dados   -->
+<!-- - Aprendizado Estatístico em Altas Dimensões   -->
+<!-- - Projetos integrados com dados reais   -->
+
+<!-- ![](images/ime_sala.jpg){width="55%"} -->
+
+<!-- :::{.notes} -->
+<!-- Mostra prontidão para fortalecer a trilha de CD. -->
+<!-- ::: -->
+
+# Atividades de Extensão
+
+## Extensão e impacto
+
+
+
+- Curso de Nivelamento Pré-Cálculo (2012)
+
+- Curso de Difusão em Aprendizagem Estatística (2021-
+2022)
+
+
+- Divulgação Científica: Tendência de Novos Casos de
+Covid-19 (2020) 
+
+![](img/jornal_usp.png)
+
+
+
+
+
+:::{.notes}
+Mostra impacto real e compromisso social.
+:::
+
+# Experiência profissional {.smaller}
+
+:::: {.columns}
+::: {.column width="45%"}
+![](img/btg.jpeg)
+:::
+
+::: {.column width="55%"}
+- Precificação de derivativos (BTG Pactual)
+- Modelagem e risco de crédito (Pernambucanas)
+- Ciência de dados financeiros (XP Inc - **atual**)
+:::
+::::
+
+:::{.notes}
+Experiência que te humaniza e te diferencia.
+:::
+
+# Como isso fortalece minha atuação acadêmica
+
+- Visão prática do ciclo completo de modelagem  
+- Experiência com dados massivos e sistemas reais  
+- Maturidade para orientar projetos aplicados  
+- Capacidade de integrar estatística, computação e impacto  
+
+![](images/pipeline.png){width="55%"}
+
+:::{.notes}
+Como o mercado te transforma em um pesquisador mais completo.
+:::
+
+# Planos Futuros
+
+## Meu plano para os próximos anos {.very-small-slide}
+
+<span style="font-size:70% !important; line-height:1.05; max-width:92%; margin:0 auto;">
+
+### Curto prazo
+- Disciplinas alinhadas à minha pesquisa  
+- Início de orientações  
+- Projetos aplicados imediatos  
+- Artigos em andamento
+
+### Médio prazo
+- Grupo de pesquisa consolidado  
+- Parcerias acadêmicas e aplicadas  
+- Ferramentas computacionais ampliadas  
+
+### Longo prazo
+- IME como referência em modelagem moderna  
+- Internacionalização e cooperação científica  
+- Formação de pesquisadores independentes  
+
+</span>
+
+:::{.notes}
+Plano orgânico e coerente com sua trajetória.
+:::
+
+<!-- # Integração com o CEA -->
+
+<!-- ![](images/cea.png){width="50%"} -->
+
+<!-- - Projetos aplicados   -->
+<!-- - Integração ensino + pesquisa + extensão   -->
+<!-- - Parcerias internas e externas   -->
+
+<!-- :::{.notes} -->
+<!-- Aderência institucional e visão colaborativa. -->
+<!-- ::: -->
+
+# Obrigado
+
+<!-- ![](images/ime_final.jpg){width="60%"} -->
+
+:::{.notes}
+“Minha trajetória foi construída na fronteira entre estatística, computação e impacto aplicado.
+É nessa fronteira que pretendo contribuir para o futuro do Departamento.”
+:::
