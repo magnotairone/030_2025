@@ -1,14 +1,285 @@
 ---
-title: "Projeto de Pesquisa"
-author: "Magno T. F. Severino"
-format: revealjs
-lang: pt-br
+title: " Projeto de Pesquisa"
+subtitle: "<br> Unsupervised Learning of Graph Structures: Inference and Model Selection for High-Dimensional Stochastic Processes"
+author: "<p style='font-size: 70%;'> Área: 1.a. Aprendizagem Estatística e Ciência de Dados <br> Área correlata: 1.c. Estatística Computacional</p> <br> <b> Magno T. F. Severino </b>"
+# "Magno T. F. Severino"
+format:
+  revealjs:
+    theme: simple
+    transition: fade
+    slide-number: true
+    fontawesome: true
+    css: styles_pesquisa.css
+    footer: "Magno T. F. Severino | Concurso ATAc-030/2025"
+lang: en
+engine: knitr
 ---
 
-## Slide 1
+```{r}
+cor = "#002060"
+```
 
-Conteúdo do primeiro slide...
+## Motivação 
 
-## Slide 2
+::: {style="font-size:70%"}
 
-Conteúdo do segundo slide...
+A análise de dependências em dados modernos envolve:
+
+- alta dimensão,
+- dependência temporal,
+- dados contínuos,
+- estruturas complexas e não supervisionadas.
+:::
+
+. . .
+
+::: {style="font-size:70%"}
+Grafos probabilísticos (MRFs) são uma ferramenta natural para representar tais dependências.
+
+:::
+
+. . .
+
+::: {style="font-size:70%"}
+**Desafio**: métodos existentes tratam majoritariamente de:
+
+- dados discretos,
+- número finito de vértices,
+- independência ou estruturas fracas de dependência.
+:::
+
+
+## Linha de pesquisa atual {.smaller}
+
+**Trabalho recente** 
+
+:::: {.columns}
+::: {.column width="10%"}
+<span style="font-size:240%;">📄</span>
+:::
+
+::: {.column width="90%"}
+<span style="font-size:80%;">
+**Model selection for Markov random fields on graphs under a mixing condition**  
+*Stochastic Processes and their Applications*, 2025.  
+**Severino, M. T. F.**, & Leonardi, F.  
+</span>
+:::
+::::
+
+. . .
+
+Avanços:
+
+- critério global baseado em pseudo-verossimilhança penalizada;
+- teorema de consistência sob condição de mistura;
+- aplicações a processos discretos vetoriais.
+
+. . .
+
+Limitações a superar:
+
+- restrição ao caso **finito** (vértices),
+- variáveis **discretas**.
+
+. . .
+
+Este projeto propõe superar essas duas limitações.
+
+# Fundamentos matemáticos essenciais
+
+## Processos vetoriais e grafo subjacente {.smaller}
+
+Considere o processo vetorial:
+
+$$
+\mathbf{X}^{(i)} = (X_1^{(i)},\dots,X_d^{(i)}), \qquad i\in\mathbb{N}.
+$$
+
+Assume-se:
+
+- estacionariedade,
+- existência de distribuição invariante $\pi,$
+- dependências condicionais descritas por um grafo $G^* = (V, E^*).$
+
+Esse grafo representa:
+$$
+X_v \perp X_{V\setminus(\{v\}\cup G^*(v))} \mid X_{G^*(v)}.
+$$
+
+
+## Pseudo-verossimilhança penalizada {.smaller}
+
+Para um grafo candidato $G$:
+$$
+\log L(G)
+=
+\sum_{v\in V}
+\sum_{a_v}\sum_{a_{G(v)}}
+N(a_v,a_{G(v)})
+\log \pi(a_v\mid a_{G(v)}).
+$$
+
+Estimamos $\pi$ empiricamente:
+$$
+\log \widehat L(G)
+=
+\sum_{v\in V}
+\sum_{a_v}\sum_{a_{G(v)}}
+N(a_v,a_{G(v)})\,
+\log \widehat\pi(a_v\mid a_{G(v)}).
+$$
+
+Critério de seleção (Severino & Leonardi, 2025):
+$$
+\widehat G = \arg\max_G
+\big\{\log\widehat L(G) - \lambda_n \sum_{v\in V}|A|^{|G(v)|}\big\}.
+$$
+
+---
+
+## Teorema de consistência {.smaller}
+
+**Teorema (Severino, SPA 2025)**  
+Se o processo satisfaz mistura polinomial,
+$$
+\psi(\ell)=O(1/\ell^{1+\epsilon}),
+$$
+então, para $\lambda_n = c \log n$,
+$$
+\widehat G \to G^*
+\quad\text{eventualmente quase certamente}.
+$$
+
+Este resultado fornece a base teórica para as extensões propostas neste projeto.
+
+# Proposta 1  
+
+## Model selection em MRFs com vértices infinitos enumeráveis {.smaller}
+
+Motivação:
+
+- Redes massivas (sociais, biológicas, IoT),
+- Estruturas onde $|V| = \infty$ e cresce com a amostra,
+- Métodos finitos não se generalizam automaticamente.
+
+Objetivo:
+
+- Generalizar a teoria de pseudo-verossimilhança penalizada para
+$$
+V = \{1,2,\dots\}, \qquad V_n\uparrow V.
+$$
+
+Questões centrais:
+
+- controle do erro ao restringir a \(V_n\),
+- limites de consistência para estimadores globais,
+- modificação da teoria de typicality para vértices infinitos.
+
+
+## Proposta 1 – avanços esperados {.smaller}
+
+Desenvolvimentos teóricos:
+
+- versão infinita dos resultados de consistência do caso finito,
+- condições de regularidade para limites \(V_n\),
+- controle da complexidade do espaço de modelos.
+
+Algoritmos:
+
+- implementação em R,
+- simulações em redes sintéticas grandes.
+
+Aplicações:
+
+- redes sociais,
+- neurociência (mapeamento de grandes redes neurais),
+- sistemas de sensores.
+
+
+# Proposta 2  
+
+## Model selection para MRFs **contínuos** sob mistura {.smaller}
+
+Limitações do estado da arte:
+
+- pseudo-verossimilhança tradicional é para alfabetos finitos,
+- discretização gera perda de informação.
+
+Objetivo:
+
+- desenvolver um estimador consistente **sem discretização**.
+
+Desafios:
+
+- substituição de somatórios por integrais,
+- definição de vizinhança em densidades condicionais,
+- adaptação das provas de consistência para o caso contínuo.
+
+## Proposta 2 – impactos {.smaller}
+
+Benefícios:
+
+- maior precisão inferencial,
+- eliminação de discretização,
+- aplicabilidade a finanças, hidrologia, neurociência e bioinformática.
+
+Resultados esperados:
+
+- teoremas análogos ao caso discreto,
+- algoritmo escalável,
+- pacote em R.
+
+
+# Integração final {.smaller}
+
+Objetivo de médio prazo:
+$$
+\text{MRFs contínuos} + \text{vértices infinitos} + \text{mistura}.
+$$
+
+Entrega:
+
+- arcabouço teórico unificado,
+- algoritmos consistentes para sistemas realmente de grande escala,
+- framework geral para dados reais complexos.
+
+
+## `r fontawesome::fa("timeline", cor)` Timeline {.smaller}
+
+![](img/gantt_chart.png)
+
+## `r fontawesome::fa("dollar", cor)` Budget {.smaller}
+
+<br>
+
+::: {style="font-size: 120%;"}
+
+- **Minimal** financial costs.
+
+- Theoretical development **does not require** any additional resources.
+
+- Simulation and real data application of the developed algorithms will be conducted using existing computer server **resources at the department**.
+
+- Anticipated expenses: presenting the research at international scientific conferences.
+
+:::
+
+
+## `r fontawesome::fa("bookmark", cor)` References 
+
+::: {style="font-size: 100%"}
+
+<!-- - **Severino, M. T. F.**, & Leonardi, F. (2025). _Model selection for Markov random fields on graphs under a mixing condition_. Stochastic Processes and their Applications. -->
+
+<!-- - Leonardi, F., Lopez-Rosenfeld, M., Rodriguez, D., **Severino, M. T. F.**, & Sued, M. (2021). _Independent block identification in multivariate time series_. Journal of Time Series Analysis. -->
+
+
+<!-- - Leonardi, F., Carvalho, R., & Frondana, I. (2023). _Structure recovery for partially observed discrete Markov random fields on graphs under not necessarily positive distributions_. Scandinavian Journal of Statistics. -->
+
+<!-- - Lauritzen, S. L. (1996). _Graphical models (Vol. 17)_. Clarendon Press. -->
+
+<!-- - Oodaira, H., & Yoshihara, K. I. (1971). _The law of the iterated logarithm for stationary processes satisfying mixing conditions_. Kodai Mathematical Seminar Reports. -->
+
+
+:::

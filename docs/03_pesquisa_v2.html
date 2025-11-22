@@ -30,7 +30,7 @@
     }
   </style>
   <link rel="stylesheet" href="site_libs/revealjs/dist/theme/quarto-0fde88a82f0356838740f155f1088782.css">
-  <link rel="stylesheet" href="styles_pesquisa.css">
+  <link rel="stylesheet" href="style_pesquisa.css">
   <link href="site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
   <link href="site_libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
   <link href="site_libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
@@ -143,36 +143,51 @@
 </div>
 
 </section>
-<section id="motivação" class="slide level2">
-<h2>Motivação</h2>
-<div style="font-size:70%">
-<p>A análise de dependências em dados modernos envolve:</p>
+<section id="agenda" class="slide level2">
+<h2>Agenda</h2>
+<div style="font-size:150%">
 <ul>
-<li>alta dimensão,</li>
-<li>dependência temporal,</li>
-<li>dados contínuos,</li>
-<li>estruturas complexas e não supervisionadas.</li>
+<li><p>Introduction</p></li>
+<li><p>Theorethical Background</p></li>
+<li><p>Research Proposal</p></li>
+<li><p>Viability</p></li>
+</ul>
+</div>
+</section>
+<section id="motivation" class="slide level2">
+<h2>Motivation</h2>
+<div style="font-size:70%">
+<p>Modern dependence analysis involves:</p>
+<ul>
+<li>high dimensionality,</li>
+<li>temporal dependence,</li>
+<li>continuous data,</li>
+<li>complex structures.</li>
 </ul>
 </div>
 <div class="fragment">
 <div style="font-size:70%">
-<p>Grafos probabilísticos (MRFs) são uma ferramenta natural para representar tais dependências.</p>
+<p>These challenges arise naturally in modern data science problems, including multivariate time series, sensor networks, neurodata, and large-scale systems where statistical models must remain both theoretically sound and computationally scalable.</p>
 </div>
 </div>
 <div class="fragment">
 <div style="font-size:70%">
-<p><strong>Desafio</strong>: métodos existentes tratam majoritariamente de:</p>
+<p>Probabilistic graphical models (MRFs) are a natural tool for representing such dependencies.</p>
+</div>
+</div>
+<div class="fragment">
+<div style="font-size:70%">
+<p><strong>Challenge</strong>: existing methods mostly address:</p>
 <ul>
-<li>dados discretos,</li>
-<li>número finito de vértices,</li>
-<li>independência ou estruturas fracas de dependência.</li>
+<li>discrete data,</li>
+<li>a finite number of vertices,</li>
+<li>independence or weak dependence structures.</li>
 </ul>
 </div>
 </div>
 </section>
-<section id="linha-de-pesquisa-atual" class="slide level2 smaller">
-<h2>Linha de pesquisa atual</h2>
-<p><strong>Trabalho recente</strong></p>
+<section id="recent-work" class="slide level2 smaller">
+<h2>Recent Work</h2>
 <div class="columns">
 <div class="column" style="width:10%;">
 <p><span style="font-size:240%;">📄</span></p>
@@ -183,48 +198,103 @@
 </span></p>
 </div></div>
 <div class="fragment">
-<p>Avanços:</p>
+<p>Advances:</p>
 <ul>
-<li>critério global baseado em pseudo-verossimilhança penalizada;</li>
-<li>teorema de consistência sob condição de mistura;</li>
-<li>aplicações a processos discretos vetoriais.</li>
+<li>global criterion based on penalized pseudo-likelihood;</li>
+<li>consistency theorem under a mixing condition;</li>
+<li>applications to discrete multivariate processes.</li>
 </ul>
 </div>
 <div class="fragment">
-<p>Limitações a superar:</p>
+<p>Limitations:</p>
 <ul>
-<li>restrição ao caso <strong>finito</strong> (vértices),</li>
-<li>variáveis <strong>discretas</strong>.</li>
+<li>restriction to the <strong>finite</strong> vertex case,</li>
+<li><strong>discrete</strong> variables.</li>
 </ul>
 </div>
 <div class="fragment">
-<p>Este projeto propõe superar essas duas limitações.</p>
+<p>This project aims to overcome both limitations in <strong>two proposals</strong>.</p>
 </div>
 </section>
 <section>
-<section id="fundamentos-matemáticos-essenciais" class="title-slide slide level1 center">
-<h1>Fundamentos matemáticos essenciais</h1>
+<section id="background-and-definitions" class="title-slide slide level1 center">
+<h1>Background and Definitions</h1>
 
 </section>
-<section id="processos-vetoriais-e-grafo-subjacente" class="slide level2 smaller">
-<h2>Processos vetoriais e grafo subjacente</h2>
-<p>Considere o processo vetorial:</p>
+<section id="vector-processes-and-the-underlying-graph" class="slide level2 smaller">
+<h2>Vector Processes and the Underlying Graph</h2>
+<p>Consider the vector-valued process:</p>
 <p><span class="math display">\[
-\mathbf{X}^{(i)} = (X_1^{(i)},\dots,X_d^{(i)}), \qquad i\in\mathbb{N}.
+\mathbf{X}^{(i)} = (X_1^{(i)},\dots,X_d^{(i)}), \qquad i\in\mathbb{N}, \quad X_i \in A.
 \]</span></p>
-<p>Assume-se:</p>
+<p>Assume:</p>
 <ul>
-<li>estacionariedade,</li>
-<li>existência de distribuição invariante <span class="math inline">\(\pi,\)</span></li>
-<li>dependências condicionais descritas por um grafo <span class="math inline">\(G^* = (V, E^*).\)</span></li>
+<li>stationarity,</li>
+<li>existence of an invariant distribution <span class="math inline">\(\pi\)</span>, probability space <span class="math inline">\(\big((A^d)^\mathbb{N}, \mathcal{F}, \mathbb{P}\big),\)</span></li>
+<li>conditional dependencies described by a graph <span class="math inline">\(G^* = (V, E^*)\)</span>.</li>
 </ul>
-<p>Esse grafo representa: <span class="math display">\[
+<p>This graph encodes: <span class="math display">\[
 X_v \perp X_{V\setminus(\{v\}\cup G^*(v))} \mid X_{G^*(v)}.
-\]</span></p>
+\]</span> <span class="math inline">\(G^*(v) = \{u \in V: (u, v) \in E^*\}.\)</span></p>
 </section>
-<section id="pseudo-verossimilhança-penalizada" class="slide level2 smaller">
-<h2>Pseudo-verossimilhança penalizada</h2>
-<p>Para um grafo candidato <span class="math inline">\(G\)</span>: <span class="math display">\[
+<section id="mixing-condition" class="slide level2 smaller">
+<h2>Mixing Condition</h2>
+<div style="font-size:90%">
+<!-- To establish consistency results in high-dimensional stochastic processes, we require a dependence condition weaker than independence. -->
+<ul>
+<li><p><span class="math inline">\(X^{(i:j)}\)</span> denote the sequence of vectors <span class="math inline">\(X^{(i)}, X^{(i+1)}, \ldots, X^{(j)}.\)</span></p></li>
+<li><p><span class="math inline">\(\bf X = \{X^{(i)}\colon -\infty &lt; i &lt; \infty\}\)</span> satisfies a <em>mixing condition</em> with rate <span class="math inline">\(\{\psi(\ell)\}_{\ell \in \mathbb R}\)</span> if <span class="math display">\[\begin{equation*}
+\begin{split}
+  \Bigl| \mathbb P \bigl(X^{(n:(n+k-1))}=x^{(1:k)}\, |\, X^{(1:m)}=x^{(1:m)}&amp;\bigr) - \mathbb P \bigl( X^{(n:(n+k-1))} =x^{(1:k)}\bigr)\Bigr| \\
+  &amp;\leq \psi(n-m) \mathbb P\bigl(X^{(n:(n+k-1))}=x^{(1:k)}\bigr),
+\end{split}
+\end{equation*}\]</span> for <span class="math inline">\(n\geq m+\ell\)</span> and for each <span class="math inline">\(k, m \in \mathbb N\)</span> and each <span class="math inline">\(x^{(1:k)} \in (A^d)^k\)</span>, <span class="math inline">\(x^{(1:m)}\in (A^d)^m\)</span> with <span class="math inline">\(\mathbb P(X^{(1:m)}=x^{(1:m)})&gt;0.\)</span></p></li>
+</ul>
+</div>
+<div class="columns">
+<div class="column" style="width:70%;">
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="03_pesquisa_v2_files/figure-revealjs/unnamed-chunk-2-1.png" class="quarto-figure quarto-figure-center" width="960"></p>
+</figure>
+</div>
+</div>
+</div>
+</div><div class="column" style="width:30%;">
+<p><br> <span class="math display">\[
+|\mathbb P(A|B) - \mathbb P(B) \leq \mathbb P(A)|
+\]</span> <span class="math display">\[
+\qquad \leq \psi(n-m)\mathbb P(A)
+\]</span></p>
+</div></div>
+<!-- Interpretation: -->
+<!-- - dependence fades sufficiently fast as observations become distant in time; -->
+<!-- - guarantees concentration properties for empirical conditional probabilities; -->
+<!-- - allows extending pseudo-likelihood theory beyond i.i.d. or Markov settings. -->
+<!-- This mixing assumption is the key regularity condition enabling   -->
+<!-- the consistency theorem and the theoretical extensions in this project. -->
+</section>
+<section id="empirical-probabilities" class="slide level2 smaller">
+<h2><svg aria-hidden="true" role="img" viewbox="0 0 640 512" style="height:1em;width:1.25em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:#004D4D;overflow:visible;position:relative;"><path d="M274.9 34.3c-28.1-28.1-73.7-28.1-101.8 0L34.3 173.1c-28.1 28.1-28.1 73.7 0 101.8L173.1 413.7c28.1 28.1 73.7 28.1 101.8 0L413.7 274.9c28.1-28.1 28.1-73.7 0-101.8L274.9 34.3zM200 224a24 24 0 1 1 48 0 24 24 0 1 1 -48 0zM96 200a24 24 0 1 1 0 48 24 24 0 1 1 0-48zM224 376a24 24 0 1 1 0-48 24 24 0 1 1 0 48zM352 200a24 24 0 1 1 0 48 24 24 0 1 1 0-48zM224 120a24 24 0 1 1 0-48 24 24 0 1 1 0 48zm96 328c0 35.3 28.7 64 64 64H576c35.3 0 64-28.7 64-64V256c0-35.3-28.7-64-64-64H461.7c11.6 36 3.1 77-25.4 105.5L320 413.8V448zM480 328a24 24 0 1 1 0 48 24 24 0 1 1 0-48z"></path></svg> Empirical Probabilities</h2>
+<p><br></p>
+<div class="columns">
+<div class="column" style="width:60%;">
+<p>Given a graph <span class="math inline">\(G=(V,E)\)</span> and <span class="math inline">\(v \in V,\)</span> define <span class="math display">\[G(v) = \big\{u \in V: (u,v) \in E \big\},\]</span> the set of neighbors of <span class="math inline">\(v\)</span> in graph <span class="math inline">\(G.\)</span></p>
+<p><br></p>
+<p>For <span class="math inline">\(v=X_1,\)</span> then <span class="math inline">\(G(v)=\{X_2, X_3\}.\)</span></p>
+</div><div class="column" style="width:30%;">
+<p><img data-src="img/ex1_graph.png" style="width:180.0%"></p>
+</div></div>
+<p><br></p>
+<p>Then <span class="math display">\[\begin{equation*}
+    \widehat\pi(a_v|a_{G(v)})  = \frac{\widehat\pi(a_{\{v\}\cup G(v)})}{\widehat\pi(a_{G(v)})}.
+\end{equation*}\]</span></p>
+</section>
+<section id="penalized-pseudo-likelihood" class="slide level2 smaller">
+<h2>Penalized Pseudo-Likelihood</h2>
+<p>For a candidate graph <span class="math inline">\(G\)</span>: <span class="math display">\[
 \log L(G)
 =
 \sum_{v\in V}
@@ -232,7 +302,7 @@ X_v \perp X_{V\setminus(\{v\}\cup G^*(v))} \mid X_{G^*(v)}.
 N(a_v,a_{G(v)})
 \log \pi(a_v\mid a_{G(v)}).
 \]</span></p>
-<p>Estimamos <span class="math inline">\(\pi\)</span> empiricamente: <span class="math display">\[
+<p>We estimate <span class="math inline">\(\pi\)</span> empirically: <span class="math display">\[
 \log \widehat L(G)
 =
 \sum_{v\in V}
@@ -240,143 +310,176 @@ N(a_v,a_{G(v)})
 N(a_v,a_{G(v)})\,
 \log \widehat\pi(a_v\mid a_{G(v)}).
 \]</span></p>
-<p>Critério de seleção (Severino &amp; Leonardi, 2025): <span class="math display">\[
+<p>Selection criterion (Severino &amp; Leonardi, 2025): <span class="math display">\[
 \widehat G = \arg\max_G
 \big\{\log\widehat L(G) - \lambda_n \sum_{v\in V}|A|^{|G(v)|}\big\}.
 \]</span></p>
 </section>
-<section id="teorema-de-consistência" class="slide level2 smaller">
-<h2>Teorema de consistência</h2>
-<p><strong>Teorema (Severino, SPA 2025)</strong><br>
-Se o processo satisfaz mistura polinomial, <span class="math display">\[
-\psi(\ell)=O(1/\ell^{1+\epsilon}),
-\]</span> então, para <span class="math inline">\(\lambda_n = c \log n\)</span>, <span class="math display">\[
-\widehat G \to G^*
-\quad\text{eventualmente quase certamente}.
-\]</span></p>
-<p>Este resultado fornece a base teórica para as extensões propostas neste projeto.</p>
+<section id="consistency-theorem" class="slide level2 smaller">
+<h2>Consistency Theorem</h2>
+<!-- `<svg aria-hidden="true" role="img" viewBox="0 0 576 512" style="height:1em;width:1.12em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:#004D4D;overflow:visible;position:relative;"><path d="M0 80C0 53.5 21.5 32 48 32h96c26.5 0 48 21.5 48 48V96H384V80c0-26.5 21.5-48 48-48h96c26.5 0 48 21.5 48 48v96c0 26.5-21.5 48-48 48H432c-26.5 0-48-21.5-48-48V160H192v16c0 1.7-.1 3.4-.3 5L272 288h96c26.5 0 48 21.5 48 48v96c0 26.5-21.5 48-48 48H272c-26.5 0-48-21.5-48-48V336c0-1.7 .1-3.4 .3-5L144 224H48c-26.5 0-48-21.5-48-48V80z"/></svg>`{=html} -->
+<!-- **Theorem (Severino, SPA 2025)**   -->
+<!-- If the process satisfies polynomial mixing, -->
+<!-- $$ -->
+<!-- \psi(\ell)=O(1/\ell^{1+\epsilon}), -->
+<!-- $$ -->
+<!-- then for $\lambda_n = c \log n$, -->
+<!-- $$ -->
+<!-- \widehat G \to G^* -->
+<!-- \quad\text{eventually almost surely}. -->
+<!-- $$ -->
+<!-- This result provides the theoretical foundation for the extensions proposed in this project. -->
+<!-- ## `<svg aria-hidden="true" role="img" viewBox="0 0 576 512" style="height:1em;width:1.12em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:#004D4D;overflow:visible;position:relative;"><path d="M0 80C0 53.5 21.5 32 48 32h96c26.5 0 48 21.5 48 48V96H384V80c0-26.5 21.5-48 48-48h96c26.5 0 48 21.5 48 48v96c0 26.5-21.5 48-48 48H432c-26.5 0-48-21.5-48-48V160H192v16c0 1.7-.1 3.4-.3 5L272 288h96c26.5 0 48 21.5 48 48v96c0 26.5-21.5 48-48 48H272c-26.5 0-48-21.5-48-48V336c0-1.7 .1-3.4 .3-5L144 224H48c-26.5 0-48-21.5-48-48V80z"/></svg>`{=html} Graph Estimator Consistency  -->
+<p><strong>Theorem (Severino &amp; Leonardi, 2025, Stochastic Processes and their Applications):</strong></p>
+<p>Let <span class="math inline">\(\{X^{(i)}: i \in \mathbb{N}\}\)</span> be a stationary process that satisfies the mixing condition presented before with rate <span class="math inline">\(\psi(\ell) = O(1/\ell^{1+\epsilon})\)</span> for some <span class="math inline">\(\epsilon&gt;0.\)</span></p>
+<p>Then, by taking <span class="math inline">\(\lambda_n = c \log n,\)</span> for <span class="math inline">\(c&gt;0,\)</span> we have that <span class="math display">\[\begin{equation*}
+  \widehat G = \underset{G}{\arg\max}\Big\{\log \widehat L(G) - \lambda_n \sum_{v \in V} |A|^{|G(v)|}\Big\}
+\end{equation*}\]</span> satisfies <span class="math inline">\(\widehat G=G^*\)</span> eventually almost surely as <span class="math inline">\(n\to \infty.\)</span></p>
 </section></section>
 <section>
-<section id="proposta-1" class="title-slide slide level1 center">
-<h1>Proposta 1</h1>
+<section id="proposal-1" class="title-slide slide level1 center">
+<h1>Proposal 1</h1>
 
 </section>
-<section id="model-selection-em-mrfs-com-vértices-infinitos-enumeráveis" class="slide level2 smaller">
-<h2>Model selection em MRFs com vértices infinitos enumeráveis</h2>
-<p>Motivação:</p>
+<section id="model-selection-for-mrfs-with-countably-infinite-vertex-sets-under-mixing-condition" class="slide level2 smaller">
+<h2><span class="small-title">Model Selection for MRFs with Countably Infinite Vertex Sets under Mixing Condition <span></span></span></h2>
+<p><strong>Motivation</strong>:</p>
 <ul>
-<li>Redes massivas (sociais, biológicas, IoT),</li>
-<li>Estruturas onde <span class="math inline">\(|V| = \infty\)</span> e cresce com a amostra,</li>
-<li>Métodos finitos não se generalizam automaticamente.</li>
+<li>Massive networks (social, biological, IoT),</li>
+<li>Structures where <span class="math inline">\(|V| = \infty\)</span> and grows with the sample,</li>
+<li>Finite-vertex methods do not generalize automatically.</li>
 </ul>
-<p>Objetivo:</p>
+<p><strong>Existing methods</strong></p>
 <ul>
-<li>Generalizar a teoria de pseudo-verossimilhança penalizada para <span class="math display">\[
-V = \{1,2,\dots\}, \qquad V_n\uparrow V.
-\]</span></li>
+<li><strong>Leonardi et al.&nbsp;(2023)</strong>: Penalized pseudo-likelihood for discrete MRFs. Graph estimated based on local neighborhood estimation.</li>
+<li><strong>Severino &amp; Leonardi (2025)</strong>: Developed theoretical results for global estimation of discrete MRFs over finite graphs.</li>
 </ul>
-<p>Questões centrais:</p>
+<p><strong>Objective</strong>:</p>
 <ul>
-<li>controle do erro ao restringir a (V_n),</li>
-<li>limites de consistência para estimadores globais,</li>
-<li>modificação da teoria de typicality para vértices infinitos.</li>
+<li>Extend the penalized pseudo-likelihood framework to <span class="math inline">\(V = \{1,2,\dots\}.\)</span></li>
 </ul>
 </section>
-<section id="proposta-1-avanços-esperados" class="slide level2 smaller">
-<h2>Proposta 1 – avanços esperados</h2>
-<p>Desenvolvimentos teóricos:</p>
+<section id="proposal-1-main-questions" class="slide level2">
+<h2>Proposal 1 – Main questions:</h2>
 <ul>
-<li>versão infinita dos resultados de consistência do caso finito,</li>
-<li>condições de regularidade para limites (V_n),</li>
-<li>controle da complexidade do espaço de modelos.</li>
+<li>error control when restricting to <span class="math inline">\(V_n\)</span>,</li>
+<li>consistency limits for global estimators,</li>
+<li>adaptation of typicality arguments to infinite vertex sets.</li>
 </ul>
-<p>Algoritmos:</p>
+</section>
+<section id="proposal-1-expected-advances" class="slide level2 smaller">
+<h2>Proposal 1 – Expected Advances</h2>
+<p><strong>Proposed estimation framework</strong>:</p>
 <ul>
-<li>implementação em R,</li>
-<li>simulações em redes sintéticas grandes.</li>
+<li>Let <span class="math inline">\(V\)</span> be infinite and <span class="math inline">\({V_n}, {n \in \mathbb{N}}\)</span> be a sequence of finite subsets of <span class="math inline">\(V\)</span>.</li>
+<li>Assume <span class="math inline">\(V_n \uparrow V\)</span> as <span class="math inline">\(n \to \infty\)</span>.</li>
+<li>Sample: <span class="math inline">\(\{\mathbf{X} = \{X_v: v \in V_n\}\}\)</span>, assuming that <span class="math inline">\({\mathrm{ne}(v)}\)</span> is finite.</li>
+<li>Adaptation of key theorems to handle countably infinite vertex sets.</li>
+<li>Regularity conditions for limits <span class="math inline">\(V_n\)</span>,</li>
+<li>Complexity control of the model space.</li>
 </ul>
-<p>Aplicações:</p>
+<p>Algorithms:</p>
 <ul>
-<li>redes sociais,</li>
-<li>neurociência (mapeamento de grandes redes neurais),</li>
-<li>sistemas de sensores.</li>
+<li>implementation in R or Python,</li>
+<li>simulations on large synthetic networks.</li>
+</ul>
+<p>Applications: <!-- TODO: COMPLETAR AQUI --></p>
+<ul>
+<li>social networks,</li>
+<li>neuroscience (large neural connectivity),</li>
+<li>sensor systems.</li>
 </ul>
 </section></section>
 <section>
-<section id="proposta-2" class="title-slide slide level1 center">
-<h1>Proposta 2</h1>
+<section id="proposal-2" class="title-slide slide level1 center">
+<h1>Proposal 2</h1>
 
 </section>
-<section id="model-selection-para-mrfs-contínuos-sob-mistura" class="slide level2 smaller">
-<h2>Model selection para MRFs <strong>contínuos</strong> sob mistura</h2>
-<p>Limitações do estado da arte:</p>
+<section id="model-selection-for-continuous-mrfs-under-mixing" class="slide level2 smaller">
+<h2>Model Selection for <strong>Continuous</strong> MRFs under Mixing</h2>
+<p>Current limitations:</p>
 <ul>
-<li>pseudo-verossimilhança tradicional é para alfabetos finitos,</li>
-<li>discretização gera perda de informação.</li>
+<li>classical pseudo-likelihood is defined for finite alphabets,</li>
+<li>discretization leads to information loss.</li>
 </ul>
-<p>Objetivo:</p>
+<p>Objective:</p>
 <ul>
-<li>desenvolver um estimador consistente <strong>sem discretização</strong>.</li>
+<li>develop a consistent estimator <strong>without discretization</strong>.</li>
 </ul>
-<p>Desafios:</p>
+<p>Challenges:</p>
 <ul>
-<li>substituição de somatórios por integrais,</li>
-<li>definição de vizinhança em densidades condicionais,</li>
-<li>adaptação das provas de consistência para o caso contínuo.</li>
+<li>replacing summations with integrals,</li>
+<li>defining neighborhood structure in conditional densities,</li>
+<li>adapting consistency proofs to the continuous setting.</li>
 </ul>
 </section>
-<section id="proposta-2-impactos" class="slide level2 smaller">
-<h2>Proposta 2 – impactos</h2>
-<p>Benefícios:</p>
+<section id="proposal-2-impact" class="slide level2 smaller">
+<h2>Proposal 2 – Impact</h2>
+<p>Benefits:</p>
 <ul>
-<li>maior precisão inferencial,</li>
-<li>eliminação de discretização,</li>
-<li>aplicabilidade a finanças, hidrologia, neurociência e bioinformática.</li>
+<li>higher inferential precision,</li>
+<li>no discretization required,</li>
+<li>applicability to finance, hydrology, neuroscience, and bioinformatics.</li>
 </ul>
-<p>Resultados esperados:</p>
+<p>Expected results:</p>
 <ul>
-<li>teoremas análogos ao caso discreto,</li>
-<li>algoritmo escalável,</li>
-<li>pacote em R.</li>
+<li>consistency theorems analogous to the discrete case,</li>
+<li>scalable algorithm,</li>
+<li>R or Python package.</li>
 </ul>
 </section></section>
 <section>
-<section id="integração-final" class="title-slide slide level1 smaller center">
-<h1>Integração final</h1>
-<p>Objetivo de médio prazo: <span class="math display">\[
-\text{MRFs contínuos} + \text{vértices infinitos} + \text{mistura}.
+<section id="final-integration" class="title-slide slide level1 smaller center">
+<h1>Final Integration</h1>
+<p>Medium-term goal: <span class="math display">\[
+\text{Continuous MRFs} + \text{Infinite Vertex Sets} + \text{Mixing}.
 \]</span></p>
-<p>Entrega:</p>
+<p>Deliverables:</p>
 <ul>
-<li>arcabouço teórico unificado,</li>
-<li>algoritmos consistentes para sistemas realmente de grande escala,</li>
-<li>framework geral para dados reais complexos.</li>
+<li>unified theoretical framework,</li>
+<li>consistent algorithms for genuinely large-scale systems,</li>
+<li>general framework for complex real-world data.</li>
+</ul>
+</section>
+<section id="viability" class="slide level2 smaller">
+<h2>Viability</h2>
+<p><strong>Resources</strong>:</p>
+<ul>
+<li>consolidated background in MRFs, mixing processes, and asymptotic theory,</li>
+</ul>
+<!-- - previous experience with international publications, -->
+<ul>
+<li><p>access to computational infrastructure at IME-USP (low budget project),</p></li>
+<li><p>a collaborative research environment (Neuromat, UFRJ, UFRN, UBA).</p></li>
+</ul>
+<p><strong>Expected output</strong>:</p>
+<ul>
+<li><p>two international journal articles,</p></li>
+<li><p>two R or Python packages,</p></li>
+<li><p>presentations at scientific conferences.</p></li>
 </ul>
 </section>
 <section id="timeline" class="slide level2 smaller">
-<h2><svg aria-hidden="true" role="img" viewbox="0 0 640 512" style="height:1em;width:1.25em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:#002060;overflow:visible;position:relative;"><path d="M128 72a24 24 0 1 1 0 48 24 24 0 1 1 0-48zm32 97.3c28.3-12.3 48-40.5 48-73.3c0-44.2-35.8-80-80-80S48 51.8 48 96c0 32.8 19.7 61 48 73.3V224H32c-17.7 0-32 14.3-32 32s14.3 32 32 32H288v54.7c-28.3 12.3-48 40.5-48 73.3c0 44.2 35.8 80 80 80s80-35.8 80-80c0-32.8-19.7-61-48-73.3V288H608c17.7 0 32-14.3 32-32s-14.3-32-32-32H544V169.3c28.3-12.3 48-40.5 48-73.3c0-44.2-35.8-80-80-80s-80 35.8-80 80c0 32.8 19.7 61 48 73.3V224H160V169.3zM488 96a24 24 0 1 1 48 0 24 24 0 1 1 -48 0zM320 392a24 24 0 1 1 0 48 24 24 0 1 1 0-48z"></path></svg> Timeline</h2>
+<h2><svg aria-hidden="true" role="img" viewbox="0 0 640 512" style="height:1em;width:1.25em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:#004D4D;overflow:visible;position:relative;"><path d="M128 72a24 24 0 1 1 0 48 24 24 0 1 1 0-48zm32 97.3c28.3-12.3 48-40.5 48-73.3c0-44.2-35.8-80-80-80S48 51.8 48 96c0 32.8 19.7 61 48 73.3V224H32c-17.7 0-32 14.3-32 32s14.3 32 32 32H288v54.7c-28.3 12.3-48 40.5-48 73.3c0 44.2 35.8 80 80 80s80-35.8 80-80c0-32.8-19.7-61-48-73.3V288H608c17.7 0 32-14.3 32-32s-14.3-32-32-32H544V169.3c28.3-12.3 48-40.5 48-73.3c0-44.2-35.8-80-80-80s-80 35.8-80 80c0 32.8 19.7 61 48 73.3V224H160V169.3zM488 96a24 24 0 1 1 48 0 24 24 0 1 1 -48 0zM320 392a24 24 0 1 1 0 48 24 24 0 1 1 0-48z"></path></svg> Timeline</h2>
 
+<!-- ## `<svg aria-hidden="true" role="img" viewBox="0 0 320 512" style="height:1em;width:0.62em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:#004D4D;overflow:visible;position:relative;"><path d="M160 0c17.7 0 32 14.3 32 32V67.7c1.6 .2 3.1 .4 4.7 .7c.4 .1 .7 .1 1.1 .2l48 8.8c17.4 3.2 28.9 19.9 25.7 37.2s-19.9 28.9-37.2 25.7l-47.5-8.7c-31.3-4.6-58.9-1.5-78.3 6.2s-27.2 18.3-29 28.1c-2 10.7-.5 16.7 1.2 20.4c1.8 3.9 5.5 8.3 12.8 13.2c16.3 10.7 41.3 17.7 73.7 26.3l2.9 .8c28.6 7.6 63.6 16.8 89.6 33.8c14.2 9.3 27.6 21.9 35.9 39.5c8.5 17.9 10.3 37.9 6.4 59.2c-6.9 38-33.1 63.4-65.6 76.7c-13.7 5.6-28.6 9.2-44.4 11V480c0 17.7-14.3 32-32 32s-32-14.3-32-32V445.1c-.4-.1-.9-.1-1.3-.2l-.2 0 0 0c-24.4-3.8-64.5-14.3-91.5-26.3c-16.1-7.2-23.4-26.1-16.2-42.2s26.1-23.4 42.2-16.2c20.9 9.3 55.3 18.5 75.2 21.6c31.9 4.7 58.2 2 76-5.3c16.9-6.9 24.6-16.9 26.8-28.9c1.9-10.6 .4-16.7-1.3-20.4c-1.9-4-5.6-8.4-13-13.3c-16.4-10.7-41.5-17.7-74-26.3l-2.8-.7 0 0C119.4 279.3 84.4 270 58.4 253c-14.2-9.3-27.5-22-35.8-39.6c-8.4-17.9-10.1-37.9-6.1-59.2C23.7 116 52.3 91.2 84.8 78.3c13.3-5.3 27.9-8.9 43.2-11V32c0-17.7 14.3-32 32-32z"/></svg>`{=html} Budget {.smaller} -->
+<!-- <br> -->
+<!-- ::: {style="font-size: 120%;"} -->
+<!-- - **Minimal** financial costs. -->
+<!-- - Theoretical development **does not require additional resources**. -->
+<!-- - Simulation and real data analysis will rely on existing computing facilities **available at the department**. -->
+<!-- - Expected expenses: participation in international scientific conferences. -->
+<!-- ::: -->
 <img data-src="img/gantt_chart.png" class="r-stretch"></section>
-<section id="budget" class="slide level2 smaller">
-<h2><svg aria-hidden="true" role="img" viewbox="0 0 320 512" style="height:1em;width:0.62em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:#002060;overflow:visible;position:relative;"><path d="M160 0c17.7 0 32 14.3 32 32V67.7c1.6 .2 3.1 .4 4.7 .7c.4 .1 .7 .1 1.1 .2l48 8.8c17.4 3.2 28.9 19.9 25.7 37.2s-19.9 28.9-37.2 25.7l-47.5-8.7c-31.3-4.6-58.9-1.5-78.3 6.2s-27.2 18.3-29 28.1c-2 10.7-.5 16.7 1.2 20.4c1.8 3.9 5.5 8.3 12.8 13.2c16.3 10.7 41.3 17.7 73.7 26.3l2.9 .8c28.6 7.6 63.6 16.8 89.6 33.8c14.2 9.3 27.6 21.9 35.9 39.5c8.5 17.9 10.3 37.9 6.4 59.2c-6.9 38-33.1 63.4-65.6 76.7c-13.7 5.6-28.6 9.2-44.4 11V480c0 17.7-14.3 32-32 32s-32-14.3-32-32V445.1c-.4-.1-.9-.1-1.3-.2l-.2 0 0 0c-24.4-3.8-64.5-14.3-91.5-26.3c-16.1-7.2-23.4-26.1-16.2-42.2s26.1-23.4 42.2-16.2c20.9 9.3 55.3 18.5 75.2 21.6c31.9 4.7 58.2 2 76-5.3c16.9-6.9 24.6-16.9 26.8-28.9c1.9-10.6 .4-16.7-1.3-20.4c-1.9-4-5.6-8.4-13-13.3c-16.4-10.7-41.5-17.7-74-26.3l-2.8-.7 0 0C119.4 279.3 84.4 270 58.4 253c-14.2-9.3-27.5-22-35.8-39.6c-8.4-17.9-10.1-37.9-6.1-59.2C23.7 116 52.3 91.2 84.8 78.3c13.3-5.3 27.9-8.9 43.2-11V32c0-17.7 14.3-32 32-32z"></path></svg> Budget</h2>
-<p><br></p>
-<div style="font-size: 120%;">
-<ul>
-<li><p><strong>Minimal</strong> financial costs.</p></li>
-<li><p>Theoretical development <strong>does not require</strong> any additional resources.</p></li>
-<li><p>Simulation and real data application of the developed algorithms will be conducted using existing computer server <strong>resources at the department</strong>.</p></li>
-<li><p>Anticipated expenses: presenting the research at international scientific conferences.</p></li>
-</ul>
-</div>
-</section>
 <section id="references" class="slide level2">
-<h2><svg aria-hidden="true" role="img" viewbox="0 0 384 512" style="height:1em;width:0.75em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:#002060;overflow:visible;position:relative;"><path d="M0 48C0 21.5 21.5 0 48 0l0 48V441.4l130.1-92.9c8.3-6 19.6-6 27.9 0L336 441.4V48H48V0H336c26.5 0 48 21.5 48 48V488c0 9-5 17.2-13 21.3s-17.6 3.4-24.9-1.8L192 397.5 37.9 507.5c-7.3 5.2-16.9 5.9-24.9 1.8S0 497 0 488V48z"></path></svg> References</h2>
-<div style="font-size: 100%">
-<!-- - **Severino, M. T. F.**, & Leonardi, F. (2025). _Model selection for Markov random fields on graphs under a mixing condition_. Stochastic Processes and their Applications. -->
-<!-- - Leonardi, F., Lopez-Rosenfeld, M., Rodriguez, D., **Severino, M. T. F.**, & Sued, M. (2021). _Independent block identification in multivariate time series_. Journal of Time Series Analysis. -->
-<!-- - Leonardi, F., Carvalho, R., & Frondana, I. (2023). _Structure recovery for partially observed discrete Markov random fields on graphs under not necessarily positive distributions_. Scandinavian Journal of Statistics. -->
-<!-- - Lauritzen, S. L. (1996). _Graphical models (Vol. 17)_. Clarendon Press. -->
-<!-- - Oodaira, H., & Yoshihara, K. I. (1971). _The law of the iterated logarithm for stationary processes satisfying mixing conditions_. Kodai Mathematical Seminar Reports. -->
+<h2><svg aria-hidden="true" role="img" viewbox="0 0 384 512" style="height:1em;width:0.75em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:#004D4D;overflow:visible;position:relative;"><path d="M0 48C0 21.5 21.5 0 48 0l0 48V441.4l130.1-92.9c8.3-6 19.6-6 27.9 0L336 441.4V48H48V0H336c26.5 0 48 21.5 48 48V488c0 9-5 17.2-13 21.3s-17.6 3.4-24.9-1.8L192 397.5 37.9 507.5c-7.3 5.2-16.9 5.9-24.9 1.8S0 497 0 488V48z"></path></svg> References</h2>
+<div style="font-size: 80%">
+<!-- TODO: inserir mais referencias -->
+<ul>
+<li><p><strong>Severino, M. T. F.</strong>, &amp; Leonardi, F. (2025). <em>Model selection for Markov random fields on graphs under a mixing condition</em>. Stochastic Processes and their Applications.</p></li>
+<li><p>Leonardi, F., Carvalho, R., &amp; Frondana, I. (2023). <em>Structure recovery for partially observed discrete Markov random fields on graphs under not necessarily positive distributions</em>. Scandinavian Journal of Statistics.</p></li>
+<li><p>Oodaira, H., &amp; Yoshihara, K. I. (1971). <em>The law of the iterated logarithm for stationary processes satisfying mixing conditions</em>. Kodai Mathematical Seminar Reports.</p></li>
+</ul>
 </div>
 
 

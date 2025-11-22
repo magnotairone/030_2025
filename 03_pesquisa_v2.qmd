@@ -1,0 +1,550 @@
+---
+title: " Projeto de Pesquisa"
+subtitle: "<br> Unsupervised Learning of Graph Structures: Inference and Model Selection for High-Dimensional Stochastic Processes"
+author: "<p style='font-size: 70%;'> Área: 1.a. Aprendizagem Estatística e Ciência de Dados <br> Área correlata: 1.c. Estatística Computacional</p> <br> <b> Magno T. F. Severino </b>"
+format:
+  revealjs:
+    theme: simple
+    transition: fade
+    slide-number: true
+    fontawesome: true
+    css: style_pesquisa.css
+    footer: "Magno T. F. Severino | Concurso ATAc-030/2025"
+lang: en
+engine: knitr
+---
+
+```{r}
+cor = "#004D4D"
+```
+
+## Agenda {.r-fit-text}
+
+::: {style="font-size:150%"}
+
+- Introduction
+
+- Theorethical Background
+
+- Research Proposal
+
+- Viability
+
+:::
+
+## Motivation 
+
+::: {style="font-size:70%"}
+
+Modern dependence analysis involves:
+
+- high dimensionality,
+- temporal dependence,
+- continuous data,
+- complex structures.
+:::
+
+. . .
+
+::: {style="font-size:70%"}
+
+These challenges arise naturally in modern data science problems, including multivariate time series, sensor networks, neurodata, and large-scale systems where statistical models must remain both theoretically sound and computationally scalable.
+
+:::
+
+. . . 
+
+::: {style="font-size:70%"}
+
+Probabilistic graphical models (MRFs) are a natural tool for representing such dependencies.
+
+:::
+
+. . .
+
+::: {style="font-size:70%"}
+**Challenge**: existing methods mostly address:
+
+- discrete data,
+- a finite number of vertices,
+- independence or weak dependence structures.
+:::
+
+
+## Recent Work {.smaller}
+
+:::: {.columns}
+::: {.column width="10%"}
+<span style="font-size:240%;">📄</span>
+:::
+
+::: {.column width="90%"}
+<span style="font-size:80%;">
+**Model selection for Markov random fields on graphs under a mixing condition**  
+*Stochastic Processes and their Applications*, 2025.  
+**Severino, M. T. F.**, & Leonardi, F.  
+</span>
+:::
+::::
+
+. . .
+
+Advances:
+
+- global criterion based on penalized pseudo-likelihood;
+- consistency theorem under a mixing condition;
+- applications to discrete multivariate processes.
+
+. . .
+
+Limitations:
+
+- restriction to the **finite** vertex case,
+- **discrete** variables.
+
+. . .
+
+This project aims to overcome both limitations in **two proposals**.
+
+
+# Background and Definitions
+
+## Vector Processes and the Underlying Graph {.smaller}
+
+Consider the vector-valued process:
+
+$$
+\mathbf{X}^{(i)} = (X_1^{(i)},\dots,X_d^{(i)}), \qquad i\in\mathbb{N}, \quad X_i \in A.
+$$
+
+Assume:
+
+- stationarity,
+- existence of an invariant distribution $\pi$, probability space $\big((A^d)^\mathbb{N}, \mathcal{F}, \mathbb{P}\big),$
+- conditional dependencies described by a graph $G^* = (V, E^*)$.
+
+This graph encodes:
+$$
+X_v \perp X_{V\setminus(\{v\}\cup G^*(v))} \mid X_{G^*(v)}.
+$$
+$G^*(v) = \{u \in V: (u, v) \in E^*\}.$
+
+## Mixing Condition {.smaller}
+
+::: {style="font-size:90%"}
+
+<!-- To establish consistency results in high-dimensional stochastic processes, we require a dependence condition weaker than independence. -->
+
+- $X^{(i:j)}$ denote the sequence of vectors $X^{(i)}, X^{(i+1)}, \ldots, X^{(j)}.$
+
+- $\bf X = \{X^{(i)}\colon -\infty < i < \infty\}$ satisfies a _mixing condition_ with rate $\{\psi(\ell)\}_{\ell \in \mathbb R}$ if 
+\begin{equation*}
+\begin{split}
+    \Bigl| \mathbb P \bigl(X^{(n:(n+k-1))}=x^{(1:k)}\, |\, X^{(1:m)}=x^{(1:m)}&\bigr) - \mathbb P \bigl( X^{(n:(n+k-1))} =x^{(1:k)}\bigr)\Bigr| \\ 
+    &\leq \psi(n-m) \mathbb P\bigl(X^{(n:(n+k-1))}=x^{(1:k)}\bigr),
+\end{split}
+\end{equation*}
+for $n\geq m+\ell$ and for each $k, m \in \mathbb N$ and each $x^{(1:k)} \in (A^d)^k$, $x^{(1:m)}\in (A^d)^m$ with $\mathbb P(X^{(1:m)}=x^{(1:m)})>0.$
+
+:::
+
+
+:::: {.columns}
+
+::: {.column width="70%"}
+
+```{r, engine = 'tikz', fig.align='center'}
+% Created by tikzDevice version 0.12.4 on 2024-04-01 21:32:51
+% !TEX encoding = UTF-8 Unicode
+\begin{tikzpicture}[x=1pt,y=1pt]
+\definecolor{fillColor}{RGB}{255,255,255}
+\path[use as bounding box,fill=fillColor,fill opacity=0.00] (0,0) rectangle (361.35,144.54);
+\begin{scope}
+\path[clip] (  0.00,  0.00) rectangle (361.35,144.54);
+\definecolor{drawColor}{RGB}{255,255,255}
+\definecolor{fillColor}{RGB}{255,255,255}
+
+\path[draw=drawColor,line width= 0.6pt,line join=round,line cap=round,fill=fillColor] (  0.00,  0.00) rectangle (361.35,144.54);
+\end{scope}
+\begin{scope}
+\path[clip] ( 40.82, 37.04) rectangle (355.85,139.04);
+\definecolor{fillColor}{RGB}{255,255,255}
+
+\path[fill=fillColor] ( 40.82, 37.04) rectangle (355.85,139.04);
+\definecolor{drawColor}{RGB}{217,95,2}
+\definecolor{fillColor}{RGB}{217,95,2}
+
+\path[draw=drawColor,line width= 0.6pt,fill=fillColor,fill opacity=0.30] ( 82.82, 41.68) rectangle (145.83,134.40);
+\definecolor{drawColor}{RGB}{27,158,119}
+\definecolor{fillColor}{RGB}{27,158,119}
+
+\path[draw=drawColor,line width= 0.6pt,fill=fillColor,fill opacity=0.30] (271.84, 41.68) rectangle (313.85,134.40);
+
+\node[text=drawColor,anchor=base,inner sep=0pt, outer sep=0pt, scale=  1.10] at (292.84, 84.24) {A};
+\definecolor{drawColor}{RGB}{217,95,2}
+
+\node[text=drawColor,anchor=base,inner sep=0pt, outer sep=0pt, scale=  1.10] at (114.33, 84.24) {B};
+\end{scope}
+\begin{scope}
+\path[clip] (  0.00,  0.00) rectangle (361.35,144.54);
+\definecolor{drawColor}{RGB}{0,0,0}
+
+\path[draw=drawColor,line width= 0.6pt,line join=round] ( 40.82, 37.04) --
+	( 40.82,139.04);
+\end{scope}
+\begin{scope}
+\path[clip] (  0.00,  0.00) rectangle (361.35,144.54);
+\definecolor{drawColor}{gray}{0.30}
+
+\node[text=drawColor,anchor=base east,inner sep=0pt, outer sep=0pt, scale=  1.20] at ( 35.87, 37.55) {$X_1$};
+
+\node[text=drawColor,anchor=base east,inner sep=0pt, outer sep=0pt, scale=  1.20] at ( 35.87, 56.09) {$X_2$};
+
+\node[text=drawColor,anchor=base east,inner sep=0pt, outer sep=0pt, scale=  1.20] at ( 35.87, 74.64) {$X_3$};
+
+\node[text=drawColor,anchor=base east,inner sep=0pt, outer sep=0pt, scale=  1.20] at ( 35.87,130.27) {$X_d$};
+\end{scope}
+\begin{scope}
+\path[clip] (  0.00,  0.00) rectangle (361.35,144.54);
+\definecolor{drawColor}{gray}{0.20}
+
+\path[draw=drawColor,line width= 0.6pt,line join=round] ( 38.07, 41.68) --
+	( 40.82, 41.68);
+
+\path[draw=drawColor,line width= 0.6pt,line join=round] ( 38.07, 60.23) --
+	( 40.82, 60.23);
+
+\path[draw=drawColor,line width= 0.6pt,line join=round] ( 38.07, 78.77) --
+	( 40.82, 78.77);
+
+\path[draw=drawColor,line width= 0.6pt,line join=round] ( 38.07,134.40) --
+	( 40.82,134.40);
+\end{scope}
+\begin{scope}
+\path[clip] (  0.00,  0.00) rectangle (361.35,144.54);
+\definecolor{drawColor}{RGB}{0,0,0}
+
+\path[draw=drawColor,line width= 0.6pt,line join=round] ( 40.82, 37.04) --
+	(355.85, 37.04);
+\definecolor{fillColor}{RGB}{0,0,0}
+
+\path[draw=drawColor,line width= 0.6pt,line join=round,fill=fillColor] (347.19, 32.04) --
+	(355.85, 37.04) --
+	(347.19, 42.04) --
+	cycle;
+\end{scope}
+\begin{scope}
+\path[clip] (  0.00,  0.00) rectangle (361.35,144.54);
+\definecolor{drawColor}{gray}{0.20}
+
+\path[draw=drawColor,line width= 0.6pt,line join=round] ( 82.82, 34.29) --
+	( 82.82, 37.04);
+
+\path[draw=drawColor,line width= 0.6pt,line join=round] (145.83, 34.29) --
+	(145.83, 37.04);
+
+\path[draw=drawColor,line width= 0.6pt,line join=round] (271.84, 34.29) --
+	(271.84, 37.04);
+
+\path[draw=drawColor,line width= 0.6pt,line join=round] (313.85, 34.29) --
+	(313.85, 37.04);
+\end{scope}
+\begin{scope}
+\path[clip] (  0.00,  0.00) rectangle (361.35,144.54);
+\definecolor{drawColor}{gray}{0.30}
+
+\node[text=drawColor,anchor=base,inner sep=0pt, outer sep=0pt, scale=  1.20] at ( 82.82, 23.83) {$1$};
+
+\node[text=drawColor,anchor=base,inner sep=0pt, outer sep=0pt, scale=  1.20] at (145.83, 23.83) {$m$};
+
+\node[text=drawColor,anchor=base,inner sep=0pt, outer sep=0pt, scale=  1.20] at (271.84, 23.83) {$n$};
+
+\node[text=drawColor,anchor=base,inner sep=0pt, outer sep=0pt, scale=  1.20] at (313.85, 23.83) {$n+k-1$};
+\end{scope}
+\begin{scope}
+\path[clip] (  0.00,  0.00) rectangle (361.35,144.54);
+\definecolor{drawColor}{RGB}{0,0,0}
+
+\node[text=drawColor,anchor=base east,inner sep=0pt, outer sep=0pt, scale=  1.50] at (355.85,  8.42) {$t$};
+\end{scope}
+\begin{scope}
+\path[clip] (  0.00,  0.00) rectangle (361.35,144.54);
+\definecolor{drawColor}{RGB}{0,0,0}
+
+\node[text=drawColor,anchor=base east,inner sep=0pt, outer sep=0pt, scale=  1.50] at ( 17.58,128.71) {$V$};
+\end{scope}
+\end{tikzpicture}
+
+```
+
+:::
+
+::: {.column width="30%"}
+<br>
+$$
+|\mathbb P(A|B) - \mathbb P(B) \leq \mathbb P(A)|
+$$
+$$
+\qquad \leq \psi(n-m)\mathbb P(A)
+$$
+:::
+
+::::
+
+<!-- Interpretation: -->
+
+<!-- - dependence fades sufficiently fast as observations become distant in time; -->
+<!-- - guarantees concentration properties for empirical conditional probabilities; -->
+<!-- - allows extending pseudo-likelihood theory beyond i.i.d. or Markov settings. -->
+
+
+<!-- This mixing assumption is the key regularity condition enabling   -->
+<!-- the consistency theorem and the theoretical extensions in this project. -->
+
+
+
+
+## `r fontawesome::fa("dice", cor)` Empirical Probabilities {.smaller}
+
+<br>
+
+:::: {.columns}
+
+::: {.column width="60%"}
+
+Given a graph $G=(V,E)$ and $v \in V,$ define
+$$G(v) = \big\{u \in V: (u,v) \in E \big\},$$
+the set of neighbors of $v$ in graph $G.$
+
+<br>
+
+For $v=X_1,$ then $G(v)=\{X_2, X_3\}.$
+
+:::
+
+
+::: {.column width="30%"}
+![](img/ex1_graph.png){width=180%}
+:::
+
+:::: 
+
+<br>
+
+Then 
+\begin{equation*}
+    \widehat\pi(a_v|a_{G(v)})  = \frac{\widehat\pi(a_{\{v\}\cup G(v)})}{\widehat\pi(a_{G(v)})}.
+\end{equation*}
+
+
+## Penalized Pseudo-Likelihood {.smaller}
+
+For a candidate graph $G$:
+$$
+\log L(G)
+=
+\sum_{v\in V}
+\sum_{a_v}\sum_{a_{G(v)}}
+N(a_v,a_{G(v)})
+\log \pi(a_v\mid a_{G(v)}).
+$$
+
+We estimate $\pi$ empirically:
+$$
+\log \widehat L(G)
+=
+\sum_{v\in V}
+\sum_{a_v}\sum_{a_{G(v)}}
+N(a_v,a_{G(v)})\,
+\log \widehat\pi(a_v\mid a_{G(v)}).
+$$
+
+Selection criterion (Severino & Leonardi, 2025):
+$$
+\widehat G = \arg\max_G
+\big\{\log\widehat L(G) - \lambda_n \sum_{v\in V}|A|^{|G(v)|}\big\}.
+$$
+
+---
+
+## Consistency Theorem {.smaller}
+<!-- `r fontawesome::fa("diagram-project", cor)` -->
+
+<!-- **Theorem (Severino, SPA 2025)**   -->
+<!-- If the process satisfies polynomial mixing, -->
+<!-- $$ -->
+<!-- \psi(\ell)=O(1/\ell^{1+\epsilon}), -->
+<!-- $$ -->
+<!-- then for $\lambda_n = c \log n$, -->
+<!-- $$ -->
+<!-- \widehat G \to G^* -->
+<!-- \quad\text{eventually almost surely}. -->
+<!-- $$ -->
+
+<!-- This result provides the theoretical foundation for the extensions proposed in this project. -->
+
+<!-- ## `r fontawesome::fa("diagram-project", cor)` Graph Estimator Consistency  -->
+**Theorem (Severino & Leonardi, 2025, Stochastic Processes and their Applications):** 
+
+Let $\{X^{(i)}: i \in \mathbb{N}\}$ be a stationary process that satisfies the mixing condition presented before
+with rate $\psi(\ell) = O(1/\ell^{1+\epsilon})$ for some $\epsilon>0.$
+
+
+Then, by taking $\lambda_n = c \log n,$ for $c>0,$ we have that 
+\begin{equation*}
+  \widehat G = \underset{G}{\arg\max}\Big\{\log \widehat L(G) - \lambda_n \sum_{v \in V} |A|^{|G(v)|}\Big\}
+\end{equation*}
+satisfies $\widehat G=G^*$ eventually almost surely as $n\to \infty.$
+
+
+# Proposal 1  
+
+## <span class="small-title">Model Selection for MRFs with Countably Infinite Vertex Sets under Mixing Condition <span> {.smaller}
+
+**Motivation**:
+
+- Massive networks (social, biological, IoT),
+- Structures where $|V| = \infty$ and grows with the sample,
+- Finite-vertex methods do not generalize automatically.
+
+**Existing methods** 
+
+  - **Leonardi et al. (2023)**: Penalized pseudo-likelihood for discrete MRFs. Graph estimated based on local neighborhood estimation.
+  - **Severino & Leonardi (2025)**: Developed theoretical results for global estimation of discrete MRFs over finite graphs.
+
+**Objective**:
+
+- Extend the penalized pseudo-likelihood framework to
+$V = \{1,2,\dots\}.$
+
+## Proposal 1 – Main questions:
+
+- error control when restricting to $V_n$,
+- consistency limits for global estimators,
+- adaptation of typicality arguments to infinite vertex sets.
+
+## Proposal 1 – Expected Advances {.smaller}
+
+**Proposed estimation framework**:  
+
+  - Let $V$ be infinite and ${V_n}, {n \in \mathbb{N}}$ be a sequence of finite subsets of $V$.
+  - Assume $V_n \uparrow V$ as $n \to \infty$.
+  - Sample: $\{\mathbf{X} = \{X_v: v \in V_n\}\}$, assuming that ${\mathrm{ne}(v)}$ is finite.
+  - Adaptation of key theorems to handle countably infinite vertex sets.
+  - Regularity conditions for limits $V_n$,
+  - Complexity control of the model space.
+
+Algorithms:
+
+- implementation in R or Python,
+- simulations on large synthetic networks.
+
+Applications:
+<!-- TODO: COMPLETAR AQUI -->
+
+- social networks,
+- neuroscience (large neural connectivity),
+- sensor systems.
+
+
+# Proposal 2  
+
+## Model Selection for **Continuous** MRFs under Mixing {.smaller}
+
+Current limitations:
+
+- classical pseudo-likelihood is defined for finite alphabets,
+- discretization leads to information loss.
+
+Objective:
+
+- develop a consistent estimator **without discretization**.
+
+Challenges:
+
+- replacing summations with integrals,
+- defining neighborhood structure in conditional densities,
+- adapting consistency proofs to the continuous setting.
+
+## Proposal 2 – Impact {.smaller}
+
+Benefits:
+
+- higher inferential precision,
+- no discretization required,
+- applicability to finance, hydrology, neuroscience, and bioinformatics.
+
+Expected results:
+
+- consistency theorems analogous to the discrete case,
+- scalable algorithm,
+- R or Python package.
+
+
+# Final Integration {.smaller}
+
+Medium-term goal:
+$$
+\text{Continuous MRFs} + \text{Infinite Vertex Sets} + \text{Mixing}.
+$$
+
+Deliverables:
+
+- unified theoretical framework,
+- consistent algorithms for genuinely large-scale systems,
+- general framework for complex real-world data.
+
+## Viability {.smaller}
+
+**Resources**:
+
+- consolidated background in MRFs, mixing processes, and asymptotic theory,
+
+<!-- - previous experience with international publications, -->
+
+- access to computational infrastructure at IME-USP (low budget project),
+
+- a collaborative research environment (Neuromat, UFRJ, UFRN, UBA).
+
+**Expected output**:
+
+- two international journal articles,
+
+- two R or Python packages,
+
+- presentations at scientific conferences.
+
+## `r fontawesome::fa("timeline", cor)` Timeline {.smaller}
+
+![](img/gantt_chart.png)
+
+<!-- ## `r fontawesome::fa("dollar", cor)` Budget {.smaller} -->
+
+<!-- <br> -->
+
+<!-- ::: {style="font-size: 120%;"} -->
+
+<!-- - **Minimal** financial costs. -->
+
+<!-- - Theoretical development **does not require additional resources**. -->
+
+<!-- - Simulation and real data analysis will rely on existing computing facilities **available at the department**. -->
+
+<!-- - Expected expenses: participation in international scientific conferences. -->
+
+<!-- ::: -->
+
+
+## `r fontawesome::fa("bookmark", cor)` References 
+
+::: {style="font-size: 80%"}
+
+<!-- TODO: inserir mais referencias -->
+
+- **Severino, M. T. F.**, & Leonardi, F. (2025). _Model selection for Markov random fields on graphs under a mixing condition_. Stochastic Processes and their Applications.
+
+- Leonardi, F., Carvalho, R., & Frondana, I. (2023). _Structure recovery for partially observed discrete Markov random fields on graphs under not necessarily positive distributions_. Scandinavian Journal of Statistics.
+
+- Oodaira, H., & Yoshihara, K. I. (1971). _The law of the iterated logarithm for stationary processes satisfying mixing conditions_. Kodai Mathematical Seminar Reports.
+
+:::
