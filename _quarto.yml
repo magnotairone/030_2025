@@ -8,12 +8,6 @@ website:
     left:
       - href: index.qmd
         text: Início
-      - href: 01_aula.qmd
-        text: "Prova Didática"
-      - href: 02_memorial.qmd
-        text: "Memorial Circunstaciado"
-      - href: 03_pesquisa.qmd
-        text: "Projeto de Pesquisa"
 
 format:
   html:

@@ -5,3 +5,11 @@ title: "Material"
 <!-- * [Prova Didática](01_aula.qmd) -->
 <!-- * [Memorial Circunstaciado](02_memorial_v3.qmd) -->
 <!-- * [Projeto de Pesquisa](03_pesquisa_v2.qmd) -->
+
+<!-- _quarto.yml -->
+      <!-- - href: 01_aula.qmd -->
+      <!--   text: "Prova Didática" -->
+      <!-- - href: 02_memorial.qmd -->
+      <!--   text: "Memorial Circunstaciado" -->
+      <!-- - href: 03_pesquisa.qmd -->
+      <!--   text: "Projeto de Pesquisa" -->
