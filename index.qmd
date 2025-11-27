@@ -2,6 +2,6 @@
 title: "Material"
 ---
 
-* [Prova Didática](01_aula.qmd)
-* [Memorial Circunstaciado](02_memorial_v3.qmd)
-* [Projeto de Pesquisa](03_pesquisa_v2.qmd)
+<!-- * [Prova Didática](01_aula.qmd) -->
+<!-- * [Memorial Circunstaciado](02_memorial_v3.qmd) -->
+<!-- * [Projeto de Pesquisa](03_pesquisa_v2.qmd) -->
