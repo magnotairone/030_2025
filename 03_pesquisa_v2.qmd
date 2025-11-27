@@ -20,7 +20,7 @@ cor = "#004D4D"
 
 ## Agenda {.r-fit-text}
 
-::: {style="font-size:150%"}
+::: {style="font-size:120%"}
 
 - Introduction
 
@@ -79,7 +79,7 @@ Probabilistic graphical models (MRFs) are a natural tool for representing such d
 :::
 
 ::: {.column width="90%"}
-<span style="font-size:80%;">
+<span style="font-size:100%;">
 **Model selection for Markov random fields on graphs under a mixing condition**  
 *Stochastic Processes and their Applications*, 2025.  
 **Severino, M. T. F.**, & Leonardi, F.  
@@ -539,11 +539,13 @@ Deliverables:
 
 ::: {style="font-size: 80%"}
 
-<!-- TODO: inserir mais referencias -->
-
 - **Severino, M. T. F.**, & Leonardi, F. (2025). _Model selection for Markov random fields on graphs under a mixing condition_. Stochastic Processes and their Applications.
 
+- Leonardi, F., Lopez-Rosenfeld, M., Rodriguez, D., **Severino, M. T. F. S.**, & Sued, M. (2021). _Independent block identification in multivariate time series_. Journal of Time Series Analysis.
+
 - Leonardi, F., Carvalho, R., & Frondana, I. (2023). _Structure recovery for partially observed discrete Markov random fields on graphs under not necessarily positive distributions_. Scandinavian Journal of Statistics.
+
+- Lauritzen, S. L. (1098). _Graphical models_. Claredon Press.
 
 - Oodaira, H., & Yoshihara, K. I. (1971). _The law of the iterated logarithm for stationary processes satisfying mixing conditions_. Kodai Mathematical Seminar Reports.
 

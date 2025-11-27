@@ -767,7 +767,7 @@
     "href": "03_pesquisa_v2.html#references",
     "title": "Projeto de Pesquisa",
     "section": " References",
-    "text": "References\n\n\n\nSeverino, M. T. F., & Leonardi, F. (2025). Model selection for Markov random fields on graphs under a mixing condition. Stochastic Processes and their Applications.\nLeonardi, F., Carvalho, R., & Frondana, I. (2023). Structure recovery for partially observed discrete Markov random fields on graphs under not necessarily positive distributions. Scandinavian Journal of Statistics.\nOodaira, H., & Yoshihara, K. I. (1971). The law of the iterated logarithm for stationary processes satisfying mixing conditions. Kodai Mathematical Seminar Reports."
+    "text": "References\n\n\nSeverino, M. T. F., & Leonardi, F. (2025). Model selection for Markov random fields on graphs under a mixing condition. Stochastic Processes and their Applications.\nLeonardi, F., Lopez-Rosenfeld, M., Rodriguez, D., Severino, M. T. F. S., & Sued, M. (2021). Independent block identification in multivariate time series. Journal of Time Series Analysis.\nLeonardi, F., Carvalho, R., & Frondana, I. (2023). Structure recovery for partially observed discrete Markov random fields on graphs under not necessarily positive distributions. Scandinavian Journal of Statistics.\nLauritzen, S. L. (1098). Graphical models. Claredon Press.\nOodaira, H., & Yoshihara, K. I. (1971). The law of the iterated logarithm for stationary processes satisfying mixing conditions. Kodai Mathematical Seminar Reports."
   },
   {
     "objectID": "03_pesquisa_v2.html#mixing-conditions",
