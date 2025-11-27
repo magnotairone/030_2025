@@ -1,5 +1,12 @@
 [
   {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Material",
+    "section": "",
+    "text": "&lt;!-- - href: 01_aula.qmd --&gt;\n  &lt;!--   text: \"Prova Didática\" --&gt;\n  &lt;!-- - href: 02_memorial.qmd --&gt;\n  &lt;!--   text: \"Memorial Circunstaciado\" --&gt;\n  &lt;!-- - href: 03_pesquisa.qmd --&gt;\n  &lt;!--   text: \"Projeto de Pesquisa\" --&gt;"
+  },
+  {
     "objectID": "03_pesquisa.html#motivação",
     "href": "03_pesquisa.html#motivação",
     "title": "Projeto de Pesquisa",
