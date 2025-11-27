@@ -62,7 +62,8 @@
 }
 
 .reveal h1, 
-.reveal h2 {
+.reveal h2,
+.reveal h3,{
   color: #004D4D;
 }
 

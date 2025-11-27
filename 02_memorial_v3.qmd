@@ -6,7 +6,7 @@ format:
   revealjs:
     theme: simple
     transition: fade
-    slide-number: true
+    slide-number: false
     # incremental: true
     fontawesome: true
     css: styles.css
@@ -31,12 +31,13 @@ Primeira geração da família a ingressar na Universidade — e também o prime
 ![](img/intersec.png){width="50%" fig-align="center"}
 </div>
 
-## F Ensino Médio Técnico: Informática Industrial
-![](images/ensino_medio.jpg)
+## Ensino Médio Técnico: Informática Industrial
 
 - Centro Federal de Educação Tecnológica de Minas Gerais (CEFET-MG), 2008-2010
 
 - Programação em C/C++, algoritmos, redes de computadores, eletrônica digital
+
+<!-- ![](images/ensino_medio.jpg) -->
 
 ## Graduação: Matemática Computacional {.smaller}
 
@@ -51,6 +52,8 @@ Primeira geração da família a ingressar na Universidade — e também o prime
 
 - Iniciação Científica: métodos numéricos para busca de autovalores e autovetores (C++)
 
+- Intercâmbio: Queen Mary University of London (2013-2014)
+
 :::
 
 ::: {.column width="50%"}
@@ -62,17 +65,17 @@ Primeira geração da família a ingressar na Universidade — e também o prime
 ::::
 
 
-## F Intercâmbio: Queen Mary University of London {.smaller}  
+<!-- ## Intercâmbio: Queen Mary University of London {.smaller}   -->
 
-<!-- incluir imagem -->
+<!-- <!-- incluir imagem -->
 
-- Período: 2013-2024 (12 meses)
+<!-- - Período: 2013-2024 (12 meses) -->
 
-- Cursos em matemática, estatística, probabilidade e métodos computacionais
+<!-- - Cursos em matemática, estatística, probabilidade e métodos computacionais -->
 
-- Primeira experiência em ambiente acadêmico internacional
+<!-- - Primeira experiência em ambiente acadêmico internacional -->
 
-- Ampliação das competências em comunicação científica e colaboração
+<!-- - Ampliação das competências em comunicação científica e colaboração -->
 
 ## Mestrado: Estatística {.smaller}
 
@@ -146,7 +149,6 @@ graduação durante 7 semestres
 
 ## Artigos publicados {.smaller}
 
-
 <br style="line-height:0.6;">
 
 :::: {.columns}
@@ -155,7 +157,7 @@ graduação durante 7 semestres
 :::
 
 ::: {.column width="90%"}
-<span style="font-size:80%;">
+<span style="font-size:90%;">
 **Independent block identification in multivariate time series**  
 Leonardi, F., Lopez-Rosenfeld, M., Rodriguez, D., **Severino, M. T. F.**, & Sued, M.  
 *Journal of Time Series Analysis*, 2021.  
@@ -173,7 +175,7 @@ Leonardi, F., Lopez-Rosenfeld, M., Rodriguez, D., **Severino, M. T. F.**, & Sued
 :::
 
 ::: {.column width="90%"}
-<span style="font-size:80%;">
+<span style="font-size:90%;">
 **Model selection for Markov random fields on graphs under a mixing condition**  
 **Severino, M. T. F.**, & Leonardi, F.  
 *Stochastic Processes and their Applications*, 2025.  
@@ -324,28 +326,30 @@ _Tutorial: Modelos de IA Generativa com R e Python_
 <div class="card-grid">
 
 <div class="card">
+  <div class="card-number">7 anos</div>
+  <div class="card-label">como <b>monitor</b> <br> (graduação e pós)</div>
+</div>
+
+<div class="card">
   <div class="card-number">1500+</div>
   <div class="card-label">horas de monitorias</div>
+</div>
+
+
+
+<div class="card">
+  <div class="card-number">1000+</div>
+  <div class="card-label">estudantes ensinados</div>
+</div>
+
+<div class="card">
+  <div class="card-number">5 anos</div>
+  <div class="card-label"><b>docente</b> (graduação e pós)</div>
 </div>
 
 <div class="card">
   <div class="card-number">770 h</div>
   <div class="card-label">de aulas ministradas</div>
-</div>
-
-<div class="card">
-  <div class="card-number">7 anos</div>
-  <div class="card-label">como monitor <br> (graduação e pós)</div>
-</div>
-
-<div class="card">
-  <div class="card-number">5 anos</div>
-  <div class="card-label">docente (graduação e pós)</div>
-</div>
-
-<div class="card">
-  <div class="card-number">1000+</div>
-  <div class="card-label">estudantes ensinados</div>
 </div>
 
 <div class="card">
@@ -460,16 +464,14 @@ _Tutorial: Modelos de IA Generativa com R e Python_
 
 
 
-- Curso de Nivelamento Pré-Cálculo (2012)
+- Curso de Nivelamento Pré-Cálculo (UFMG, 2012)
 
-- Curso de Difusão em Aprendizagem Estatística (2021-
-2022)
-
+- Curso de Difusão em Aprendizagem Estatística (USP, 2021-2022)
 
 - Divulgação Científica: Tendência de Novos Casos de
 Covid-19 (2020) 
 
-![](img/jornal_usp.png)
+![](img/jornal_usp.png){fig-align="center"}
 
 
 
@@ -479,17 +481,19 @@ Covid-19 (2020)
 Mostra impacto real e compromisso social.
 :::
 
-# Experiência profissional {.smaller}
+# Experiência profissional
 
 :::: {.columns}
 ::: {.column width="45%"}
-![](img/btg.jpeg)
+![](img/btg.jpeg){fig-align="center"}
 :::
 
 ::: {.column width="55%"}
-- Precificação de derivativos (BTG Pactual)
-- Modelagem e risco de crédito (Pernambucanas)
-- Ciência de dados financeiros (XP Inc - **atual**)
+
+- **BTG Pactual**: Modelagem de precificação de derivativos
+- **Grupo Pernambucanas**: Modelagem e risco de crédito
+- **XP Inc**: Cientista de dados financeiros (*atual*)
+
 :::
 ::::
 
@@ -516,21 +520,33 @@ Como o mercado te transforma em um pesquisador mais completo.
 
 <span style="font-size:70% !important; line-height:1.05; max-width:92%; margin:0 auto;">
 
-### Curto prazo
-- Disciplinas alinhadas à minha pesquisa  
-- Início de orientações  
-- Projetos aplicados imediatos  
-- Artigos em andamento
+- Pós-doutorado no exterior
 
-### Médio prazo
-- Grupo de pesquisa consolidado  
-- Parcerias acadêmicas e aplicadas  
-- Ferramentas computacionais ampliadas  
+- Interação com grupos de pesquisa de outras universidades (brasileiras e extrangeiras)
 
-### Longo prazo
-- IME como referência em modelagem moderna  
-- Internacionalização e cooperação científica  
-- Formação de pesquisadores independentes  
+- Vincular-me ao programa de pós-graduação em Estatística do IME-USP
+
+- Ministrar disciplinas na graduação e pós-graduação em Estatística 
+
+- Desenvolver projetos de pesquisa teórica e aplicada em modelagem estatística e ciência de dados
+
+- Tornar o departamento uma referencia em ciencia de dados e modelagem estatística moderna
+
+<!-- ### Curto prazo -->
+<!-- - Oferta de disciplinas alinhadas à minha pesquisa   -->
+<!-- - Início de orientações   -->
+<!-- - Projetos aplicados imediatos   -->
+<!-- - Artigos em andamento -->
+
+<!-- ### Médio prazo -->
+<!-- - Grupo de pesquisa consolidado   -->
+<!-- - Parcerias acadêmicas e aplicadas   -->
+<!-- - Ferramentas computacionais ampliadas   -->
+
+<!-- ### Longo prazo -->
+<!-- - IME como referência em modelagem moderna   -->
+<!-- - Internacionalização e cooperação científica   -->
+<!-- - Formação de pesquisadores independentes   -->
 
 </span>
 
