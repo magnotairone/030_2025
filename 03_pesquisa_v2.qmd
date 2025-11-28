@@ -431,16 +431,16 @@ $V = \{1,2,\dots\}.$
   - Assume $V_n \uparrow V$ as $n \to \infty$.
   - Sample: $\{\mathbf{X} = \{X_v: v \in V_n\}\}$, assuming that ${\mathrm{ne}(v)}$ is finite.
   - Adaptation of key theorems to handle countably infinite vertex sets.
-  - Regularity conditions for limits $V_n$,
-  - Complexity control of the model space.
+<!-- - Regularity conditions for limits $V_n$, -->
+<!-- - Complexity control of the model space. -->
 
 Algorithms:
 
 - implementation in R or Python,
 - simulations on large synthetic networks.
 
-Applications:
 <!-- TODO: COMPLETAR AQUI -->
+Applications:
 
 - social networks,
 - neuroscience (large neural connectivity),
@@ -535,9 +535,8 @@ Deliverables:
 <!-- ::: -->
 
 
-## `r fontawesome::fa("bookmark", cor)` References 
+## `r fontawesome::fa("bookmark", cor)` References {.smaller} 
 
-::: {style="font-size: 80%"}
 
 - **Severino, M. T. F.**, & Leonardi, F. (2025). _Model selection for Markov random fields on graphs under a mixing condition_. Stochastic Processes and their Applications.
 
@@ -545,8 +544,6 @@ Deliverables:
 
 - Leonardi, F., Carvalho, R., & Frondana, I. (2023). _Structure recovery for partially observed discrete Markov random fields on graphs under not necessarily positive distributions_. Scandinavian Journal of Statistics.
 
-- Lauritzen, S. L. (1098). _Graphical models_. Claredon Press.
+- Lauritzen, S. L. (1996). _Graphical models_. Claredon Press.
 
 - Oodaira, H., & Yoshihara, K. I. (1971). _The law of the iterated logarithm for stationary processes satisfying mixing conditions_. Kodai Mathematical Seminar Reports.
-
-:::

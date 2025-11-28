@@ -23,9 +23,9 @@ lang: pt-br
 
 <br>
 
-<div style="text-align: center; font-size: 85%; max-width: 85%; margin: 0 auto;">
-Primeira geração da família a ingressar na Universidade — e também o primeiro Mestre e Doutor.  
-</div>
+<!-- <div style="text-align: center; font-size: 85%; max-width: 85%; margin: 0 auto;"> -->
+<!-- Primeira geração da família a ingressar na Universidade — e também o primeiro Mestre e Doutor.   -->
+<!-- </div> -->
 
 <div style="margin-top: -4px; margin-bottom: 10px;">
 ![](img/intersec.png){width="50%" fig-align="center"}
@@ -204,16 +204,13 @@ Mostrar um gráfico aqui concreta sua pesquisa.
 :::
 
 ::: {.column width="90%"}
-<span style="font-size:80%;">
+<span style="font-size:70%;">
 **GeoJAGS** <br>
 Modelos para dados espaciais com MCMC <br> 
-Modulo computacional em C++ voltado a inferência Bayesiana em estruturas espaciais <br>
-Desenvolvido durante o mestrado
+Modulo computacional em C++ voltado a inferência Bayesiana em estruturas espaciais (desenvolvido durante o mestrado)
 </span>
 :::
 ::::
-
-<br style="line-height:0.6;">
 
 :::: {.columns}
 ::: {.column width="10%"}
@@ -221,11 +218,10 @@ Desenvolvido durante o mestrado
 :::
 
 ::: {.column width="90%"}
-<span style="font-size:80%;">
+<span style="font-size:70%;">
 **MixingGraph**  <br>
 Modelos gráficos para dados sob condições de mistura  <br>
-Ferramentas para modelagem de estruturas de dependência
-Desenvolvido durante o doutorado<br>
+Ferramentas para modelagem de estruturas de dependência (desenvolvido durante o doutorado)
 </span>
 :::
 ::::
@@ -381,14 +377,17 @@ _Tutorial: Modelos de IA Generativa com R e Python_
 
 **Disciplinas**  
 
-- Introdução à Probabilidade e Estatística; 
-- Estatística I;  
-- Análise Combinatória; 
-- MQ para Tomada de Decisão;  
-- Aprendizagem Estatística; 
-- Modelagem Preditiva;  
-- R e Python para Ciência de Dados; 
-- Visualização de Dados
+<span style="font-size:70%;">
+- Introdução à Probabilidade e Estatística; <br>
+- Estatística I;   <br>
+- Análise Combinatória; <br> 
+- MQ para Tomada de Decisão;   <br>
+- Aprendizagem Estatística;  <br>
+- Modelagem Preditiva;   <br>
+- R e Python para Ciência de Dados;  <br>
+- Visualização de Dados <br>
+
+</span>
 
 </div>
 
@@ -408,11 +407,13 @@ _Tutorial: Modelos de IA Generativa com R e Python_
 
 **Disciplinas**  
 
-- Análise Combinatória; Probabilidade e Aplicações;  
-- Aprendizado Estatístico Supervisionado;  
-- Aprendizado Estatístico Não-Supervisionado;  
-- Visualização de Dados; 
-- Transformando Negócios com Dados
+<span style="font-size:70%;"> 
+- Análise Combinatória, Probabilidade e Aplicações;    <br>
+- Aprendizado Estatístico Supervisionado;   <br>
+- Aprendizado Estatístico Não-Supervisionado;   <br>
+- Visualização de Dados;  <br>
+- Transformando Negócios com Dados <br>
+</span>
 
 </div>
 
@@ -469,7 +470,7 @@ _Tutorial: Modelos de IA Generativa com R e Python_
 - Curso de Difusão em Aprendizagem Estatística (USP, 2021-2022)
 
 - Divulgação Científica: Tendência de Novos Casos de
-Covid-19 (2020) 
+Covid-19 (2020) <br> <span style="font-size:80%;">Vencedor do _Prêmio vídeo: pós no combate ao covid-19_<span>
 
 ![](img/jornal_usp.png){fig-align="center"}
 
