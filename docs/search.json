@@ -1,5 +1,313 @@
 [
   {
+    "objectID": "03_pesquisa.html#motivação",
+    "href": "03_pesquisa.html#motivação",
+    "title": "Projeto de Pesquisa",
+    "section": "Motivação",
+    "text": "Motivação\n\nA análise de dependências em dados modernos envolve:\n\nalta dimensão,\ndependência temporal,\ndados contínuos,\nestruturas complexas e não supervisionadas.\n\n\n\n\nGrafos probabilísticos (MRFs) são uma ferramenta natural para representar tais dependências.\n\n\n\n\nDesafio: métodos existentes tratam majoritariamente de:\n\ndados discretos,\nnúmero finito de vértices,\nindependência ou estruturas fracas de dependência."
+  },
+  {
+    "objectID": "03_pesquisa.html#linha-de-pesquisa-atual",
+    "href": "03_pesquisa.html#linha-de-pesquisa-atual",
+    "title": "Projeto de Pesquisa",
+    "section": "Linha de pesquisa atual",
+    "text": "Linha de pesquisa atual\nTrabalho recente\n\n\n📄\n\n Model selection for Markov random fields on graphs under a mixing condition\nStochastic Processes and their Applications, 2025.\nSeverino, M. T. F., & Leonardi, F.\n\n\n\nAvanços:\n\ncritério global baseado em pseudo-verossimilhança penalizada;\nteorema de consistência sob condição de mistura;\naplicações a processos discretos vetoriais.\n\n\n\nLimitações a superar:\n\nrestrição ao caso finito (vértices),\nvariáveis discretas.\n\n\n\nEste projeto propõe superar essas duas limitações."
+  },
+  {
+    "objectID": "03_pesquisa.html#processos-vetoriais-e-grafo-subjacente",
+    "href": "03_pesquisa.html#processos-vetoriais-e-grafo-subjacente",
+    "title": "Projeto de Pesquisa",
+    "section": "Processos vetoriais e grafo subjacente",
+    "text": "Processos vetoriais e grafo subjacente\nConsidere o processo vetorial:\n\\[\n\\mathbf{X}^{(i)} = (X_1^{(i)},\\dots,X_d^{(i)}), \\qquad i\\in\\mathbb{N}.\n\\]\nAssume-se:\n\nestacionariedade,\nexistência de distribuição invariante \\(\\pi,\\)\ndependências condicionais descritas por um grafo \\(G^* = (V, E^*).\\)\n\nEsse grafo representa: \\[\nX_v \\perp X_{V\\setminus(\\{v\\}\\cup G^*(v))} \\mid X_{G^*(v)}.\n\\]"
+  },
+  {
+    "objectID": "03_pesquisa.html#pseudo-verossimilhança-penalizada",
+    "href": "03_pesquisa.html#pseudo-verossimilhança-penalizada",
+    "title": "Projeto de Pesquisa",
+    "section": "Pseudo-verossimilhança penalizada",
+    "text": "Pseudo-verossimilhança penalizada\nPara um grafo candidato \\(G\\): \\[\n\\log L(G)\n=\n\\sum_{v\\in V}\n\\sum_{a_v}\\sum_{a_{G(v)}}\nN(a_v,a_{G(v)})\n\\log \\pi(a_v\\mid a_{G(v)}).\n\\]\nEstimamos \\(\\pi\\) empiricamente: \\[\n\\log \\widehat L(G)\n=\n\\sum_{v\\in V}\n\\sum_{a_v}\\sum_{a_{G(v)}}\nN(a_v,a_{G(v)})\\,\n\\log \\widehat\\pi(a_v\\mid a_{G(v)}).\n\\]\nCritério de seleção (Severino & Leonardi, 2025): \\[\n\\widehat G = \\arg\\max_G\n\\big\\{\\log\\widehat L(G) - \\lambda_n \\sum_{v\\in V}|A|^{|G(v)|}\\big\\}.\n\\]"
+  },
+  {
+    "objectID": "03_pesquisa.html#teorema-de-consistência",
+    "href": "03_pesquisa.html#teorema-de-consistência",
+    "title": "Projeto de Pesquisa",
+    "section": "Teorema de consistência",
+    "text": "Teorema de consistência\nTeorema (Severino, SPA 2025)\nSe o processo satisfaz mistura polinomial, \\[\n\\psi(\\ell)=O(1/\\ell^{1+\\epsilon}),\n\\] então, para \\(\\lambda_n = c \\log n\\), \\[\n\\widehat G \\to G^*\n\\quad\\text{eventualmente quase certamente}.\n\\]\nEste resultado fornece a base teórica para as extensões propostas neste projeto."
+  },
+  {
+    "objectID": "03_pesquisa.html#model-selection-em-mrfs-com-vértices-infinitos-enumeráveis",
+    "href": "03_pesquisa.html#model-selection-em-mrfs-com-vértices-infinitos-enumeráveis",
+    "title": "Projeto de Pesquisa",
+    "section": "Model selection em MRFs com vértices infinitos enumeráveis",
+    "text": "Model selection em MRFs com vértices infinitos enumeráveis\nMotivação:\n\nRedes massivas (sociais, biológicas, IoT),\nEstruturas onde \\(|V| = \\infty\\) e cresce com a amostra,\nMétodos finitos não se generalizam automaticamente.\n\nObjetivo:\n\nGeneralizar a teoria de pseudo-verossimilhança penalizada para \\[\nV = \\{1,2,\\dots\\}, \\qquad V_n\\uparrow V.\n\\]\n\nQuestões centrais:\n\ncontrole do erro ao restringir a (V_n),\nlimites de consistência para estimadores globais,\nmodificação da teoria de typicality para vértices infinitos."
+  },
+  {
+    "objectID": "03_pesquisa.html#proposta-1-avanços-esperados",
+    "href": "03_pesquisa.html#proposta-1-avanços-esperados",
+    "title": "Projeto de Pesquisa",
+    "section": "Proposta 1 – avanços esperados",
+    "text": "Proposta 1 – avanços esperados\nDesenvolvimentos teóricos:\n\nversão infinita dos resultados de consistência do caso finito,\ncondições de regularidade para limites (V_n),\ncontrole da complexidade do espaço de modelos.\n\nAlgoritmos:\n\nimplementação em R,\nsimulações em redes sintéticas grandes.\n\nAplicações:\n\nredes sociais,\nneurociência (mapeamento de grandes redes neurais),\nsistemas de sensores."
+  },
+  {
+    "objectID": "03_pesquisa.html#model-selection-para-mrfs-contínuos-sob-mistura",
+    "href": "03_pesquisa.html#model-selection-para-mrfs-contínuos-sob-mistura",
+    "title": "Projeto de Pesquisa",
+    "section": "Model selection para MRFs contínuos sob mistura",
+    "text": "Model selection para MRFs contínuos sob mistura\nLimitações do estado da arte:\n\npseudo-verossimilhança tradicional é para alfabetos finitos,\ndiscretização gera perda de informação.\n\nObjetivo:\n\ndesenvolver um estimador consistente sem discretização.\n\nDesafios:\n\nsubstituição de somatórios por integrais,\ndefinição de vizinhança em densidades condicionais,\nadaptação das provas de consistência para o caso contínuo."
+  },
+  {
+    "objectID": "03_pesquisa.html#proposta-2-impactos",
+    "href": "03_pesquisa.html#proposta-2-impactos",
+    "title": "Projeto de Pesquisa",
+    "section": "Proposta 2 – impactos",
+    "text": "Proposta 2 – impactos\nBenefícios:\n\nmaior precisão inferencial,\neliminação de discretização,\naplicabilidade a finanças, hidrologia, neurociência e bioinformática.\n\nResultados esperados:\n\nteoremas análogos ao caso discreto,\nalgoritmo escalável,\npacote em R."
+  },
+  {
+    "objectID": "03_pesquisa.html#timeline",
+    "href": "03_pesquisa.html#timeline",
+    "title": "Projeto de Pesquisa",
+    "section": " Timeline",
+    "text": "Timeline"
+  },
+  {
+    "objectID": "03_pesquisa.html#budget",
+    "href": "03_pesquisa.html#budget",
+    "title": "Projeto de Pesquisa",
+    "section": " Budget",
+    "text": "Budget\n\n\n\nMinimal financial costs.\nTheoretical development does not require any additional resources.\nSimulation and real data application of the developed algorithms will be conducted using existing computer server resources at the department.\nAnticipated expenses: presenting the research at international scientific conferences."
+  },
+  {
+    "objectID": "03_pesquisa.html#references",
+    "href": "03_pesquisa.html#references",
+    "title": "Projeto de Pesquisa",
+    "section": " References",
+    "text": "References"
+  },
+  {
+    "objectID": "02_memorial_v2.html#minha-trajetória-está-na-interseção-entre",
+    "href": "02_memorial_v2.html#minha-trajetória-está-na-interseção-entre",
+    "title": "Memorial Circunstanciado",
+    "section": "Minha trajetória está na interseção entre:",
+    "text": "Minha trajetória está na interseção entre:\n\nRigor estatístico\nComputação científica\nImpacto aplicado e interdisciplinar\n\n\nMinha trajetória foi construída na fronteira entre estatística, computação e aplicações reais. É nesse espaço que vejo minha maior capacidade de contribuição — tanto acadêmica quanto aplicada. Ao longo da apresentação, vou mostrar como essa interseção guiou a minha formação, minhas escolhas, minhas pesquisas, meu trabalho no mercado e meu papel como educador."
+  },
+  {
+    "objectID": "02_memorial_v2.html#uma-trajetória-multidisciplinar",
+    "href": "02_memorial_v2.html#uma-trajetória-multidisciplinar",
+    "title": "Memorial Circunstanciado",
+    "section": "Uma trajetória multidisciplinar",
+    "text": "Uma trajetória multidisciplinar\n\nTécnico Informática Industrial (CEFET–MG)\nBacharelado Matemática Computacional (UFMG)\nIntercâmbio acadêmico (QMUL — Londres)\nMestrado em Estatística (UFMG)\nDoutorado em Probabilidade e Estatística (IME–USP)\n\n\nMinha formação começa em computação, passa pela matemática e encontra na estatística um ponto de convergência. No CEFET desenvolvi base técnica e de programação.\nNa UFMG, a matemática computacional me trouxe abstração e rigor.\nO intercâmbio na QMUL ampliou minha visão internacional e acesso a métodos modernos.\nNo mestrado aprofundei modelagem estatística e computação Bayesiana, com dissertação premiada no Encontro Mineiro de Estatística.\nNo doutorado no IME–USP, meu foco se consolidou em dependência, alta dimensionalidade e métodos computacionais. Essa trajetória diversa molda como penso problemas estatísticos hoje."
+  },
+  {
+    "objectID": "02_memorial_v2.html#pilares-da-minha-atuação-científica",
+    "href": "02_memorial_v2.html#pilares-da-minha-atuação-científica",
+    "title": "Memorial Circunstanciado",
+    "section": "Pilares da minha atuação científica",
+    "text": "Pilares da minha atuação científica\n\nDependência e estrutura em séries multivariadas\n\nAlta dimensionalidade e regularização\n\nModelos gráficos e métodos Bayesianos\n\nComputação reprodutível e software científico\n\n\nEsses pilares nasceram ainda no doutorado e evoluíram ao longo de colaborações diversas. Todos respondem a desafios contemporâneos: complexidade crescente dos dados, necessidade de interpretar dependências e desenvolver métodos escaláveis e confiáveis."
+  },
+  {
+    "objectID": "02_memorial_v2.html#resultados-selecionados",
+    "href": "02_memorial_v2.html#resultados-selecionados",
+    "title": "Memorial Circunstanciado",
+    "section": "Resultados selecionados",
+    "text": "Resultados selecionados\n\nModelos para dependência multivariada com desempenho superior em séries complexas\n\nResultados teóricos de consistência e regularização\n\nAplicações em saúde, risco, hidrologia e finanças\n\n\nAqui destaco contribuições que sintetizam meu trabalho:\nestruturas de dependência mais flexíveis, inferência escalável e aplicações em áreas onde esses métodos geram impacto imediato. São problemas tanto científicos quanto sociais e econômicos."
+  },
+  {
+    "objectID": "02_memorial_v2.html#ferramentas-abertas",
+    "href": "02_memorial_v2.html#ferramentas-abertas",
+    "title": "Memorial Circunstanciado",
+    "section": "Ferramentas abertas",
+    "text": "Ferramentas abertas\n\nGeoJAGS — modelos gráficos + MCMC\n\nMixingGraph — regularização e dependência\n\nPipelines reprodutíveis para pesquisa aplicada\n\n\nSempre acreditei que pesquisa só ganha vida quando se torna acessível. Essas ferramentas abrem caminho para uso real em disciplinas, projetos, colaborações e extensão. Também aceleram pesquisas futuras e estimulam práticas reprodutíveis."
+  },
+  {
+    "objectID": "02_memorial_v2.html#vivência-em-problemas-reais-de-grande-escala",
+    "href": "02_memorial_v2.html#vivência-em-problemas-reais-de-grande-escala",
+    "title": "Memorial Circunstanciado",
+    "section": "Vivência em problemas reais de grande escala",
+    "text": "Vivência em problemas reais de grande escala\n\nEngenharia de software\n\nModelos de risco de crédito\n\nCiência de dados em marketing e produto no setor bancário"
+  },
+  {
+    "objectID": "02_memorial_v2.html#o-que-isso-traz-para-minha-atuação-acadêmica",
+    "href": "02_memorial_v2.html#o-que-isso-traz-para-minha-atuação-acadêmica",
+    "title": "Memorial Circunstanciado",
+    "section": "O que isso traz para minha atuação acadêmica",
+    "text": "O que isso traz para minha atuação acadêmica\n\nFundamentação prática para métodos modernos\n\nVisão completa dos ciclos de modelagem e validação\n\nCapacidade de trabalhar com dados massivos e sistemas críticos\n\nMaturidade para orientar projetos aplicados\n\nConexão natural com interdisciplinaridade\n\n\nMinha trajetória no mercado ampliou meu repertório:\nengenharia de software deu solidez técnica;\no trabalho com risco de crédito trouxe maturidade metodológica e dados massivos;\nno marketing bancário aprendi sobre experimentação, personalização e impacto no negócio.\nEssas experiências me ajudam a formular perguntas de pesquisa relevantes, identificar gargalos reais e preparar estudantes para atuar em ambientes modernos."
+  },
+  {
+    "objectID": "02_memorial_v2.html#exemplos-de-atuação",
+    "href": "02_memorial_v2.html#exemplos-de-atuação",
+    "title": "Memorial Circunstanciado",
+    "section": "Exemplos de atuação",
+    "text": "Exemplos de atuação\n\nCOVID-19: modelagem, análise e apoio técnico\n\nHidrologia e clima\n\nFinanças, risco e crédito\n\nTransparência pública e dados governamentais\n\n\nEsses projetos mostram como a estatística se conecta a problemas concretos. São ambientes desafiadores, com dados ruidosos, decisões rápidas e impacto real — locais onde a integração entre teoria, computação e aplicação faz diferença."
+  },
+  {
+    "objectID": "02_memorial_v2.html#experiência-acumulada",
+    "href": "02_memorial_v2.html#experiência-acumulada",
+    "title": "Memorial Circunstanciado",
+    "section": "Experiência acumulada",
+    "text": "Experiência acumulada\n\nMonitorias e aulas totalizando mais de 1500 horas\n\nGraduação, pós-graduação e educação executiva\n\nDisciplinas teóricas e computacionais\n\nProjetos práticos com dados reais\n\n\nO ensino foi parte constitutiva da minha formação.\nDesde monitorias iniciais até disciplinas completas, sempre busquei promover autonomia, rigor metodológico e capacidade de aplicar técnicas a problemas reais.\nEssa visão dialoga com a formação moderna em estatística e ciência de dados."
+  },
+  {
+    "objectID": "02_memorial_v2.html#disciplinas-que-posso-ofertar",
+    "href": "02_memorial_v2.html#disciplinas-que-posso-ofertar",
+    "title": "Memorial Circunstanciado",
+    "section": "Disciplinas que posso ofertar",
+    "text": "Disciplinas que posso ofertar\n\nModelagem Estatística para Ciência de Dados\n\nAprendizado Estatístico em Altas Dimensões\n\nProjetos integrados baseados em dados reais\n\n\nEssas disciplinas combinam estatística, probabilidade e computação de forma natural. São conteúdos que já desenvolvo e posso oferecer imediatamente, ampliando a formação técnica do departamento e fortalecendo competências essenciais para a área."
+  },
+  {
+    "objectID": "02_memorial_v2.html#projetos-e-iniciativas",
+    "href": "02_memorial_v2.html#projetos-e-iniciativas",
+    "title": "Memorial Circunstanciado",
+    "section": "Projetos e iniciativas",
+    "text": "Projetos e iniciativas\n\nAnálises e comunicação da COVID-19\n\nCursos de difusão no IME\n\nConsultorias técnicas\n\nProjetos de dados públicos\n\n\nBusco sempre usar estatística para produzir impacto social. O trabalho durante a pandemia, por exemplo, integrou análise, comunicação clara e suporte técnico. Assim, a extensão se torna parte natural da atividade de pesquisa e ensino."
+  },
+  {
+    "objectID": "02_memorial_v2.html#propostas",
+    "href": "02_memorial_v2.html#propostas",
+    "title": "Memorial Circunstanciado",
+    "section": "Propostas",
+    "text": "Propostas\n\n1–2 projetos aplicados anuais\n\nIntegração com ensino e extensão\n\nParcerias externas e internas\n\nProjetos com dados reais\n\n\nVejo no CEA uma oportunidade de fortalecer a ponte entre pesquisa, ensino e impacto prático. Minha experiência me permite contribuir desde o início com projetos aplicados."
+  },
+  {
+    "objectID": "02_memorial_v2.html#plano-para-os-próximos-anos",
+    "href": "02_memorial_v2.html#plano-para-os-próximos-anos",
+    "title": "Memorial Circunstanciado",
+    "section": "Plano para os próximos anos",
+    "text": "Plano para os próximos anos\nPrimeiros anos\n\nOfertar disciplinas alinhadas à minha linha de pesquisa\nIniciar orientações em temas de modelagem, dependência e computação estatística\nAmpliar a produção científica com projetos já em andamento\nDesenvolver projetos aplicados envolvendo dados reais e colaboração interdisciplinar"
+  },
+  {
+    "objectID": "02_memorial_v2.html#plano-para-os-próximos-anos-1",
+    "href": "02_memorial_v2.html#plano-para-os-próximos-anos-1",
+    "title": "Memorial Circunstanciado",
+    "section": "Plano para os próximos anos",
+    "text": "Plano para os próximos anos\nMédio prazo\n\nConsolidar um grupo de pesquisa integrado a problemas modernos de dados\nEstabelecer parcerias acadêmicas e aplicadas dentro e fora da USP\nExpandir ferramentas computacionais abertas e pipelines reprodutíveis"
+  },
+  {
+    "objectID": "02_memorial_v2.html#plano-para-os-próximos-anos-2",
+    "href": "02_memorial_v2.html#plano-para-os-próximos-anos-2",
+    "title": "Memorial Circunstanciado",
+    "section": "Plano para os próximos anos",
+    "text": "Plano para os próximos anos\nVisão de longo prazo\n\nContribuir para que o IME se destaque em modelagem estatística para dados complexos\nFormar pesquisadores e profissionais capazes de atuar na interseção entre teoria e aplicação\nFortalecer colaborações internacionais e intercâmbio científico"
+  },
+  {
+    "objectID": "02_memorial_v2.html#minha-contribuição",
+    "href": "02_memorial_v2.html#minha-contribuição",
+    "title": "Memorial Circunstanciado",
+    "section": "Minha contribuição",
+    "text": "Minha contribuição\n\nTrajetória multidisciplinar\n\nPesquisa sólida e atual\n\nExperiência prática diferenciada\n\nAtuação ampla em ensino\n\nInterdisciplinaridade real\n\nCompromisso com extensão\n\nVisão clara de futuro\n\n\nMinha trajetória reúne elementos que se complementam: formação diversa, rigor teórico, ferramentas computacionais, experiência aplicada e compromisso educacional."
+  },
+  {
+    "objectID": "01_aula.html#slide-1",
+    "href": "01_aula.html#slide-1",
+    "title": "Aula: Tópico",
+    "section": "Slide 1",
+    "text": "Slide 1\nConteúdo do primeiro slide…"
+  },
+  {
+    "objectID": "01_aula.html#slide-2",
+    "href": "01_aula.html#slide-2",
+    "title": "Aula: Tópico",
+    "section": "Slide 2",
+    "text": "Slide 2\nConteúdo do segundo slide…"
+  },
+  {
+    "objectID": "02_memorial_v3.html#uma-trajetória-multidisciplinar",
+    "href": "02_memorial_v3.html#uma-trajetória-multidisciplinar",
+    "title": "Memorial Circunstanciado",
+    "section": "Uma trajetória multidisciplinar",
+    "text": "Uma trajetória multidisciplinar"
+  },
+  {
+    "objectID": "02_memorial_v3.html#ensino-médio-técnico-informática-industrial",
+    "href": "02_memorial_v3.html#ensino-médio-técnico-informática-industrial",
+    "title": "Memorial Circunstanciado",
+    "section": "Ensino Médio Técnico: Informática Industrial",
+    "text": "Ensino Médio Técnico: Informática Industrial\n\nCentro Federal de Educação Tecnológica de Minas Gerais (CEFET-MG), 2008-2010\nProgramação em C/C++, algoritmos, redes de computadores, eletrônica digital"
+  },
+  {
+    "objectID": "02_memorial_v3.html#graduação-matemática-computacional",
+    "href": "02_memorial_v3.html#graduação-matemática-computacional",
+    "title": "Memorial Circunstanciado",
+    "section": "Graduação: Matemática Computacional",
+    "text": "Graduação: Matemática Computacional\n\n\n\n\nUniversidade Federal de Minas Gerais (UFMG), 2011–2015\n\nBolsista PET Matemática\nIniciação Científica: métodos numéricos para busca de autovalores e autovetores (C++)\nIntercâmbio: Queen Mary University of London (2013-2014)"
+  },
+  {
+    "objectID": "02_memorial_v3.html#mestrado-estatística",
+    "href": "02_memorial_v3.html#mestrado-estatística",
+    "title": "Memorial Circunstanciado",
+    "section": "Mestrado: Estatística",
+    "text": "Mestrado: Estatística\n\n\n\n\nUniversidade Federal de Minas Gerais (UFMG), 2016–2018\n\nBolsista CAPES\nDissertação: Extending JAGS for spatial data\nModelagem Bayesiana para dados espaciais\nFinalista no Concurso de Melhor Dissertação de Mestrado – SINAPE 2018."
+  },
+  {
+    "objectID": "02_memorial_v3.html#doutorado-probabilidade-e-estatística",
+    "href": "02_memorial_v3.html#doutorado-probabilidade-e-estatística",
+    "title": "Memorial Circunstanciado",
+    "section": "Doutorado: Probabilidade e Estatística",
+    "text": "Doutorado: Probabilidade e Estatística\n\n\n\n\nUniversidade de São Paulo (IME-USP)\n\nPeríodo: 2018–2024\n\nTese: Estimation and model selection for graphical models under mixing conditions\nModelos gráficos para processos estocásticos vetoriais"
+  },
+  {
+    "objectID": "02_memorial_v3.html#durante-o-doutorado",
+    "href": "02_memorial_v3.html#durante-o-doutorado",
+    "title": "Memorial Circunstanciado",
+    "section": "Durante o doutorado",
+    "text": "Durante o doutorado\n\nAtuei como monitor e estagiário PAE em disciplinas de graduação durante 7 semestres\nMonitor da disciplina de pós-graduação Aprendizagem Estatística em Altas Dimensões (MAE0501) por 2 semestres\nFui contemplado com bolsa PRINT-USP para estágio na UBA, Argentina em 2020\nApresentei trabalhos em congressos nacionais e internacionais\nRepresentante discente:\n\nComissão de Recepção da Pós-Graduação (RPG)\nComissão Coordenadora do Programa de Pós-Graduação em Estatística (CPP-MAE)\nConselho do Departamento de Estatística"
+  },
+  {
+    "objectID": "02_memorial_v3.html#artigos-publicados",
+    "href": "02_memorial_v3.html#artigos-publicados",
+    "title": "Memorial Circunstanciado",
+    "section": "Artigos publicados",
+    "text": "Artigos publicados\n\n\n\n📄\n\n Independent block identification in multivariate time series\nLeonardi, F., Lopez-Rosenfeld, M., Rodriguez, D., Severino, M. T. F., & Sued, M.\nJournal of Time Series Analysis, 2021.\n(Q2 – Probability and Statistics, Scimago) \n\n\n\n\n📄\n\n Model selection for Markov random fields on graphs under a mixing condition\nSeverino, M. T. F., & Leonardi, F.\nStochastic Processes and their Applications, 2025.\n(Q1 – Probability and Statistics, Scimago) \n\n\nEstes dois artigos sintetizam minha contribuição teórica em séries temporais multivariadas\ne em modelos gráficos sob condições de mistura — ambos profundamente conectados às\nlinhas prioritárias do edital: modelagem estatística moderna, dados de alta dimensão e\naprendizagem estatística.\n\n\nMostrar um gráfico aqui concreta sua pesquisa."
+  },
+  {
+    "objectID": "02_memorial_v3.html#software-e-produção-computacional",
+    "href": "02_memorial_v3.html#software-e-produção-computacional",
+    "title": "Memorial Circunstanciado",
+    "section": "Software e produção computacional",
+    "text": "Software e produção computacional\n\n\n\n\n\n GeoJAGS  Modelos para dados espaciais com MCMC  Modulo computacional em C++ voltado a inferência Bayesiana em estruturas espaciais (desenvolvido durante o mestrado) \n\n\n\n\n\n MixingGraph  Modelos gráficos para dados sob condições de mistura  Ferramentas para modelagem de estruturas de dependência (desenvolvido durante o doutorado) \n\n\nPesquisa que vira software: diferencial forte."
+  },
+  {
+    "objectID": "02_memorial_v3.html#apresentação-de-trabalhos-em-eventos",
+    "href": "02_memorial_v3.html#apresentação-de-trabalhos-em-eventos",
+    "title": "Memorial Circunstanciado",
+    "section": "Apresentação de Trabalhos em Eventos",
+    "text": "Apresentação de Trabalhos em Eventos\n\nEventos selecionados:\n\n\n📌\n\nEBEB – Rio de Janeiro (2018)\nPôster: Extending JAGS for spatial data\n\n\n\n\n📌\n\nEMR – Pirenópolis (2019)\nPôster: As desigualdades existentes no Brasil vistas no ENEM 2017\n\n\n\n\n🎤\n\nBernoulli–IMS One World Symposium (2020)\nApresentação oral: Independent block identification in multivariate time series\n\n\n\n\n📌\n\nCLAPEM – São Paulo (2023)\nPôster: Estimation and model selection for mixing graphical models\n\n\n\n\n🎓\n\nSINAPE – Fortaleza (2024)\nTutorial: Modelos de IA Generativa com R e Python"
+  },
+  {
+    "objectID": "02_memorial_v3.html#principais-destaques",
+    "href": "02_memorial_v3.html#principais-destaques",
+    "title": "Memorial Circunstanciado",
+    "section": "Principais Destaques",
+    "text": "Principais Destaques\n\n\n\n\n\n\n\n\n7 anos\n\n\ncomo monitor  (graduação e pós)\n\n\n\n\n1500+\n\n\nhoras de monitorias\n\n\n\n\n1000+\n\n\nestudantes ensinados\n\n\n\n\n5 anos\n\n\ndocente (graduação e pós)\n\n\n\n\n770 h\n\n\nde aulas ministradas\n\n\n\n\nTurmas\n\n\ndiversas e numerosas"
+  },
+  {
+    "objectID": "02_memorial_v3.html#experiência",
+    "href": "02_memorial_v3.html#experiência",
+    "title": "Memorial Circunstanciado",
+    "section": "Experiência",
+    "text": "Experiência\n\n\n\n\nMonitoria (2017–2023)\n\nNíveis e Instituições\n\nGraduação: DEST UFMG, MAE IME USP, Insper\n\nPós-graduação: MAE IME USP (stricto sensu), Insper (lato sensu)\n\nDisciplinas\n - Introdução à Probabilidade e Estatística;  - Estatística I;  - Análise Combinatória;  - MQ para Tomada de Decisão;  - Aprendizagem Estatística;  - Modelagem Preditiva;  - R e Python para Ciência de Dados;  - Visualização de Dados \n\n\n\n\n\nDocência (2020–atual)\n\nNíveis e Instituições\n\nGraduação: IME USP (programa de verão)\n\nPós-graduação: Insper (lato sensu)\n\nEducação Executiva: Insper\n\nDisciplinas\n - Análise Combinatória, Probabilidade e Aplicações;  - Aprendizado Estatístico Supervisionado;  - Aprendizado Estatístico Não-Supervisionado;  - Visualização de Dados;  - Transformando Negócios com Dados"
+  },
+  {
+    "objectID": "02_memorial_v3.html#experiência-atual",
+    "href": "02_memorial_v3.html#experiência-atual",
+    "title": "Memorial Circunstanciado",
+    "section": "Experiência atual",
+    "text": "Experiência atual\n\n\nProfessor no Insper desde 2021 (tempo parcial)\nDisciplinas de aprendizagem estatística e ciência de dados\nProgramas: pós-graduação (lato sensu) e educação executiva\nMembro da comissão de desenvolvimento curricular do Mestrado Profissional em Ciência de Dados"
+  },
+  {
+    "objectID": "02_memorial_v3.html#extensão-e-impacto",
+    "href": "02_memorial_v3.html#extensão-e-impacto",
+    "title": "Memorial Circunstanciado",
+    "section": "Extensão e impacto",
+    "text": "Extensão e impacto\n\nCurso de Nivelamento Pré-Cálculo (UFMG, 2012)\nCurso de Difusão em Aprendizagem Estatística (USP, 2021-2022)\nDivulgação Científica: Tendência de Novos Casos de Covid-19 (2020)  Vencedor do Prêmio vídeo: pós no combate ao covid-19\n\n\n\nMostra impacto real e compromisso social."
+  },
+  {
+    "objectID": "02_memorial_v3.html#meu-plano-para-os-próximos-anos",
+    "href": "02_memorial_v3.html#meu-plano-para-os-próximos-anos",
+    "title": "Memorial Circunstanciado",
+    "section": "Meu plano para os próximos anos",
+    "text": "Meu plano para os próximos anos\n\n\nPós-doutorado no exterior\nInteração com grupos de pesquisa de outras universidades (brasileiras e extrangeiras)\nVincular-me ao programa de pós-graduação em Estatística do IME-USP\nMinistrar disciplinas na graduação e pós-graduação em Estatística\nDesenvolver projetos de pesquisa teórica e aplicada em modelagem estatística e ciência de dados\nTornar o departamento uma referencia em ciencia de dados e modelagem estatística moderna\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nPlano orgânico e coerente com sua trajetória."
+  },
+  {
     "objectID": "03_pesquisa_v2.html#agenda",
     "href": "03_pesquisa_v2.html#agenda",
     "title": "Projeto de Pesquisa",
@@ -11,7 +319,7 @@
     "href": "03_pesquisa_v2.html#motivation",
     "title": "Projeto de Pesquisa",
     "section": "Motivation",
-    "text": "Motivation\n\nModern dependence analysis involves:\n\nhigh dimensionality,\ntemporal dependence,\ncontinuous data,\ncomplex structures.\n\n\n\n\nThese challenges arise naturally in modern data science problems, including multivariate time series, sensor networks, neurodata, and large-scale systems where statistical models must remain both theoretically sound and computationally scalable.\n\n\n\n\nProbabilistic graphical models (MRFs) are a natural tool for representing such dependencies.\n\n\n\n\nChallenge: existing methods mostly address:\n\ndiscrete data,\na finite number of vertices,\nindependence or weak dependence structures."
+    "text": "Motivation\n\nModern dependence analysis involves:\n\nhigh dimensionality,\ntemporal dependence,\ncontinuous data,\ncomplex structures.\n\n\n\n\nThese challenges arise naturally in modern data science problems, including multivariate time series, sensor networks, neurodata, and large-scale systems where statistical models must remain both theoretically sound and computationally scalable.\n\n\n\n\nProbabilistic graphical models (MRFs) are a natural tool for representing such dependencies.\n\n\n\n\nChallenge: existing methods mostly address:\n\ndiscrete data, a finite number of vertices,\nindependence or weak dependence structures."
   },
   {
     "objectID": "03_pesquisa_v2.html#recent-work",
@@ -60,7 +368,7 @@
     "href": "03_pesquisa_v2.html#model-selection-for-mrfs-with-countably-infinite-vertex-sets-under-mixing-condition",
     "title": "Projeto de Pesquisa",
     "section": "Model Selection for MRFs with Countably Infinite Vertex Sets under Mixing Condition ",
-    "text": "Model Selection for MRFs with Countably Infinite Vertex Sets under Mixing Condition \nMotivation:\n\nMassive networks (social, biological, IoT),\nStructures where \\(|V| = \\infty\\) and grows with the sample,\nFinite-vertex methods do not generalize automatically.\n\nExisting methods\n\nLeonardi et al. (2023): Penalized pseudo-likelihood for discrete MRFs. Graph estimated based on local neighborhood estimation.\nSeverino & Leonardi (2025): Developed theoretical results for global estimation of discrete MRFs over finite graphs.\n\nObjective:\n\nExtend the penalized pseudo-likelihood framework to \\(V = \\{1,2,\\dots\\}.\\)"
+    "text": "Model Selection for MRFs with Countably Infinite Vertex Sets under Mixing Condition \nMotivation:\n\nMassive networks (social, biological, IoT),\nStructures where \\(|V| = \\infty\\) and grows with the sample,\nFinite-vertex methods do not generalize automatically.\n\nExisting methods\n\nLeonardi et al. (2023): Penalized pseudo-likelihood for discrete MRFs. Graph estimated based on local neighborhood estimation.\nSeverino & Leonardi (2025): Developed theoretical results for global estimation of discrete MRFs over finite graphs.\n\nObjective: Extend the penalized pseudo-likelihood framework to \\(V = \\{1,2,\\dots\\}.\\)"
   },
   {
     "objectID": "03_pesquisa_v2.html#proposal-1-main-questions",
