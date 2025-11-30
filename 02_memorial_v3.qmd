@@ -31,6 +31,10 @@ lang: pt-br
 ![](img/intersec.png){width="50%" fig-align="center"}
 </div>
 
+:::{.notes}
+Minha trajetória se desenvolve na interseção entre estatística teórica, modelagem probabilística e ciência de dados aplicada
+:::
+
 ## Ensino Médio Técnico: Informática Industrial
 
 - Centro Federal de Educação Tecnológica de Minas Gerais (CEFET-MG), 2008-2010
@@ -203,7 +207,7 @@ aprendizagem estatística.
 Mostrar um gráfico aqui concreta sua pesquisa.
 :::
 
-## Software e produção computacional
+## Software e estatística computacional
 
 <br style="line-height:0.6;">
 
@@ -380,6 +384,9 @@ _Tutorial: Modelos de IA Generativa com R e Python_
 
 ::::
 
+:::{.notes}
+Minha experiência docente é ampla e diversificada: monitoria de 7 anos, docência desde 2020, mais de mil estudantes. Já atuei em diversas disciplinas que dialogam com probabilidade, inferência, métodos estatísticos e ciência de dados.
+:::
 
 ## Experiência {.smaller}
 

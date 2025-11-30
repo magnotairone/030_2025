@@ -214,7 +214,7 @@
     "href": "02_memorial_v3.html#uma-trajetória-multidisciplinar",
     "title": "Memorial Circunstanciado",
     "section": "Uma trajetória multidisciplinar",
-    "text": "Uma trajetória multidisciplinar"
+    "text": "Uma trajetória multidisciplinar\n\n\n\n\n\n\n\n\n\n\n\n\nMinha trajetória se desenvolve na interseção entre estatística teórica, modelagem probabilística e ciência de dados aplicada"
   },
   {
     "objectID": "02_memorial_v3.html#ensino-médio-técnico-informática-industrial",
@@ -277,7 +277,7 @@
     "href": "02_memorial_v3.html#principais-destaques",
     "title": "Memorial Circunstanciado",
     "section": "Principais Destaques",
-    "text": "Principais Destaques\n\n\n\n\n\n\n\n\n7 anos\n\n\ncomo monitor  (graduação e pós)\n\n\n\n\n1500+\n\n\nhoras de monitorias\n\n\n\n\n1000+\n\n\nestudantes ensinados\n\n\n\n\n5 anos\n\n\ndocente (graduação e pós)\n\n\n\n\n770 h\n\n\nde aulas ministradas\n\n\n\n\nTurmas\n\n\ndiversas e numerosas"
+    "text": "Principais Destaques\n\n\n\n\n\n\n\n\n7 anos\n\n\ncomo monitor  (graduação e pós)\n\n\n\n\n1500+\n\n\nhoras de monitorias\n\n\n\n\n1000+\n\n\nestudantes ensinados\n\n\n\n\n5 anos\n\n\ndocente (graduação e pós)\n\n\n\n\n770 h\n\n\nde aulas ministradas\n\n\n\n\nTurmas\n\n\ndiversas e numerosas\n\n\n\n\n\nMinha experiência docente é ampla e diversificada: monitoria de 7 anos, docência desde 2020, mais de mil estudantes. Já atuei em diversas disciplinas que dialogam com probabilidade, inferência, métodos estatísticos e ciência de dados."
   },
   {
     "objectID": "02_memorial_v3.html#experiência",
@@ -418,5 +418,19 @@
     "title": "Projeto de Pesquisa",
     "section": " References",
     "text": "References\n\nSeverino, M. T. F., & Leonardi, F. (2025). Model selection for Markov random fields on graphs under a mixing condition. Stochastic Processes and their Applications.\nLeonardi, F., Lopez-Rosenfeld, M., Rodriguez, D., Severino, M. T. F. S., & Sued, M. (2021). Independent block identification in multivariate time series. Journal of Time Series Analysis.\nLeonardi, F., Carvalho, R., & Frondana, I. (2023). Structure recovery for partially observed discrete Markov random fields on graphs under not necessarily positive distributions. Scandinavian Journal of Statistics.\nLauritzen, S. L. (1996). Graphical models. Claredon Press.\nOodaira, H., & Yoshihara, K. I. (1971). The law of the iterated logarithm for stationary processes satisfying mixing conditions. Kodai Mathematical Seminar Reports."
+  },
+  {
+    "objectID": "03_pesquisa_v2.html#r-fontawesomefabookmark-cor-references",
+    "href": "03_pesquisa_v2.html#r-fontawesomefabookmark-cor-references",
+    "title": "Projeto de Pesquisa",
+    "section": "r fontawesome::fa(“bookmark”, cor) References",
+    "text": "r fontawesome::fa(“bookmark”, cor) References\n\n\n📘\n\n Severino, M. T. F., & Leonardi, F. (2025). Model selection for Markov random fields on graphs under a mixing condition. Stochastic Processes and their Applications. \n\n\n\n📘\n\n Leonardi, F., Lopez-Rosenfeld, M., Rodriguez, D., Severino, M. T. F. S., & Sued, M. (2021). Independent block identification in multivariate time series. Journal of Time Series Analysis. \n\n\n\n📘\n\n Leonardi, F., Carvalho, R., & Frondana, I. (2023). Structure recovery for partially observed discrete Markov random fields on graphs under not necessarily positive distributions. Scandinavian Journal of Statistics. \n\n\n\n📘\n\n Lauritzen, S. L. (1996). Graphical Models. Clarendon Press. \n\n\n\n📘\n\n Oodaira, H., & Yoshihara, K. I. (1971). The law of the iterated logarithm for stationary processes satisfying mixing conditions. Kodai Mathematical Seminar Reports."
+  },
+  {
+    "objectID": "02_memorial_v3.html#software-e-estatística-computacional",
+    "href": "02_memorial_v3.html#software-e-estatística-computacional",
+    "title": "Memorial Circunstanciado",
+    "section": "Software e estatística computacional",
+    "text": "Software e estatística computacional\n\n\n\n\n\n GeoJAGS  Modelos para dados espaciais com MCMC  Modulo computacional em C++ voltado a inferência Bayesiana em estruturas espaciais (desenvolvido durante o mestrado) \n\n\n\n\n\n MixingGraph  Modelos gráficos para dados sob condições de mistura  Ferramentas para modelagem de estruturas de dependência (desenvolvido durante o doutorado) \n\n\nPesquisa que vira software: diferencial forte."
   }
 ]
