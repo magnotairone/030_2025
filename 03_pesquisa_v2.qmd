@@ -541,3 +541,479 @@ Deliverables:
 
 - Oodaira, H., & Yoshihara, K. I. (1971). _The law of the iterated logarithm for stationary processes satisfying mixing conditions_. Kodai Mathematical Seminar Reports.
 
+# Obrigado
+
+## Rate of convergence of the empirical probabilities {.smaller visibility="uncounted"}
+
+Based on the Law of the Iterated Logarithm for stationary polynomial mixing processes proved in Oodaira and Yoshihara (1971), we can derive the rate of convergence of the empirical probabilities to the true probabilities of the process. 
+
+**Proposition 1 (Typicality)**:
+Assume the process $\{X^{(i)}\colon  i \in \mathbb{Z}\}$ satisfies the mixing condition with rate $\psi(\ell) = O(1/\ell^{1+\epsilon}),$ for some $\epsilon>0.$
+Then, for any $W \subset V$ and $\delta > 0,$
+\begin{equation*}
+    \Big\vert \widehat{\pi}(a_W) - \pi(a_W) \Big\vert < \sqrt{\frac{\delta\log n}{n}},
+\end{equation*}
+eventually almost surely as $n \rightarrow \infty.$
+
+**Proposition 2 (Conditional typicality)**: \label{prop:limite_condicional}
+Then for any $\delta > 0$, any disjoint sets $W, W' \subset V$ and any 
+$a_W \in A^{W}$ and $a_{W'} \in A^{{W'}}$ we have that
+\begin{equation*}
+    \Big\vert \widehat\pi(a_W|a_{W'}) - \pi(a_W|a_{W'}) \Big\vert < \sqrt{\frac{\delta\log n}{N(a_W)}},
+\end{equation*}
+eventually almost surely as $n \rightarrow \infty.$
+
+
+## Intuitive Ove
+rview of Theorem Proof  {.smaller visibility="uncounted"}
+
+Consider $\{\widehat G\neq G^*\} = \big\{G^* \subsetneq \widehat G \big\} \cup  \big\{G^* \not\subset \widehat G \big\}.$
+
+<br/>
+
+:::: {.columns}
+
+::: {.column width="50%"}
+
+```{r, engine = 'tikz', fig.align='center', out.height='300px', out.width='300px'}
+\begin{tikzpicture}[x=0.75pt,y=0.75pt,yscale=-0.7,xscale=0.7]
+    %uncomment if require: \path (0,248); %set diagram left start at 0, and has height of 248
+    %Shape: Circle [id:dp904407057957167] 
+    \draw   (234,153.5) .. controls (234,122.85) and (258.85,98) .. (289.5,98) .. controls (320.15,98) and (345,122.85) .. (345,153.5) .. controls (345,184.15) and (320.15,209) .. (289.5,209) .. controls (258.85,209) and (234,184.15) .. (234,153.5) -- cycle ;
+    %Shape: Circle [id:dp714900201452652] 
+    \draw   (205,123) .. controls (205,63.35) and (253.35,15) .. (313,15) .. controls (372.65,15) and (421,63.35) .. (421,123) .. controls (421,182.65) and (372.65,231) .. (313,231) .. controls (253.35,231) and (205,182.65) .. (205,123) -- cycle ;
+    % Text Node
+    \draw (387,14.4) node [anchor=north west][inner sep=0.75pt]  [font=\Large]  {$\:\widehat G$};
+    % Text Node
+    \draw (313,76.4) node [anchor=north west][inner sep=0.75pt]  [font=\Large]  {$G^{*}$};
+    \end{tikzpicture}
+```
+:::
+
+::: {.column width="50%"}
+```{r, engine = 'tikz', fig.align='center', out.height='300px', out.width='500px'}
+\begin{tikzpicture}[x=0.75pt,y=0.75pt,yscale=-0.75,xscale=0.75]
+    %uncomment if require: \path (0,300); %set diagram left start at 0, and has height of 300
+    %Shape: Circle [id:dp8459764215331429] 
+    \draw   (294,155) .. controls (294,95.35) and (342.35,47) .. (402,47) .. controls (461.65,47) and (510,95.35) .. (510,155) .. controls (510,214.65) and (461.65,263) .. (402,263) .. controls (342.35,263) and (294,214.65) .. (294,155) -- cycle ;
+    %Shape: Circle [id:dp4157181109791406] 
+    \draw   (161,156) .. controls (161,96.35) and (209.35,48) .. (269,48) .. controls (328.65,48) and (377,96.35) .. (377,156) .. controls (377,215.65) and (328.65,264) .. (269,264) .. controls (209.35,264) and (161,215.65) .. (161,156) -- cycle ;
+    % Text Node
+    \draw (476,46.4) node [anchor=north west][inner sep=0.75pt]  [font=\Large]  {$\widehat G$};
+    % Text Node
+    \draw (165,51.4) node [anchor=north west][inner sep=0.75pt]  [font=\Large]  {$G^{*}$};
+\end{tikzpicture}
+```
+:::
+
+:::
+
+
+<br/>
+
+We prove that, eventually almost surely as $n\to\infty,$ neither of the cases above can happen, which implies that $\widehat G = G^*.$
+
+## Algorithms for Estimation {.smaller visibility="uncounted"}
+
+<br/><br/>
+Define
+``` {=tex}
+\begin{equation*}\label{eq:defH}
+    H(G) = \log \widehat L(G) - \lambda_n \sum_{v \in V} |A|^{|G(v)|}.
+\end{equation*}
+```
+
+**Focus**: determine the maximal value of $H(\cdot)$ and identify the argument at which this maximum occurs.
+
+## Exact Algorithm {.smaller visibility="uncounted"} 
+
+- Let $H(G) = \log \widehat L(G) - \lambda_n \sum_{v \in V} |A|^{|G(v)|}.$
+
+- Define 
+  $$\mathcal{G} = \Big\{ G = (V, E): E \subseteq \{V\times V\} \setminus \{(v,v):v \in V\}\Big\}.$$
+
+- Set 
+$$\widehat G = \arg\max_{G \:\in\: \mathcal{G}} H(G).$$
+
+- Drawback: computational complexity
+  
+  $\qquad |\mathcal{G}| = 2^{{d(d-1)}/{2}},$ 
+  
+  $\qquad |V|=d.$
+
+
+## Forward Stepwise Algorithm {visibility="uncounted"}
+
+- Starts with an empty graph.
+
+- Adds edges one at a time, selecting the edge that maximizes improvement in fit.
+
+- Stops when no further enhancement in fit is achieved.
+
+![](img/sim/ex1_1x_fwd_stepwise.jpg){fig-align="center"}
+
+
+## Backward Stepwise Algorithm {visibility="uncounted"}
+
+- Begins with a complete graph.
+- Removes edges one at a time, selecting the edge that maximizes improvement in fit.
+
+- Stops when no further enhancement in fit is achieved.
+
+
+![](img/sim/ex1_1x_bcw_stepwise.jpg){fig-align="center"}
+
+## Simulated Annealing Algorithm {.smaller visibility="uncounted"} 
+<!-- - $H^* = \max_{G \in \mathcal{G}} \{H(G)\}.$ -->
+
+<!-- - $\mathcal{H} = \{G \in \mathcal{G} : H(G) = H^*\}.$ -->
+
+- $H(G) = \log \widehat L(G) - \lambda_n \sum_{v \in V} |A|^{|G(v)|}.$
+
+- Definition of a neighbor of a graph.
+
+::: {layout-ncol=3}
+![$\qquad\qquad\qquad\qquad G_1$](img/sim/ch3-grafo_aleatorio.jpg) 
+
+![$\qquad\qquad\qquad\qquad G_2$](img/sim/ch3-grafo_aleatorio_viz1.jpg)
+
+![$\qquad\qquad\qquad\qquad G_3$](img/sim/ch3-grafo_aleatorio_viz2.jpg) 
+:::
+
+## Simulation Study {.smaller visibility="uncounted"} 
+
+- **Objective**: Assess the performance of the proposed algorithms via simulation studies.
+
+
+- **Scenario 1: Fixed True Graph**
+  - Generate synthetic data based on fixed true graph.
+  - Assess estimator's performance under stability conditions.
+
+
+- **Scenario 2: Random Graphs with Varying Edge Number** 
+  - Generate random graphs with varying edge numbers.
+  - Evaluate estimator's performance across graphs with different edge configuration.
+
+
+## Example 11 - Scenario 1 {.smaller visibility="uncounted"} 
+
+- Consider  $\mathbf{X} = (X_1, \dots, X_5).$
+
+- Joint probability function of these variables:
+$$ p(x_1,x_2,x_3,x_4,x_5) = p(x_3) p(x_1|x_3) p(x_2|x_1,x_3) p(x_4|x_3) p(x_5|x_3). $$
+
+:::: {.columns}
+
+::: {.column width="40%"}
+- Conditional probabilities:
+``` {=tex}
+\begin{align*} 
+    p(x_1|x_2,x_3,x_4,x_5) &= p(x_1|x_2,x_3), \\  
+    p(x_2|x_1,x_3,x_4,x_5) &= p(x_2|x_1,x_3), \\ 
+    %p(x_3|x_1,x_2,x_4,x_5) &= p(x_1,x_2,x_3,x_4,x_5)/ \sum {_{x_3}}p(x_1,x_2,x_3,x_4,x_5), \\
+    p(x_4|x_1,x_2,x_3,x_5) &= p(x_4|x_3), \\
+    p(x_5|x_1,x_2,x_3,x_4)&= p(x_5|x_3).
+\end{align*}
+```
+:::
+
+::: {.column width="60%"}
+![](img/sim/ex1_graph.jpg){fig-align="center" width=250px}
+:::
+::::
+
+- **Aim**: assess the performance of the algorithms for estimation.
+
+- **Data generation**: Gibbs Sampler algorithm.
+
+<!-- ## Example 11 - Data Generation {.smaller} -->
+
+<!-- 0. Establish theoretical values for the marginal and conditional distributions. -->
+
+<!-- 1. Initialize the variables -->
+<!-- ``` {=tex} -->
+<!-- \begin{align*}  -->
+<!--     X_{3}^{0} &\sim p(X_3), &\qquad X_{1}^{0} &\sim p(X_1| X_{3}^{0}), \\ -->
+<!--     X_{2}^{0} &\sim p(X_2| X_{1}^{0}, X_{3}^{0}), &\qquad X_{4}^{0} &\sim p(X_4| X_{3}^{0}), \\ -->
+<!--     X_{5}^{0} &\sim p(X_5| X_{3}^{0}).  -->
+<!-- \end{align*} -->
+<!-- ``` -->
+
+
+<!-- 2. For $j = 1, 2 \dots,$ generate -->
+<!-- ``` {=tex}    -->
+<!-- \begin{align*} -->
+<!--     X_{1}^{j} &\sim p(X_1| X_{2}^{j-1}, X_{3}^{j-1}), &\qquad X_{2}^{j} &\sim p(X_2| X_{1}^{j}, X_{3}^{j-1}), \\ -->
+<!--     X_{4}^{j} &\sim p(X_4| X_{3}^{j-1}), &\qquad X_{5}^{j} &\sim p(X_5| X_{3}^{j-1}), \\ -->
+<!--     X_{3}^{j} &\sim p(X_3| X_{1}^{j}, X_{2}^{j}, X_{4}^{j}, X_{5}^{j}). -->
+<!-- \end{align*} -->
+<!-- ``` -->
+
+<!-- Step 2 above should be repeated accordingly to generate a sample with the size needed. -->
+
+<!-- ## Example 11 {.smaller} -->
+
+<!-- TODO: pensar de incluo esse grafico -->
+
+<!-- Effect of the penalizing constant value. -->
+
+<!-- ![](img/sim/ex1_1x_exact_N5000.jpg){fig-align="center"} -->
+
+## Example 11 - Sampling Scheme {.smaller visibility="uncounted"} 
+
+- The Gibbs sampler (Geman and Geman, 1984 and Gelfand and Smith, 1990):
+  - iterations: $15{,}000$, 
+  - burn-in period: $5{,}000$,
+  - final sample: $10{,}000$.
+
+- Smaller samples were extracted from the initial sample $s_1, \dots, s_{10{,}000}$, with sizes $N \in \{100, 500, 1{,}000, 5{,}000, 10{,}000\}$.
+
+![](img/sim/ex1_sample_scheme_page.jpg){fig-align="center"}
+
+
+## Example 11 - Exact Algorithm {.smaller visibility="uncounted"}
+
+Effects of sample size and penalizing constant value.
+Here, $\lambda_N = c\log N.$
+![](img/sim/ex1_1x_grid_exact.jpg){fig-align="center"}
+
+## Example 11 - Forward Stepwise {.smaller visibility="uncounted"}
+
+Effects of sample size and penalizing constant value.
+Here, $\lambda_N = c\log N.$
+![](img/sim/ex1_1x_grid_fwd.jpg){fig-align="center"}
+
+## Example 11 - Backward Stepwise {.smaller visibility="uncounted"}
+
+Effects of sample size and penalizing constant value.
+Here, $\lambda_N = c\log N.$
+![](img/sim/ex1_1x_grid_bcw.jpg){fig-align="center"}
+
+## Example 11 - Simulated Annealing {.smaller visibility="uncounted"}
+
+Effects of sample size and penalizing constant value.
+Here, $\lambda_N = c\log N.$
+![](img/sim/ex1_1x_grid_SA.jpg){fig-align="center"}
+
+
+<!-- adicionar comentarios -->
+
+## Example 11 - Several Replications{.smaller visibility="uncounted"}
+
+- **Objective**: generate several samples and assess the performance of the algorithms.
+
+- **Metrics**: underestimation error ($ue$), overestimation error ($oe$), and total error ($te$).
+
+:::{#title-slide .center}
+$ue(G, \hat G) = \frac{\sum_{(v, w)}\mathbf{1}\{(v, w)\in E \text{ and } (v,w) \not\in \hat E\}}{\sum_{(v, w)}\mathbf{1}\{(v, w) \in E\}},$
+<br><br>
+$oe(G, \hat G) = \frac{\sum_{(v, w)}\mathbf{1}\{(v, w)\not\in E \text{ and } (v,w) \in \hat E\}}{\sum_{(v, w)}\mathbf{1}\{(v, w) \not\in E\}},$
+<br><br>
+$\qquad \qquad te(G, \hat G) = \frac{ue \sum_{(v, w)}\mathbf{1}\{(v, w) \not\in E\} + oe \sum_{(v, w)}\mathbf{1}\{(v, w) \in E\}}{|V|(|V|-1)/2}.$
+:::
+
+
+## Example 11 - Several Replications {.smaller visibility="uncounted"}
+
+![](img/sim/ex1_10x_tile.jpg){fig-align="center" width=100%}
+
+<!-- - Stepwise algorithms offer appealing alternatives to Exact algorithm. -->
+<!-- - Simulated Annealing results are unsatisfactory, favoring Forward or Backward Stepwise algorithms for practical applications. -->
+
+
+## The Choice of Penalizing Constant $c$  {.smaller visibility="uncounted"}
+
+Utilize $k$-fold cross-validation to assess model performance and select optimal penalizing constant values.
+
+```{r, engine = 'tikz', fig.align='center', out.height='300px'}
+% Created by tikzDevice version 0.12.4 on 2024-04-04 09:23:38
+% !TEX encoding = UTF-8 Unicode
+\begin{tikzpicture}[x=1pt,y=1pt]
+\definecolor{fillColor}{RGB}{255,255,255}
+\path[use as bounding box,fill=fillColor,fill opacity=0.00] (0,0) rectangle (361.35,144.54);
+\begin{scope}
+\path[clip] ( 51.29,  8.25) rectangle (355.85,139.04);
+\definecolor{drawColor}{RGB}{0,0,0}
+\definecolor{fillColor}{RGB}{102,194,165}
+
+\path[draw=drawColor,line width= 0.6pt,fill=fillColor,fill opacity=0.80] ( 65.13, 14.20) rectangle (120.51, 37.51);
+
+\path[draw=drawColor,line width= 0.6pt,fill=fillColor,fill opacity=0.80] (120.51, 14.20) rectangle (175.88, 37.51);
+
+\path[draw=drawColor,line width= 0.6pt,fill=fillColor,fill opacity=0.80] (175.88, 14.20) rectangle (231.26, 37.51);
+
+\path[draw=drawColor,line width= 0.6pt,fill=fillColor,fill opacity=0.80] (231.26, 14.20) rectangle (286.63, 37.51);
+\definecolor{fillColor}{RGB}{252,141,98}
+
+\path[draw=drawColor,line width= 0.6pt,fill=fillColor,fill opacity=0.80] (286.63, 14.20) rectangle (342.01, 37.51);
+\definecolor{fillColor}{RGB}{102,194,165}
+
+\path[draw=drawColor,line width= 0.6pt,fill=fillColor,fill opacity=0.80] ( 65.13, 39.84) rectangle (120.51, 60.82);
+
+\path[draw=drawColor,line width= 0.6pt,fill=fillColor,fill opacity=0.80] (120.51, 39.84) rectangle (175.88, 60.82);
+
+\path[draw=drawColor,line width= 0.6pt,fill=fillColor,fill opacity=0.80] (175.88, 39.84) rectangle (231.26, 60.82);
+\definecolor{fillColor}{RGB}{252,141,98}
+
+\path[draw=drawColor,line width= 0.6pt,fill=fillColor,fill opacity=0.80] (231.26, 39.84) rectangle (286.63, 60.82);
+\definecolor{fillColor}{RGB}{102,194,165}
+
+\path[draw=drawColor,line width= 0.6pt,fill=fillColor,fill opacity=0.80] (286.63, 39.84) rectangle (342.01, 60.82);
+
+\path[draw=drawColor,line width= 0.6pt,fill=fillColor,fill opacity=0.80] ( 65.13, 63.15) rectangle (120.51, 84.14);
+
+\path[draw=drawColor,line width= 0.6pt,fill=fillColor,fill opacity=0.80] (120.51, 63.15) rectangle (175.88, 84.14);
+\definecolor{fillColor}{RGB}{252,141,98}
+
+\path[draw=drawColor,line width= 0.6pt,fill=fillColor,fill opacity=0.80] (175.88, 63.15) rectangle (231.26, 84.14);
+\definecolor{fillColor}{RGB}{102,194,165}
+
+\path[draw=drawColor,line width= 0.6pt,fill=fillColor,fill opacity=0.80] (231.26, 63.15) rectangle (286.63, 84.14);
+
+\path[draw=drawColor,line width= 0.6pt,fill=fillColor,fill opacity=0.80] (286.63, 63.15) rectangle (342.01, 84.14);
+
+\path[draw=drawColor,line width= 0.6pt,fill=fillColor,fill opacity=0.80] ( 65.13, 86.47) rectangle (120.51,107.45);
+\definecolor{fillColor}{RGB}{252,141,98}
+
+\path[draw=drawColor,line width= 0.6pt,fill=fillColor,fill opacity=0.80] (120.51, 86.47) rectangle (175.88,107.45);
+\definecolor{fillColor}{RGB}{102,194,165}
+
+\path[draw=drawColor,line width= 0.6pt,fill=fillColor,fill opacity=0.80] (175.88, 86.47) rectangle (231.26,107.45);
+
+\path[draw=drawColor,line width= 0.6pt,fill=fillColor,fill opacity=0.80] (231.26, 86.47) rectangle (286.63,107.45);
+
+\path[draw=drawColor,line width= 0.6pt,fill=fillColor,fill opacity=0.80] (286.63, 86.47) rectangle (342.01,107.45);
+\definecolor{fillColor}{RGB}{252,141,98}
+
+\path[draw=drawColor,line width= 0.6pt,fill=fillColor,fill opacity=0.80] ( 65.13,109.78) rectangle (120.51,133.10);
+\definecolor{fillColor}{RGB}{102,194,165}
+
+\path[draw=drawColor,line width= 0.6pt,fill=fillColor,fill opacity=0.80] (120.51,109.78) rectangle (175.88,133.10);
+
+\path[draw=drawColor,line width= 0.6pt,fill=fillColor,fill opacity=0.80] (175.88,109.78) rectangle (231.26,133.10);
+
+\path[draw=drawColor,line width= 0.6pt,fill=fillColor,fill opacity=0.80] (231.26,109.78) rectangle (286.63,133.10);
+
+\path[draw=drawColor,line width= 0.6pt,fill=fillColor,fill opacity=0.80] (286.63,109.78) rectangle (342.01,133.10);
+
+\node[text=drawColor,anchor=base,inner sep=0pt, outer sep=0pt, scale=  1.10] at ( 92.82,116.47) {Val.};
+
+\node[text=drawColor,anchor=base,inner sep=0pt, outer sep=0pt, scale=  1.10] at (148.19, 93.16) {Val.};
+
+\node[text=drawColor,anchor=base,inner sep=0pt, outer sep=0pt, scale=  1.10] at (203.57, 69.84) {Val.};
+
+\node[text=drawColor,anchor=base,inner sep=0pt, outer sep=0pt, scale=  1.10] at (258.94, 46.53) {Val.};
+
+\node[text=drawColor,anchor=base,inner sep=0pt, outer sep=0pt, scale=  1.10] at (314.32, 23.22) {Val.};
+
+\node[text=drawColor,anchor=base,inner sep=0pt, outer sep=0pt, scale=  1.10] at ( 92.82, 23.22) {Train};
+
+\node[text=drawColor,anchor=base,inner sep=0pt, outer sep=0pt, scale=  1.10] at (148.19, 23.22) {Train};
+
+\node[text=drawColor,anchor=base,inner sep=0pt, outer sep=0pt, scale=  1.10] at (203.57, 23.22) {Train};
+
+\node[text=drawColor,anchor=base,inner sep=0pt, outer sep=0pt, scale=  1.10] at (258.94, 23.22) {Train};
+
+\node[text=drawColor,anchor=base,inner sep=0pt, outer sep=0pt, scale=  1.10] at ( 92.82, 46.53) {Train};
+
+\node[text=drawColor,anchor=base,inner sep=0pt, outer sep=0pt, scale=  1.10] at (148.19, 46.53) {Train};
+
+\node[text=drawColor,anchor=base,inner sep=0pt, outer sep=0pt, scale=  1.10] at (203.57, 46.53) {Train};
+
+\node[text=drawColor,anchor=base,inner sep=0pt, outer sep=0pt, scale=  1.10] at (314.32, 46.53) {Train};
+
+\node[text=drawColor,anchor=base,inner sep=0pt, outer sep=0pt, scale=  1.10] at ( 92.82, 69.84) {Train};
+
+\node[text=drawColor,anchor=base,inner sep=0pt, outer sep=0pt, scale=  1.10] at (148.19, 69.84) {Train};
+
+\node[text=drawColor,anchor=base,inner sep=0pt, outer sep=0pt, scale=  1.10] at (258.94, 69.84) {Train};
+
+\node[text=drawColor,anchor=base,inner sep=0pt, outer sep=0pt, scale=  1.10] at (314.32, 69.84) {Train};
+
+\node[text=drawColor,anchor=base,inner sep=0pt, outer sep=0pt, scale=  1.10] at ( 92.82, 93.16) {Train};
+
+\node[text=drawColor,anchor=base,inner sep=0pt, outer sep=0pt, scale=  1.10] at (203.57, 93.16) {Train};
+
+\node[text=drawColor,anchor=base,inner sep=0pt, outer sep=0pt, scale=  1.10] at (258.94, 93.16) {Train};
+
+\node[text=drawColor,anchor=base,inner sep=0pt, outer sep=0pt, scale=  1.10] at (314.32, 93.16) {Train};
+
+\node[text=drawColor,anchor=base,inner sep=0pt, outer sep=0pt, scale=  1.10] at (148.19,116.47) {Train};
+
+\node[text=drawColor,anchor=base,inner sep=0pt, outer sep=0pt, scale=  1.10] at (203.57,116.47) {Train};
+
+\node[text=drawColor,anchor=base,inner sep=0pt, outer sep=0pt, scale=  1.10] at (258.94,116.47) {Train};
+
+\node[text=drawColor,anchor=base,inner sep=0pt, outer sep=0pt, scale=  1.10] at (314.32,116.47) {Train};
+\end{scope}
+\begin{scope}
+\path[clip] (  0.00,  0.00) rectangle (361.35,144.54);
+\definecolor{drawColor}{gray}{0.30}
+
+\node[text=drawColor,anchor=base east,inner sep=0pt, outer sep=0pt, scale=  0.88] at ( 46.34, 23.99) {Iteration 5};
+
+\node[text=drawColor,anchor=base east,inner sep=0pt, outer sep=0pt, scale=  0.88] at ( 46.34, 47.30) {Iteration 4};
+
+\node[text=drawColor,anchor=base east,inner sep=0pt, outer sep=0pt, scale=  0.88] at ( 46.34, 70.61) {Iteration 3};
+
+\node[text=drawColor,anchor=base east,inner sep=0pt, outer sep=0pt, scale=  0.88] at ( 46.34, 93.93) {Iteration 2};
+
+\node[text=drawColor,anchor=base east,inner sep=0pt, outer sep=0pt, scale=  0.88] at ( 46.34,117.24) {Iteration 1};
+\end{scope}
+\end{tikzpicture}
+
+```
+
+
+Compute pseudo-log-likelihood over validation sets for different constant values.
+\begin{equation}
+  \mathrm{CV}_k^{(i)}(c) = \sum_{v \in V} \:\sum_{(a_v\in A)} \:\sum_{a_{\hat G(v)}\in A^{|\hat G(v)|}}
+          N_i(a_v,a_{\widehat G(v)})\log \widehat\pi(a_v|a_{\widehat G(v)})\,.
+\end{equation}
+
+<!-- ## The Choice of Penalizing Constant $c$  {.smaller} -->
+
+<!-- - **Issue:** Configuration mismatch between training and validation sets can cause problems in cross-validation. -->
+<!--    $$\hat\pi(a_v|a_{\hat G(v)}) = 0, \text{ resulting in } \mathrm{CV}_k^{(i)}(c) = -\infty.$$  -->
+<!-- - **Solution:** Introduce the hyperparameter $\gamma$ to handle cases where observed configuration is absent in training set, -->
+<!--    $$\hat\pi(a_v|a_{\hat G(v)}) = \gamma.$$ -->
+<!-- - **Redefinition:** Rescale distribution $\hat\pi(\cdot|a_{\hat G(v)})$ for configurations not seen in training data. -->
+<!-- - **Recommendation:** Set $\gamma$ to a small value for numerical stability. -->
+<!-- - This change ensures stability and reliability of cross-validation method for real-world datasets. -->
+
+## The Choice of Penalizing Constant $c$  {.smaller visibility="uncounted"}
+
+![](img/sim/ex1_cv_error_with_labels.jpg){fig-align="center"}
+
+$5$-fold cross-validation error for Example 11, considering a sample of size $5{,}000$ and set of values for penalizing constant.
+
+## São Francisco River Data {.smaller visibility="uncounted"}
+
+
+- Water volume measured at $d$ stations along the river's course, denoted as $X_{u}$, where $u = 1, \ldots, d$.
+
+- Vector $\mathbf{X}$ observed at discrete time intervals (10-day mean), from January 1977 to December 2016.
+
+- Process $\mathbf{X}^n=\{\mathbf{X}^{(i)}: 1 \leq i \leq n\}$, $\mathbf{X}^{(i)}= (X_{1}^{(i)}, \ldots, X_{d}^{(i)})$.
+
+- Forward stepwise algorithm and a $5$-fold cross-validation approach below.
+
+
+:::: {.columns}
+::: {.column width="40%"}
+![](img/sim/SF_stations.jpg){fig-align="center"}
+:::
+::: {.column width="20%"}
+:::
+::: {.column width="40%"}
+![](img/sim/SF_map_best_cv_fwd_N_1042_c_0.4.jpg){fig-align="center"}
+:::
+::::
+
+Results similar to Leonardi et al (2021).
+
+## Stock Exchange Data {.smaller visibility="uncounted"}
+
+![](img/sim/app_stock_cv_graph_page.jpg){fig-align="center"}
+
+Estimated graph, considering the penalizing constant value chosen by cross-validation.

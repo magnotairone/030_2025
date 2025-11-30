@@ -476,6 +476,301 @@ N(a_v,a_{G(v)})\,
 <li><p>Lauritzen, S. L. (1996). <em>Graphical models</em>. Claredon Press.</p></li>
 <li><p>Oodaira, H., &amp; Yoshihara, K. I. (1971). <em>The law of the iterated logarithm for stationary processes satisfying mixing conditions</em>. Kodai Mathematical Seminar Reports.</p></li>
 </ul>
+</section></section>
+<section>
+<section id="obrigado" class="title-slide slide level1 center">
+<h1>Obrigado</h1>
+
+</section>
+<section id="rate-of-convergence-of-the-empirical-probabilities" class="slide level2 smaller" data-visibility="uncounted">
+<h2>Rate of convergence of the empirical probabilities</h2>
+<p>Based on the Law of the Iterated Logarithm for stationary polynomial mixing processes proved in Oodaira and Yoshihara (1971), we can derive the rate of convergence of the empirical probabilities to the true probabilities of the process.</p>
+<p><strong>Proposition 1 (Typicality)</strong>: Assume the process <span class="math inline">\(\{X^{(i)}\colon  i \in \mathbb{Z}\}\)</span> satisfies the mixing condition with rate <span class="math inline">\(\psi(\ell) = O(1/\ell^{1+\epsilon}),\)</span> for some <span class="math inline">\(\epsilon&gt;0.\)</span> Then, for any <span class="math inline">\(W \subset V\)</span> and <span class="math inline">\(\delta &gt; 0,\)</span> <span class="math display">\[\begin{equation*}
+    \Big\vert \widehat{\pi}(a_W) - \pi(a_W) \Big\vert &lt; \sqrt{\frac{\delta\log n}{n}},
+\end{equation*}\]</span> eventually almost surely as <span class="math inline">\(n \rightarrow \infty.\)</span></p>
+<p><strong>Proposition 2 (Conditional typicality)</strong>: Then for any <span class="math inline">\(\delta &gt; 0\)</span>, any disjoint sets <span class="math inline">\(W, W' \subset V\)</span> and any <span class="math inline">\(a_W \in A^{W}\)</span> and <span class="math inline">\(a_{W'} \in A^{{W'}}\)</span> we have that <span class="math display">\[\begin{equation*}
+    \Big\vert \widehat\pi(a_W|a_{W'}) - \pi(a_W|a_{W'}) \Big\vert &lt; \sqrt{\frac{\delta\log n}{N(a_W)}},
+\end{equation*}\]</span> eventually almost surely as <span class="math inline">\(n \rightarrow \infty.\)</span></p>
+</section>
+<section id="intuitive-ove" class="slide level2">
+<h2>Intuitive Ove</h2>
+<p>rview of Theorem Proof {.smaller visibility=“uncounted”}</p>
+<p>Consider <span class="math inline">\(\{\widehat G\neq G^*\} = \big\{G^* \subsetneq \widehat G \big\} \cup  \big\{G^* \not\subset \widehat G \big\}.\)</span></p>
+<p><br></p>
+<div class="columns">
+<div class="column" style="width:50%;">
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="03_pesquisa_v2_files/figure-revealjs/unnamed-chunk-3-1.png" class="quarto-figure quarto-figure-center" width="300" height="300"></p>
+</figure>
+</div>
+</div>
+</div>
+</div><div class="column" style="width:50%;">
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="03_pesquisa_v2_files/figure-revealjs/unnamed-chunk-4-1.png" class="quarto-figure quarto-figure-center" width="500" height="300"></p>
+</figure>
+</div>
+</div>
+</div>
+</div></div>
+<p><br></p>
+<p>We prove that, eventually almost surely as <span class="math inline">\(n\to\infty,\)</span> neither of the cases above can happen, which implies that <span class="math inline">\(\widehat G = G^*.\)</span></p>
+</section>
+<section id="algorithms-for-estimation" class="slide level2 smaller" data-visibility="uncounted">
+<h2>Algorithms for Estimation</h2>
+<p><br><br> Define</p>
+<span class="math display">\[\begin{equation*}\label{eq:defH}
+    H(G) = \log \widehat L(G) - \lambda_n \sum_{v \in V} |A|^{|G(v)|}.
+\end{equation*}\]</span>
+<p><strong>Focus</strong>: determine the maximal value of <span class="math inline">\(H(\cdot)\)</span> and identify the argument at which this maximum occurs.</p>
+</section>
+<section id="exact-algorithm" class="slide level2 smaller" data-visibility="uncounted">
+<h2>Exact Algorithm</h2>
+<ul>
+<li><p>Let <span class="math inline">\(H(G) = \log \widehat L(G) - \lambda_n \sum_{v \in V} |A|^{|G(v)|}.\)</span></p></li>
+<li><p>Define <span class="math display">\[\mathcal{G} = \Big\{ G = (V, E): E \subseteq \{V\times V\} \setminus \{(v,v):v \in V\}\Big\}.\]</span></p></li>
+<li><p>Set <span class="math display">\[\widehat G = \arg\max_{G \:\in\: \mathcal{G}} H(G).\]</span></p></li>
+<li><p>Drawback: computational complexity</p>
+<p><span class="math inline">\(\qquad |\mathcal{G}| = 2^{{d(d-1)}/{2}},\)</span></p>
+<p><span class="math inline">\(\qquad |V|=d.\)</span></p></li>
+</ul>
+</section>
+<section id="forward-stepwise-algorithm" class="slide level2" data-visibility="uncounted">
+<h2>Forward Stepwise Algorithm</h2>
+<ul>
+<li><p>Starts with an empty graph.</p></li>
+<li><p>Adds edges one at a time, selecting the edge that maximizes improvement in fit.</p></li>
+<li><p>Stops when no further enhancement in fit is achieved.</p></li>
+</ul>
+
+<img data-src="img/sim/ex1_1x_fwd_stepwise.jpg" class="quarto-figure quarto-figure-center r-stretch"></section>
+<section id="backward-stepwise-algorithm" class="slide level2" data-visibility="uncounted">
+<h2>Backward Stepwise Algorithm</h2>
+<ul>
+<li><p>Begins with a complete graph.</p></li>
+<li><p>Removes edges one at a time, selecting the edge that maximizes improvement in fit.</p></li>
+<li><p>Stops when no further enhancement in fit is achieved.</p></li>
+</ul>
+
+<img data-src="img/sim/ex1_1x_bcw_stepwise.jpg" class="quarto-figure quarto-figure-center r-stretch"></section>
+<section id="simulated-annealing-algorithm" class="slide level2 smaller" data-visibility="uncounted">
+<h2>Simulated Annealing Algorithm</h2>
+<!-- - $H^* = \max_{G \in \mathcal{G}} \{H(G)\}.$ -->
+<!-- - $\mathcal{H} = \{G \in \mathcal{G} : H(G) = H^*\}.$ -->
+<ul>
+<li><p><span class="math inline">\(H(G) = \log \widehat L(G) - \lambda_n \sum_{v \in V} |A|^{|G(v)|}.\)</span></p></li>
+<li><p>Definition of a neighbor of a graph.</p></li>
+</ul>
+<div class="quarto-layout-panel" data-layout-ncol="3">
+<div class="quarto-layout-row">
+<div class="quarto-layout-cell" style="flex-basis: 33.3%;justify-content: flex-start;">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="img/sim/ch3-grafo_aleatorio.jpg"></p>
+<figcaption><span class="math inline">\(\qquad\qquad\qquad\qquad G_1\)</span></figcaption>
+</figure>
+</div>
+</div>
+<div class="quarto-layout-cell" style="flex-basis: 33.3%;justify-content: flex-start;">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="img/sim/ch3-grafo_aleatorio_viz1.jpg"></p>
+<figcaption><span class="math inline">\(\qquad\qquad\qquad\qquad G_2\)</span></figcaption>
+</figure>
+</div>
+</div>
+<div class="quarto-layout-cell" style="flex-basis: 33.3%;justify-content: flex-start;">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="img/sim/ch3-grafo_aleatorio_viz2.jpg"></p>
+<figcaption><span class="math inline">\(\qquad\qquad\qquad\qquad G_3\)</span></figcaption>
+</figure>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="simulation-study" class="slide level2 smaller" data-visibility="uncounted">
+<h2>Simulation Study</h2>
+<ul>
+<li><p><strong>Objective</strong>: Assess the performance of the proposed algorithms via simulation studies.</p></li>
+<li><p><strong>Scenario 1: Fixed True Graph</strong></p>
+<ul>
+<li>Generate synthetic data based on fixed true graph.</li>
+<li>Assess estimator’s performance under stability conditions.</li>
+</ul></li>
+<li><p><strong>Scenario 2: Random Graphs with Varying Edge Number</strong></p>
+<ul>
+<li>Generate random graphs with varying edge numbers.</li>
+<li>Evaluate estimator’s performance across graphs with different edge configuration.</li>
+</ul></li>
+</ul>
+</section>
+<section id="example-11---scenario-1" class="slide level2 smaller" data-visibility="uncounted">
+<h2>Example 11 - Scenario 1</h2>
+<ul>
+<li><p>Consider <span class="math inline">\(\mathbf{X} = (X_1, \dots, X_5).\)</span></p></li>
+<li><p>Joint probability function of these variables: <span class="math display">\[ p(x_1,x_2,x_3,x_4,x_5) = p(x_3) p(x_1|x_3) p(x_2|x_1,x_3) p(x_4|x_3) p(x_5|x_3). \]</span></p></li>
+</ul>
+<div class="columns">
+<div class="column" style="width:40%;">
+<ul>
+<li>Conditional probabilities:</li>
+</ul>
+<span class="math display">\[\begin{align*}
+    p(x_1|x_2,x_3,x_4,x_5) &amp;= p(x_1|x_2,x_3), \\  
+    p(x_2|x_1,x_3,x_4,x_5) &amp;= p(x_2|x_1,x_3), \\
+    %p(x_3|x_1,x_2,x_4,x_5) &amp;= p(x_1,x_2,x_3,x_4,x_5)/ \sum {_{x_3}}p(x_1,x_2,x_3,x_4,x_5), \\
+    p(x_4|x_1,x_2,x_3,x_5) &amp;= p(x_4|x_3), \\
+    p(x_5|x_1,x_2,x_3,x_4)&amp;= p(x_5|x_3).
+\end{align*}\]</span>
+</div><div class="column" style="width:60%;">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="img/sim/ex1_graph.jpg" class="quarto-figure quarto-figure-center" width="250"></p>
+</figure>
+</div>
+</div></div>
+<ul>
+<li><p><strong>Aim</strong>: assess the performance of the algorithms for estimation.</p></li>
+<li><p><strong>Data generation</strong>: Gibbs Sampler algorithm.</p></li>
+</ul>
+<!-- ## Example 11 - Data Generation {.smaller} -->
+<!-- 0. Establish theoretical values for the marginal and conditional distributions. -->
+<!-- 1. Initialize the variables -->
+<!-- ``` {=tex} -->
+<!-- \begin{align*}  -->
+<!--     X_{3}^{0} &\sim p(X_3), &\qquad X_{1}^{0} &\sim p(X_1| X_{3}^{0}), \\ -->
+<!--     X_{2}^{0} &\sim p(X_2| X_{1}^{0}, X_{3}^{0}), &\qquad X_{4}^{0} &\sim p(X_4| X_{3}^{0}), \\ -->
+<!--     X_{5}^{0} &\sim p(X_5| X_{3}^{0}).  -->
+<!-- \end{align*} -->
+<!-- ``` -->
+<!-- 2. For $j = 1, 2 \dots,$ generate -->
+<!-- ``` {=tex}    -->
+<!-- \begin{align*} -->
+<!--     X_{1}^{j} &\sim p(X_1| X_{2}^{j-1}, X_{3}^{j-1}), &\qquad X_{2}^{j} &\sim p(X_2| X_{1}^{j}, X_{3}^{j-1}), \\ -->
+<!--     X_{4}^{j} &\sim p(X_4| X_{3}^{j-1}), &\qquad X_{5}^{j} &\sim p(X_5| X_{3}^{j-1}), \\ -->
+<!--     X_{3}^{j} &\sim p(X_3| X_{1}^{j}, X_{2}^{j}, X_{4}^{j}, X_{5}^{j}). -->
+<!-- \end{align*} -->
+<!-- ``` -->
+<!-- Step 2 above should be repeated accordingly to generate a sample with the size needed. -->
+<!-- ## Example 11 {.smaller} -->
+<!-- TODO: pensar de incluo esse grafico -->
+<!-- Effect of the penalizing constant value. -->
+<!-- ![](img/sim/ex1_1x_exact_N5000.jpg){fig-align="center"} -->
+</section>
+<section id="example-11---sampling-scheme" class="slide level2 smaller" data-visibility="uncounted">
+<h2>Example 11 - Sampling Scheme</h2>
+<ul>
+<li>The Gibbs sampler (Geman and Geman, 1984 and Gelfand and Smith, 1990):
+<ul>
+<li>iterations: <span class="math inline">\(15{,}000\)</span>,</li>
+<li>burn-in period: <span class="math inline">\(5{,}000\)</span>,</li>
+<li>final sample: <span class="math inline">\(10{,}000\)</span>.</li>
+</ul></li>
+<li>Smaller samples were extracted from the initial sample <span class="math inline">\(s_1, \dots, s_{10{,}000}\)</span>, with sizes <span class="math inline">\(N \in \{100, 500, 1{,}000, 5{,}000, 10{,}000\}\)</span>.</li>
+</ul>
+
+<img data-src="img/sim/ex1_sample_scheme_page.jpg" class="quarto-figure quarto-figure-center r-stretch"></section>
+<section id="example-11---exact-algorithm" class="slide level2 smaller" data-visibility="uncounted">
+<h2>Example 11 - Exact Algorithm</h2>
+<p>Effects of sample size and penalizing constant value. Here, <span class="math inline">\(\lambda_N = c\log N.\)</span> <img data-src="img/sim/ex1_1x_grid_exact.jpg" class="quarto-figure quarto-figure-center"></p>
+</section>
+<section id="example-11---forward-stepwise" class="slide level2 smaller" data-visibility="uncounted">
+<h2>Example 11 - Forward Stepwise</h2>
+<p>Effects of sample size and penalizing constant value. Here, <span class="math inline">\(\lambda_N = c\log N.\)</span> <img data-src="img/sim/ex1_1x_grid_fwd.jpg" class="quarto-figure quarto-figure-center"></p>
+</section>
+<section id="example-11---backward-stepwise" class="slide level2 smaller" data-visibility="uncounted">
+<h2>Example 11 - Backward Stepwise</h2>
+<p>Effects of sample size and penalizing constant value. Here, <span class="math inline">\(\lambda_N = c\log N.\)</span> <img data-src="img/sim/ex1_1x_grid_bcw.jpg" class="quarto-figure quarto-figure-center"></p>
+</section>
+<section id="example-11---simulated-annealing" class="slide level2 smaller" data-visibility="uncounted">
+<h2>Example 11 - Simulated Annealing</h2>
+<p>Effects of sample size and penalizing constant value. Here, <span class="math inline">\(\lambda_N = c\log N.\)</span> <img data-src="img/sim/ex1_1x_grid_SA.jpg" class="quarto-figure quarto-figure-center"></p>
+<!-- adicionar comentarios -->
+</section>
+<section id="example-11---several-replications" class="slide level2 smaller" data-visibility="uncounted">
+<h2>Example 11 - Several Replications</h2>
+<ul>
+<li><p><strong>Objective</strong>: generate several samples and assess the performance of the algorithms.</p></li>
+<li><p><strong>Metrics</strong>: underestimation error (<span class="math inline">\(ue\)</span>), overestimation error (<span class="math inline">\(oe\)</span>), and total error (<span class="math inline">\(te\)</span>).</p></li>
+</ul>
+<div id="title-slide" class="center">
+<p><span class="math inline">\(ue(G, \hat G) = \frac{\sum_{(v, w)}\mathbf{1}\{(v, w)\in E \text{ and } (v,w) \not\in \hat E\}}{\sum_{(v, w)}\mathbf{1}\{(v, w) \in E\}},\)</span> <br><br> <span class="math inline">\(oe(G, \hat G) = \frac{\sum_{(v, w)}\mathbf{1}\{(v, w)\not\in E \text{ and } (v,w) \in \hat E\}}{\sum_{(v, w)}\mathbf{1}\{(v, w) \not\in E\}},\)</span> <br><br> <span class="math inline">\(\qquad \qquad te(G, \hat G) = \frac{ue \sum_{(v, w)}\mathbf{1}\{(v, w) \not\in E\} + oe \sum_{(v, w)}\mathbf{1}\{(v, w) \in E\}}{|V|(|V|-1)/2}.\)</span></p>
+</div>
+</section>
+<section id="example-11---several-replications-1" class="slide level2 smaller" data-visibility="uncounted">
+<h2>Example 11 - Several Replications</h2>
+
+<!-- - Stepwise algorithms offer appealing alternatives to Exact algorithm. -->
+<!-- - Simulated Annealing results are unsatisfactory, favoring Forward or Backward Stepwise algorithms for practical applications. -->
+<img data-src="img/sim/ex1_10x_tile.jpg" class="quarto-figure quarto-figure-center r-stretch" style="width:100.0%"></section>
+<section id="the-choice-of-penalizing-constant-c" class="slide level2 smaller" data-visibility="uncounted">
+<h2>The Choice of Penalizing Constant <span class="math inline">\(c\)</span></h2>
+<p>Utilize <span class="math inline">\(k\)</span>-fold cross-validation to assess model performance and select optimal penalizing constant values.</p>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="03_pesquisa_v2_files/figure-revealjs/unnamed-chunk-5-1.png" class="quarto-figure quarto-figure-center" width="960" height="300"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>Compute pseudo-log-likelihood over validation sets for different constant values. <span class="math display">\[\begin{equation}
+  \mathrm{CV}_k^{(i)}(c) = \sum_{v \in V} \:\sum_{(a_v\in A)} \:\sum_{a_{\hat G(v)}\in A^{|\hat G(v)|}}
+          N_i(a_v,a_{\widehat G(v)})\log \widehat\pi(a_v|a_{\widehat G(v)})\,.
+\end{equation}\]</span></p>
+<!-- ## The Choice of Penalizing Constant $c$  {.smaller} -->
+<!-- - **Issue:** Configuration mismatch between training and validation sets can cause problems in cross-validation. -->
+<!--    $$\hat\pi(a_v|a_{\hat G(v)}) = 0, \text{ resulting in } \mathrm{CV}_k^{(i)}(c) = -\infty.$$  -->
+<!-- - **Solution:** Introduce the hyperparameter $\gamma$ to handle cases where observed configuration is absent in training set, -->
+<!--    $$\hat\pi(a_v|a_{\hat G(v)}) = \gamma.$$ -->
+<!-- - **Redefinition:** Rescale distribution $\hat\pi(\cdot|a_{\hat G(v)})$ for configurations not seen in training data. -->
+<!-- - **Recommendation:** Set $\gamma$ to a small value for numerical stability. -->
+<!-- - This change ensures stability and reliability of cross-validation method for real-world datasets. -->
+</section>
+<section id="the-choice-of-penalizing-constant-c-1" class="slide level2 smaller" data-visibility="uncounted">
+<h2>The Choice of Penalizing Constant <span class="math inline">\(c\)</span></h2>
+
+<img data-src="img/sim/ex1_cv_error_with_labels.jpg" class="quarto-figure quarto-figure-center r-stretch"><p><span class="math inline">\(5\)</span>-fold cross-validation error for Example 11, considering a sample of size <span class="math inline">\(5{,}000\)</span> and set of values for penalizing constant.</p>
+</section>
+<section id="são-francisco-river-data" class="slide level2 smaller" data-visibility="uncounted">
+<h2>São Francisco River Data</h2>
+<ul>
+<li><p>Water volume measured at <span class="math inline">\(d\)</span> stations along the river’s course, denoted as <span class="math inline">\(X_{u}\)</span>, where <span class="math inline">\(u = 1, \ldots, d\)</span>.</p></li>
+<li><p>Vector <span class="math inline">\(\mathbf{X}\)</span> observed at discrete time intervals (10-day mean), from January 1977 to December 2016.</p></li>
+<li><p>Process <span class="math inline">\(\mathbf{X}^n=\{\mathbf{X}^{(i)}: 1 \leq i \leq n\}\)</span>, <span class="math inline">\(\mathbf{X}^{(i)}= (X_{1}^{(i)}, \ldots, X_{d}^{(i)})\)</span>.</p></li>
+<li><p>Forward stepwise algorithm and a <span class="math inline">\(5\)</span>-fold cross-validation approach below.</p></li>
+</ul>
+<div class="columns">
+<div class="column" style="width:40%;">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="img/sim/SF_stations.jpg" class="quarto-figure quarto-figure-center"></p>
+</figure>
+</div>
+</div><div class="column" style="width:20%;">
+
+</div><div class="column" style="width:40%;">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="img/sim/SF_map_best_cv_fwd_N_1042_c_0.4.jpg" class="quarto-figure quarto-figure-center"></p>
+</figure>
+</div>
+</div></div>
+<p>Results similar to Leonardi et al (2021).</p>
+</section>
+<section id="stock-exchange-data" class="slide level2 smaller" data-visibility="uncounted">
+<h2>Stock Exchange Data</h2>
+
+<img data-src="img/sim/app_stock_cv_graph_page.jpg" class="quarto-figure quarto-figure-center r-stretch"><p>Estimated graph, considering the penalizing constant value chosen by cross-validation.</p>
 
 
 </section></section>

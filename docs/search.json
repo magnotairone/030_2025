@@ -432,5 +432,145 @@
     "title": "Memorial Circunstanciado",
     "section": "Software e estatística computacional",
     "text": "Software e estatística computacional\n\n\n\n\n\n GeoJAGS  Modelos para dados espaciais com MCMC  Modulo computacional em C++ voltado a inferência Bayesiana em estruturas espaciais (desenvolvido durante o mestrado) \n\n\n\n\n\n MixingGraph  Modelos gráficos para dados sob condições de mistura  Ferramentas para modelagem de estruturas de dependência (desenvolvido durante o doutorado) \n\n\nPesquisa que vira software: diferencial forte."
+  },
+  {
+    "objectID": "03_pesquisa_v2.html#rate-of-convergence-of-the-empirical-probabilities",
+    "href": "03_pesquisa_v2.html#rate-of-convergence-of-the-empirical-probabilities",
+    "title": "Projeto de Pesquisa",
+    "section": "Rate of convergence of the empirical probabilities",
+    "text": "Rate of convergence of the empirical probabilities\nBased on the Law of the Iterated Logarithm for stationary polynomial mixing processes proved in Oodaira and Yoshihara (1971), we can derive the rate of convergence of the empirical probabilities to the true probabilities of the process.\nProposition 1 (Typicality): Assume the process \\(\\{X^{(i)}\\colon  i \\in \\mathbb{Z}\\}\\) satisfies the mixing condition with rate \\(\\psi(\\ell) = O(1/\\ell^{1+\\epsilon}),\\) for some \\(\\epsilon&gt;0.\\) Then, for any \\(W \\subset V\\) and \\(\\delta &gt; 0,\\) \\[\\begin{equation*}\n    \\Big\\vert \\widehat{\\pi}(a_W) - \\pi(a_W) \\Big\\vert &lt; \\sqrt{\\frac{\\delta\\log n}{n}},\n\\end{equation*}\\] eventually almost surely as \\(n \\rightarrow \\infty.\\)\nProposition 2 (Conditional typicality): Then for any \\(\\delta &gt; 0\\), any disjoint sets \\(W, W' \\subset V\\) and any \\(a_W \\in A^{W}\\) and \\(a_{W'} \\in A^{{W'}}\\) we have that \\[\\begin{equation*}\n    \\Big\\vert \\widehat\\pi(a_W|a_{W'}) - \\pi(a_W|a_{W'}) \\Big\\vert &lt; \\sqrt{\\frac{\\delta\\log n}{N(a_W)}},\n\\end{equation*}\\] eventually almost surely as \\(n \\rightarrow \\infty.\\)"
+  },
+  {
+    "objectID": "03_pesquisa_v2.html#intuitive-ove",
+    "href": "03_pesquisa_v2.html#intuitive-ove",
+    "title": "Projeto de Pesquisa",
+    "section": "Intuitive Ove",
+    "text": "Intuitive Ove\nrview of Theorem Proof {.smaller visibility=“uncounted”}\nConsider \\(\\{\\widehat G\\neq G^*\\} = \\big\\{G^* \\subsetneq \\widehat G \\big\\} \\cup  \\big\\{G^* \\not\\subset \\widehat G \\big\\}.\\)\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nWe prove that, eventually almost surely as \\(n\\to\\infty,\\) neither of the cases above can happen, which implies that \\(\\widehat G = G^*.\\)"
+  },
+  {
+    "objectID": "03_pesquisa_v2.html#algorithms-for-estimation",
+    "href": "03_pesquisa_v2.html#algorithms-for-estimation",
+    "title": "Projeto de Pesquisa",
+    "section": "Algorithms for Estimation",
+    "text": "Algorithms for Estimation\n Define\n\\[\\begin{equation*}\\label{eq:defH}\n    H(G) = \\log \\widehat L(G) - \\lambda_n \\sum_{v \\in V} |A|^{|G(v)|}.\n\\end{equation*}\\]\nFocus: determine the maximal value of \\(H(\\cdot)\\) and identify the argument at which this maximum occurs."
+  },
+  {
+    "objectID": "03_pesquisa_v2.html#exact-algorithm",
+    "href": "03_pesquisa_v2.html#exact-algorithm",
+    "title": "Projeto de Pesquisa",
+    "section": "Exact Algorithm",
+    "text": "Exact Algorithm\n\nLet \\(H(G) = \\log \\widehat L(G) - \\lambda_n \\sum_{v \\in V} |A|^{|G(v)|}.\\)\nDefine \\[\\mathcal{G} = \\Big\\{ G = (V, E): E \\subseteq \\{V\\times V\\} \\setminus \\{(v,v):v \\in V\\}\\Big\\}.\\]\nSet \\[\\widehat G = \\arg\\max_{G \\:\\in\\: \\mathcal{G}} H(G).\\]\nDrawback: computational complexity\n\\(\\qquad |\\mathcal{G}| = 2^{{d(d-1)}/{2}},\\)\n\\(\\qquad |V|=d.\\)"
+  },
+  {
+    "objectID": "03_pesquisa_v2.html#forward-stepwise-algorithm",
+    "href": "03_pesquisa_v2.html#forward-stepwise-algorithm",
+    "title": "Projeto de Pesquisa",
+    "section": "Forward Stepwise Algorithm",
+    "text": "Forward Stepwise Algorithm\n\nStarts with an empty graph.\nAdds edges one at a time, selecting the edge that maximizes improvement in fit.\nStops when no further enhancement in fit is achieved."
+  },
+  {
+    "objectID": "03_pesquisa_v2.html#backward-stepwise-algorithm",
+    "href": "03_pesquisa_v2.html#backward-stepwise-algorithm",
+    "title": "Projeto de Pesquisa",
+    "section": "Backward Stepwise Algorithm",
+    "text": "Backward Stepwise Algorithm\n\nBegins with a complete graph.\nRemoves edges one at a time, selecting the edge that maximizes improvement in fit.\nStops when no further enhancement in fit is achieved."
+  },
+  {
+    "objectID": "03_pesquisa_v2.html#simulated-annealing-algorithm",
+    "href": "03_pesquisa_v2.html#simulated-annealing-algorithm",
+    "title": "Projeto de Pesquisa",
+    "section": "Simulated Annealing Algorithm",
+    "text": "Simulated Annealing Algorithm\n\n\n\n\\(H(G) = \\log \\widehat L(G) - \\lambda_n \\sum_{v \\in V} |A|^{|G(v)|}.\\)\nDefinition of a neighbor of a graph.\n\n\n\n\n\n\n\n\\(\\qquad\\qquad\\qquad\\qquad G_1\\)\n\n\n\n\n\n\n\n\\(\\qquad\\qquad\\qquad\\qquad G_2\\)\n\n\n\n\n\n\n\n\\(\\qquad\\qquad\\qquad\\qquad G_3\\)"
+  },
+  {
+    "objectID": "03_pesquisa_v2.html#simulation-study",
+    "href": "03_pesquisa_v2.html#simulation-study",
+    "title": "Projeto de Pesquisa",
+    "section": "Simulation Study",
+    "text": "Simulation Study\n\nObjective: Assess the performance of the proposed algorithms via simulation studies.\nScenario 1: Fixed True Graph\n\nGenerate synthetic data based on fixed true graph.\nAssess estimator’s performance under stability conditions.\n\nScenario 2: Random Graphs with Varying Edge Number\n\nGenerate random graphs with varying edge numbers.\nEvaluate estimator’s performance across graphs with different edge configuration."
+  },
+  {
+    "objectID": "03_pesquisa_v2.html#example-11---scenario-1",
+    "href": "03_pesquisa_v2.html#example-11---scenario-1",
+    "title": "Projeto de Pesquisa",
+    "section": "Example 11 - Scenario 1",
+    "text": "Example 11 - Scenario 1\n\nConsider \\(\\mathbf{X} = (X_1, \\dots, X_5).\\)\nJoint probability function of these variables: \\[ p(x_1,x_2,x_3,x_4,x_5) = p(x_3) p(x_1|x_3) p(x_2|x_1,x_3) p(x_4|x_3) p(x_5|x_3). \\]\n\n\n\n\nConditional probabilities:\n\n\\[\\begin{align*}\n    p(x_1|x_2,x_3,x_4,x_5) &= p(x_1|x_2,x_3), \\\\  \n    p(x_2|x_1,x_3,x_4,x_5) &= p(x_2|x_1,x_3), \\\\\n    %p(x_3|x_1,x_2,x_4,x_5) &= p(x_1,x_2,x_3,x_4,x_5)/ \\sum {_{x_3}}p(x_1,x_2,x_3,x_4,x_5), \\\\\n    p(x_4|x_1,x_2,x_3,x_5) &= p(x_4|x_3), \\\\\n    p(x_5|x_1,x_2,x_3,x_4)&= p(x_5|x_3).\n\\end{align*}\\]\n\n\n\n\n\n\n\n\nAim: assess the performance of the algorithms for estimation.\nData generation: Gibbs Sampler algorithm."
+  },
+  {
+    "objectID": "03_pesquisa_v2.html#example-11---sampling-scheme",
+    "href": "03_pesquisa_v2.html#example-11---sampling-scheme",
+    "title": "Projeto de Pesquisa",
+    "section": "Example 11 - Sampling Scheme",
+    "text": "Example 11 - Sampling Scheme\n\nThe Gibbs sampler (Geman and Geman, 1984 and Gelfand and Smith, 1990):\n\niterations: \\(15{,}000\\),\nburn-in period: \\(5{,}000\\),\nfinal sample: \\(10{,}000\\).\n\nSmaller samples were extracted from the initial sample \\(s_1, \\dots, s_{10{,}000}\\), with sizes \\(N \\in \\{100, 500, 1{,}000, 5{,}000, 10{,}000\\}\\)."
+  },
+  {
+    "objectID": "03_pesquisa_v2.html#example-11---exact-algorithm",
+    "href": "03_pesquisa_v2.html#example-11---exact-algorithm",
+    "title": "Projeto de Pesquisa",
+    "section": "Example 11 - Exact Algorithm",
+    "text": "Example 11 - Exact Algorithm\nEffects of sample size and penalizing constant value. Here, \\(\\lambda_N = c\\log N.\\)"
+  },
+  {
+    "objectID": "03_pesquisa_v2.html#example-11---forward-stepwise",
+    "href": "03_pesquisa_v2.html#example-11---forward-stepwise",
+    "title": "Projeto de Pesquisa",
+    "section": "Example 11 - Forward Stepwise",
+    "text": "Example 11 - Forward Stepwise\nEffects of sample size and penalizing constant value. Here, \\(\\lambda_N = c\\log N.\\)"
+  },
+  {
+    "objectID": "03_pesquisa_v2.html#example-11---backward-stepwise",
+    "href": "03_pesquisa_v2.html#example-11---backward-stepwise",
+    "title": "Projeto de Pesquisa",
+    "section": "Example 11 - Backward Stepwise",
+    "text": "Example 11 - Backward Stepwise\nEffects of sample size and penalizing constant value. Here, \\(\\lambda_N = c\\log N.\\)"
+  },
+  {
+    "objectID": "03_pesquisa_v2.html#example-11---simulated-annealing",
+    "href": "03_pesquisa_v2.html#example-11---simulated-annealing",
+    "title": "Projeto de Pesquisa",
+    "section": "Example 11 - Simulated Annealing",
+    "text": "Example 11 - Simulated Annealing\nEffects of sample size and penalizing constant value. Here, \\(\\lambda_N = c\\log N.\\)"
+  },
+  {
+    "objectID": "03_pesquisa_v2.html#example-11---several-replications",
+    "href": "03_pesquisa_v2.html#example-11---several-replications",
+    "title": "Projeto de Pesquisa",
+    "section": "Example 11 - Several Replications",
+    "text": "Example 11 - Several Replications\n\nObjective: generate several samples and assess the performance of the algorithms.\nMetrics: underestimation error (\\(ue\\)), overestimation error (\\(oe\\)), and total error (\\(te\\)).\n\n\n\\(ue(G, \\hat G) = \\frac{\\sum_{(v, w)}\\mathbf{1}\\{(v, w)\\in E \\text{ and } (v,w) \\not\\in \\hat E\\}}{\\sum_{(v, w)}\\mathbf{1}\\{(v, w) \\in E\\}},\\)  \\(oe(G, \\hat G) = \\frac{\\sum_{(v, w)}\\mathbf{1}\\{(v, w)\\not\\in E \\text{ and } (v,w) \\in \\hat E\\}}{\\sum_{(v, w)}\\mathbf{1}\\{(v, w) \\not\\in E\\}},\\)  \\(\\qquad \\qquad te(G, \\hat G) = \\frac{ue \\sum_{(v, w)}\\mathbf{1}\\{(v, w) \\not\\in E\\} + oe \\sum_{(v, w)}\\mathbf{1}\\{(v, w) \\in E\\}}{|V|(|V|-1)/2}.\\)"
+  },
+  {
+    "objectID": "03_pesquisa_v2.html#example-11---several-replications-1",
+    "href": "03_pesquisa_v2.html#example-11---several-replications-1",
+    "title": "Projeto de Pesquisa",
+    "section": "Example 11 - Several Replications",
+    "text": "Example 11 - Several Replications"
+  },
+  {
+    "objectID": "03_pesquisa_v2.html#the-choice-of-penalizing-constant-c",
+    "href": "03_pesquisa_v2.html#the-choice-of-penalizing-constant-c",
+    "title": "Projeto de Pesquisa",
+    "section": "The Choice of Penalizing Constant \\(c\\)",
+    "text": "The Choice of Penalizing Constant \\(c\\)\nUtilize \\(k\\)-fold cross-validation to assess model performance and select optimal penalizing constant values.\n\n\n\n\n\n\n\n\n\nCompute pseudo-log-likelihood over validation sets for different constant values. \\[\\begin{equation}\n  \\mathrm{CV}_k^{(i)}(c) = \\sum_{v \\in V} \\:\\sum_{(a_v\\in A)} \\:\\sum_{a_{\\hat G(v)}\\in A^{|\\hat G(v)|}}\n          N_i(a_v,a_{\\widehat G(v)})\\log \\widehat\\pi(a_v|a_{\\widehat G(v)})\\,.\n\\end{equation}\\]"
+  },
+  {
+    "objectID": "03_pesquisa_v2.html#the-choice-of-penalizing-constant-c-1",
+    "href": "03_pesquisa_v2.html#the-choice-of-penalizing-constant-c-1",
+    "title": "Projeto de Pesquisa",
+    "section": "The Choice of Penalizing Constant \\(c\\)",
+    "text": "The Choice of Penalizing Constant \\(c\\)\n\n\\(5\\)-fold cross-validation error for Example 11, considering a sample of size \\(5{,}000\\) and set of values for penalizing constant."
+  },
+  {
+    "objectID": "03_pesquisa_v2.html#são-francisco-river-data",
+    "href": "03_pesquisa_v2.html#são-francisco-river-data",
+    "title": "Projeto de Pesquisa",
+    "section": "São Francisco River Data",
+    "text": "São Francisco River Data\n\nWater volume measured at \\(d\\) stations along the river’s course, denoted as \\(X_{u}\\), where \\(u = 1, \\ldots, d\\).\nVector \\(\\mathbf{X}\\) observed at discrete time intervals (10-day mean), from January 1977 to December 2016.\nProcess \\(\\mathbf{X}^n=\\{\\mathbf{X}^{(i)}: 1 \\leq i \\leq n\\}\\), \\(\\mathbf{X}^{(i)}= (X_{1}^{(i)}, \\ldots, X_{d}^{(i)})\\).\nForward stepwise algorithm and a \\(5\\)-fold cross-validation approach below.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nResults similar to Leonardi et al (2021)."
+  },
+  {
+    "objectID": "03_pesquisa_v2.html#stock-exchange-data",
+    "href": "03_pesquisa_v2.html#stock-exchange-data",
+    "title": "Projeto de Pesquisa",
+    "section": "Stock Exchange Data",
+    "text": "Stock Exchange Data\n\nEstimated graph, considering the penalizing constant value chosen by cross-validation."
   }
 ]
