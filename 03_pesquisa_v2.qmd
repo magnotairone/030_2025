@@ -9,7 +9,7 @@ format:
     slide-number: true
     fontawesome: true
     css: style_pesquisa.css
-    # footer: "Magno T. F. Severino | Concurso ATAc-030/2025"
+    footer: "Magno T. F. Severino | Concurso ATAc-030/2025"
 lang: en
 engine: knitr
 ---
@@ -34,7 +34,7 @@ cor = "#004D4D"
 
 ## Motivation {.smaller}
 
-::: {style="font-size:100%"}
+::: {style="font-size:90%"}
 Modern dependence analysis involves:
 
 - high dimensionality,
@@ -45,19 +45,19 @@ Modern dependence analysis involves:
 
 . . .
 
-::: {style="font-size:100%"}
+::: {style="font-size:90%"}
 These challenges arise naturally in modern data science problems, including multivariate time series, sensor networks, neurodata, and large-scale systems where statistical models must remain both theoretically sound and computationally scalable.
 :::
 
 . . . 
 
-::: {style="font-size:100%"}
+::: {style="font-size:90%"}
 Probabilistic graphical models (MRFs) are a natural tool for representing such dependencies.
 :::
 
 . . .
 
-::: {style="font-size:100%"}
+::: {style="font-size:90%"}
 **Challenge**: existing methods mostly address:
 
 - discrete data
@@ -407,33 +407,37 @@ satisfies $\widehat G=G^*$ eventually almost surely as $n\to \infty.$
   - **Leonardi et al. (2023)**: Penalized pseudo-likelihood for discrete MRFs. Graph estimated based on local neighborhood estimation.
   - **Severino & Leonardi (2025)**: Developed theoretical results for global estimation of discrete MRFs over finite graphs.
 
-**Objective**: Extend the penalized pseudo-likelihood framework to
-$V = \{1,2,\dots\}.$
 
-## Proposal 1 – Main questions: (TODO: verificar)
+## <span class="small-title">Model Selection for MRFs with Countably Infinite Vertex Sets under Mixing Condition <span> {.smaller}
 
-- error control when restricting to $V_n$,
-- consistency limits for global estimators,
-- adaptation of typicality arguments to infinite vertex sets.
+**Research goal**  
+
+  - Generalize the results from finite to countably infinite graphs.  
+  - Improve global estimation, possibly reducing errors from local neighborhood estimation.
+  
+
+**Algorithm development and evaluation**  
+
+  - implementation in R or Python, 
+  - simulations on large synthetic networks.
+
 
 ## Proposal 1 – Expected Advances {.smaller}
 
-**Proposed estimation framework**:  
+**Proposed estimation framework**
 
   - Let $V$ be infinite and ${V_n}, {n \in \mathbb{N}}$ be a sequence of finite subsets of $V$.
   - Assume $V_n \uparrow V$ as $n \to \infty$.
   - Sample: $\{\mathbf{X} = \{X_v: v \in V_n\}\}$, assuming that ${\mathrm{ne}(v)}$ is finite.
   - Adaptation of key theorems to handle countably infinite vertex sets.
-<!-- - Regularity conditions for limits $V_n$, -->
-<!-- - Complexity control of the model space. -->
 
-Algorithms:
+**Algorithms**
 
 - implementation in R or Python,
 - simulations on large synthetic networks.
 
 <!-- TODO: COMPLETAR AQUI -->
-Applications:
+**Applications**
 
 - social networks,
 - neuroscience (large neural connectivity),
@@ -444,12 +448,12 @@ Applications:
 
 ## Model Selection for **Continuous** MRFs under Mixing {.smaller}
 
-Current limitations:
+**Current limitations**
 
 - classical pseudo-likelihood is defined for finite alphabets,
 - discretization leads to information loss.
 
-Objective:
+**Objective**
 
 - develop a consistent estimator **without discretization**.
 
@@ -461,13 +465,13 @@ Challenges:
 
 ## Proposal 2 – Impact {.smaller}
 
-Benefits:
+**Benefits**
 
 - higher inferential precision,
 - no discretization required,
 - applicability to finance, hydrology, neuroscience, and bioinformatics.
 
-Expected results:
+**Expected results**
 
 - consistency theorems analogous to the discrete case,
 - scalable algorithm,

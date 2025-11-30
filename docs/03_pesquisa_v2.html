@@ -156,7 +156,7 @@
 </section>
 <section id="motivation" class="slide level2 smaller">
 <h2>Motivation</h2>
-<div style="font-size:100%">
+<div style="font-size:90%">
 <p>Modern dependence analysis involves:</p>
 <ul>
 <li>high dimensionality,</li>
@@ -166,17 +166,17 @@
 </ul>
 </div>
 <div class="fragment">
-<div style="font-size:100%">
+<div style="font-size:90%">
 <p>These challenges arise naturally in modern data science problems, including multivariate time series, sensor networks, neurodata, and large-scale systems where statistical models must remain both theoretically sound and computationally scalable.</p>
 </div>
 </div>
 <div class="fragment">
-<div style="font-size:100%">
+<div style="font-size:90%">
 <p>Probabilistic graphical models (MRFs) are a natural tool for representing such dependencies.</p>
 </div>
 </div>
 <div class="fragment">
-<div style="font-size:100%">
+<div style="font-size:90%">
 <p><strong>Challenge</strong>: existing methods mostly address:</p>
 <ul>
 <li>discrete data</li>
@@ -354,32 +354,37 @@ N(a_v,a_{G(v)})\,
 <li><strong>Leonardi et al.&nbsp;(2023)</strong>: Penalized pseudo-likelihood for discrete MRFs. Graph estimated based on local neighborhood estimation.</li>
 <li><strong>Severino &amp; Leonardi (2025)</strong>: Developed theoretical results for global estimation of discrete MRFs over finite graphs.</li>
 </ul>
-<p><strong>Objective</strong>: Extend the penalized pseudo-likelihood framework to <span class="math inline">\(V = \{1,2,\dots\}.\)</span></p>
 </section>
-<section id="proposal-1-main-questions-todo-verificar" class="slide level2">
-<h2>Proposal 1 – Main questions: (TODO: verificar)</h2>
+<section id="model-selection-for-mrfs-with-countably-infinite-vertex-sets-under-mixing-condition-1" class="slide level2 smaller">
+<h2><span class="small-title">Model Selection for MRFs with Countably Infinite Vertex Sets under Mixing Condition <span></span></span></h2>
+<p><strong>Research goal</strong></p>
 <ul>
-<li>error control when restricting to <span class="math inline">\(V_n\)</span>,</li>
-<li>consistency limits for global estimators,</li>
-<li>adaptation of typicality arguments to infinite vertex sets.</li>
+<li>Generalize the results from finite to countably infinite graphs.<br>
+</li>
+<li>Improve global estimation, possibly reducing errors from local neighborhood estimation.</li>
+</ul>
+<p><strong>Algorithm development and evaluation</strong></p>
+<ul>
+<li>implementation in R or Python,</li>
+<li>simulations on large synthetic networks.</li>
 </ul>
 </section>
 <section id="proposal-1-expected-advances" class="slide level2 smaller">
 <h2>Proposal 1 – Expected Advances</h2>
-<p><strong>Proposed estimation framework</strong>:</p>
+<p><strong>Proposed estimation framework</strong></p>
 <ul>
 <li>Let <span class="math inline">\(V\)</span> be infinite and <span class="math inline">\({V_n}, {n \in \mathbb{N}}\)</span> be a sequence of finite subsets of <span class="math inline">\(V\)</span>.</li>
 <li>Assume <span class="math inline">\(V_n \uparrow V\)</span> as <span class="math inline">\(n \to \infty\)</span>.</li>
 <li>Sample: <span class="math inline">\(\{\mathbf{X} = \{X_v: v \in V_n\}\}\)</span>, assuming that <span class="math inline">\({\mathrm{ne}(v)}\)</span> is finite.</li>
-<li>Adaptation of key theorems to handle countably infinite vertex sets. <!-- - Regularity conditions for limits $V_n$, --> <!-- - Complexity control of the model space. --></li>
+<li>Adaptation of key theorems to handle countably infinite vertex sets.</li>
 </ul>
-<p>Algorithms:</p>
+<p><strong>Algorithms</strong></p>
 <ul>
 <li>implementation in R or Python,</li>
 <li>simulations on large synthetic networks.</li>
 </ul>
 <!-- TODO: COMPLETAR AQUI -->
-<p>Applications:</p>
+<p><strong>Applications</strong></p>
 <ul>
 <li>social networks,</li>
 <li>neuroscience (large neural connectivity),</li>
@@ -393,12 +398,12 @@ N(a_v,a_{G(v)})\,
 </section>
 <section id="model-selection-for-continuous-mrfs-under-mixing" class="slide level2 smaller">
 <h2>Model Selection for <strong>Continuous</strong> MRFs under Mixing</h2>
-<p>Current limitations:</p>
+<p><strong>Current limitations</strong></p>
 <ul>
 <li>classical pseudo-likelihood is defined for finite alphabets,</li>
 <li>discretization leads to information loss.</li>
 </ul>
-<p>Objective:</p>
+<p><strong>Objective</strong></p>
 <ul>
 <li>develop a consistent estimator <strong>without discretization</strong>.</li>
 </ul>
@@ -411,13 +416,13 @@ N(a_v,a_{G(v)})\,
 </section>
 <section id="proposal-2-impact" class="slide level2 smaller">
 <h2>Proposal 2 – Impact</h2>
-<p>Benefits:</p>
+<p><strong>Benefits</strong></p>
 <ul>
 <li>higher inferential precision,</li>
 <li>no discretization required,</li>
 <li>applicability to finance, hydrology, neuroscience, and bioinformatics.</li>
 </ul>
-<p>Expected results:</p>
+<p><strong>Expected results</strong></p>
 <ul>
 <li>consistency theorems analogous to the discrete case,</li>
 <li>scalable algorithm,</li>
@@ -777,7 +782,7 @@ N(a_v,a_{G(v)})\,
     </div>
   <div class="quarto-auto-generated-content" style="display: none;">
 <div class="footer footer-default">
-
+<p>Magno T. F. Severino | Concurso ATAc-030/2025</p>
 </div>
 </div></div>
 

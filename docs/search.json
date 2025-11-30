@@ -259,11 +259,11 @@
     "text": "Artigos publicados\n\n\n\n📄\n\n Independent block identification in multivariate time series\nLeonardi, F., Lopez-Rosenfeld, M., Rodriguez, D., Severino, M. T. F., & Sued, M.\nJournal of Time Series Analysis, 2021.\n(Q2 – Probability and Statistics, Scimago) \n\n\n\n\n📄\n\n Model selection for Markov random fields on graphs under a mixing condition\nSeverino, M. T. F., & Leonardi, F.\nStochastic Processes and their Applications, 2025.\n(Q1 – Probability and Statistics, Scimago) \n\n\nEstes dois artigos sintetizam minha contribuição teórica em séries temporais multivariadas\ne em modelos gráficos sob condições de mistura — ambos profundamente conectados às\nlinhas prioritárias do edital: modelagem estatística moderna, dados de alta dimensão e\naprendizagem estatística.\n\n\nMostrar um gráfico aqui concreta sua pesquisa."
   },
   {
-    "objectID": "02_memorial_v3.html#software-e-produção-computacional",
-    "href": "02_memorial_v3.html#software-e-produção-computacional",
+    "objectID": "02_memorial_v3.html#software-e-estatística-computacional",
+    "href": "02_memorial_v3.html#software-e-estatística-computacional",
     "title": "Memorial Circunstanciado",
-    "section": "Software e produção computacional",
-    "text": "Software e produção computacional\n\n\n\n\n\n GeoJAGS  Modelos para dados espaciais com MCMC  Modulo computacional em C++ voltado a inferência Bayesiana em estruturas espaciais (desenvolvido durante o mestrado) \n\n\n\n\n\n MixingGraph  Modelos gráficos para dados sob condições de mistura  Ferramentas para modelagem de estruturas de dependência (desenvolvido durante o doutorado) \n\n\nPesquisa que vira software: diferencial forte."
+    "section": "Software e estatística computacional",
+    "text": "Software e estatística computacional\n\n\n\n\n\n GeoJAGS  Modelos para dados espaciais com MCMC  Modulo computacional em C++ voltado a inferência Bayesiana em estruturas espaciais (desenvolvido durante o mestrado) \n\n\n\n\n\n MixingGraph  Modelos gráficos para dados sob condições de mistura  Ferramentas para modelagem de estruturas de dependência (desenvolvido durante o doutorado) \n\n\nPesquisa que vira software: diferencial forte."
   },
   {
     "objectID": "02_memorial_v3.html#apresentação-de-trabalhos-em-eventos",
@@ -368,35 +368,35 @@
     "href": "03_pesquisa_v2.html#model-selection-for-mrfs-with-countably-infinite-vertex-sets-under-mixing-condition",
     "title": "Projeto de Pesquisa",
     "section": "Model Selection for MRFs with Countably Infinite Vertex Sets under Mixing Condition ",
-    "text": "Model Selection for MRFs with Countably Infinite Vertex Sets under Mixing Condition \nMotivation:\n\nMassive networks (social, biological, IoT),\nStructures where \\(|V| = \\infty\\) and grows with the sample,\nFinite-vertex methods do not generalize automatically.\n\nExisting methods\n\nLeonardi et al. (2023): Penalized pseudo-likelihood for discrete MRFs. Graph estimated based on local neighborhood estimation.\nSeverino & Leonardi (2025): Developed theoretical results for global estimation of discrete MRFs over finite graphs.\n\nObjective: Extend the penalized pseudo-likelihood framework to \\(V = \\{1,2,\\dots\\}.\\)"
+    "text": "Model Selection for MRFs with Countably Infinite Vertex Sets under Mixing Condition \nMotivation:\n\nMassive networks (social, biological, IoT),\nStructures where \\(|V| = \\infty\\) and grows with the sample,\nFinite-vertex methods do not generalize automatically.\n\nExisting methods\n\nLeonardi et al. (2023): Penalized pseudo-likelihood for discrete MRFs. Graph estimated based on local neighborhood estimation.\nSeverino & Leonardi (2025): Developed theoretical results for global estimation of discrete MRFs over finite graphs."
   },
   {
-    "objectID": "03_pesquisa_v2.html#proposal-1-main-questions-todo-verificar",
-    "href": "03_pesquisa_v2.html#proposal-1-main-questions-todo-verificar",
+    "objectID": "03_pesquisa_v2.html#model-selection-for-mrfs-with-countably-infinite-vertex-sets-under-mixing-condition-1",
+    "href": "03_pesquisa_v2.html#model-selection-for-mrfs-with-countably-infinite-vertex-sets-under-mixing-condition-1",
     "title": "Projeto de Pesquisa",
-    "section": "Proposal 1 – Main questions: (TODO: verificar)",
-    "text": "Proposal 1 – Main questions: (TODO: verificar)\n\nerror control when restricting to \\(V_n\\),\nconsistency limits for global estimators,\nadaptation of typicality arguments to infinite vertex sets."
+    "section": "Model Selection for MRFs with Countably Infinite Vertex Sets under Mixing Condition ",
+    "text": "Model Selection for MRFs with Countably Infinite Vertex Sets under Mixing Condition \nResearch goal\n\nGeneralize the results from finite to countably infinite graphs.\n\nImprove global estimation, possibly reducing errors from local neighborhood estimation.\n\nAlgorithm development and evaluation\n\nimplementation in R or Python,\nsimulations on large synthetic networks."
   },
   {
     "objectID": "03_pesquisa_v2.html#proposal-1-expected-advances",
     "href": "03_pesquisa_v2.html#proposal-1-expected-advances",
     "title": "Projeto de Pesquisa",
     "section": "Proposal 1 – Expected Advances",
-    "text": "Proposal 1 – Expected Advances\nProposed estimation framework:\n\nLet \\(V\\) be infinite and \\({V_n}, {n \\in \\mathbb{N}}\\) be a sequence of finite subsets of \\(V\\).\nAssume \\(V_n \\uparrow V\\) as \\(n \\to \\infty\\).\nSample: \\(\\{\\mathbf{X} = \\{X_v: v \\in V_n\\}\\}\\), assuming that \\({\\mathrm{ne}(v)}\\) is finite.\nAdaptation of key theorems to handle countably infinite vertex sets.  \n\nAlgorithms:\n\nimplementation in R or Python,\nsimulations on large synthetic networks.\n\n\nApplications:\n\nsocial networks,\nneuroscience (large neural connectivity),\nsensor systems."
+    "text": "Proposal 1 – Expected Advances\nProposed estimation framework\n\nLet \\(V\\) be infinite and \\({V_n}, {n \\in \\mathbb{N}}\\) be a sequence of finite subsets of \\(V\\).\nAssume \\(V_n \\uparrow V\\) as \\(n \\to \\infty\\).\nSample: \\(\\{\\mathbf{X} = \\{X_v: v \\in V_n\\}\\}\\), assuming that \\({\\mathrm{ne}(v)}\\) is finite.\nAdaptation of key theorems to handle countably infinite vertex sets.\n\nAlgorithms\n\nimplementation in R or Python,\nsimulations on large synthetic networks.\n\n\nApplications\n\nsocial networks,\nneuroscience (large neural connectivity),\nsensor systems."
   },
   {
     "objectID": "03_pesquisa_v2.html#model-selection-for-continuous-mrfs-under-mixing",
     "href": "03_pesquisa_v2.html#model-selection-for-continuous-mrfs-under-mixing",
     "title": "Projeto de Pesquisa",
     "section": "Model Selection for Continuous MRFs under Mixing",
-    "text": "Model Selection for Continuous MRFs under Mixing\nCurrent limitations:\n\nclassical pseudo-likelihood is defined for finite alphabets,\ndiscretization leads to information loss.\n\nObjective:\n\ndevelop a consistent estimator without discretization.\n\nChallenges:\n\nreplacing summations with integrals,\ndefining neighborhood structure in conditional densities,\nadapting consistency proofs to the continuous setting."
+    "text": "Model Selection for Continuous MRFs under Mixing\nCurrent limitations\n\nclassical pseudo-likelihood is defined for finite alphabets,\ndiscretization leads to information loss.\n\nObjective\n\ndevelop a consistent estimator without discretization.\n\nChallenges:\n\nreplacing summations with integrals,\ndefining neighborhood structure in conditional densities,\nadapting consistency proofs to the continuous setting."
   },
   {
     "objectID": "03_pesquisa_v2.html#proposal-2-impact",
     "href": "03_pesquisa_v2.html#proposal-2-impact",
     "title": "Projeto de Pesquisa",
     "section": "Proposal 2 – Impact",
-    "text": "Proposal 2 – Impact\nBenefits:\n\nhigher inferential precision,\nno discretization required,\napplicability to finance, hydrology, neuroscience, and bioinformatics.\n\nExpected results:\n\nconsistency theorems analogous to the discrete case,\nscalable algorithm,\nR or Python package."
+    "text": "Proposal 2 – Impact\nBenefits\n\nhigher inferential precision,\nno discretization required,\napplicability to finance, hydrology, neuroscience, and bioinformatics.\n\nExpected results\n\nconsistency theorems analogous to the discrete case,\nscalable algorithm,\nR or Python package."
   },
   {
     "objectID": "03_pesquisa_v2.html#viability",
@@ -418,20 +418,6 @@
     "title": "Projeto de Pesquisa",
     "section": " References",
     "text": "References\n\nSeverino, M. T. F., & Leonardi, F. (2025). Model selection for Markov random fields on graphs under a mixing condition. Stochastic Processes and their Applications.\nLeonardi, F., Lopez-Rosenfeld, M., Rodriguez, D., Severino, M. T. F. S., & Sued, M. (2021). Independent block identification in multivariate time series. Journal of Time Series Analysis.\nLeonardi, F., Carvalho, R., & Frondana, I. (2023). Structure recovery for partially observed discrete Markov random fields on graphs under not necessarily positive distributions. Scandinavian Journal of Statistics.\nLauritzen, S. L. (1996). Graphical models. Claredon Press.\nOodaira, H., & Yoshihara, K. I. (1971). The law of the iterated logarithm for stationary processes satisfying mixing conditions. Kodai Mathematical Seminar Reports."
-  },
-  {
-    "objectID": "03_pesquisa_v2.html#r-fontawesomefabookmark-cor-references",
-    "href": "03_pesquisa_v2.html#r-fontawesomefabookmark-cor-references",
-    "title": "Projeto de Pesquisa",
-    "section": "r fontawesome::fa(“bookmark”, cor) References",
-    "text": "r fontawesome::fa(“bookmark”, cor) References\n\n\n📘\n\n Severino, M. T. F., & Leonardi, F. (2025). Model selection for Markov random fields on graphs under a mixing condition. Stochastic Processes and their Applications. \n\n\n\n📘\n\n Leonardi, F., Lopez-Rosenfeld, M., Rodriguez, D., Severino, M. T. F. S., & Sued, M. (2021). Independent block identification in multivariate time series. Journal of Time Series Analysis. \n\n\n\n📘\n\n Leonardi, F., Carvalho, R., & Frondana, I. (2023). Structure recovery for partially observed discrete Markov random fields on graphs under not necessarily positive distributions. Scandinavian Journal of Statistics. \n\n\n\n📘\n\n Lauritzen, S. L. (1996). Graphical Models. Clarendon Press. \n\n\n\n📘\n\n Oodaira, H., & Yoshihara, K. I. (1971). The law of the iterated logarithm for stationary processes satisfying mixing conditions. Kodai Mathematical Seminar Reports."
-  },
-  {
-    "objectID": "02_memorial_v3.html#software-e-estatística-computacional",
-    "href": "02_memorial_v3.html#software-e-estatística-computacional",
-    "title": "Memorial Circunstanciado",
-    "section": "Software e estatística computacional",
-    "text": "Software e estatística computacional\n\n\n\n\n\n GeoJAGS  Modelos para dados espaciais com MCMC  Modulo computacional em C++ voltado a inferência Bayesiana em estruturas espaciais (desenvolvido durante o mestrado) \n\n\n\n\n\n MixingGraph  Modelos gráficos para dados sob condições de mistura  Ferramentas para modelagem de estruturas de dependência (desenvolvido durante o doutorado) \n\n\nPesquisa que vira software: diferencial forte."
   },
   {
     "objectID": "03_pesquisa_v2.html#rate-of-convergence-of-the-empirical-probabilities",
