@@ -319,7 +319,7 @@
     "href": "03_pesquisa_v2.html#motivation",
     "title": "Projeto de Pesquisa",
     "section": "Motivation",
-    "text": "Motivation\n\nModern dependence analysis involves:\n\nhigh dimensionality,\ntemporal dependence,\ncontinuous data,\ncomplex structures.\n\n\n\n\nThese challenges arise naturally in modern data science problems, including multivariate time series, sensor networks, neurodata, and large-scale systems where statistical models must remain both theoretically sound and computationally scalable.\n\n\n\n\nProbabilistic graphical models (MRFs) are a natural tool for representing such dependencies.\n\n\n\n\nChallenge: existing methods mostly address:\n\ndiscrete data, a finite number of vertices,\nindependence or weak dependence structures."
+    "text": "Motivation\n\nModern dependence analysis involves:\n\nhigh dimensionality,\ntemporal dependence,\ncontinuous data,\ncomplex structures.\n\n\n\n\nThese challenges arise naturally in modern data science problems, including multivariate time series, sensor networks, neurodata, and large-scale systems where statistical models must remain both theoretically sound and computationally scalable.\n\n\n\n\nProbabilistic graphical models (MRFs) are a natural tool for representing such dependencies.\n\n\n\n\nChallenge: existing methods mostly address:\n\ndiscrete data\nfinite number of vertices,\nindependence or weak dependence structures."
   },
   {
     "objectID": "03_pesquisa_v2.html#recent-work",
@@ -371,11 +371,11 @@
     "text": "Model Selection for MRFs with Countably Infinite Vertex Sets under Mixing Condition \nMotivation:\n\nMassive networks (social, biological, IoT),\nStructures where \\(|V| = \\infty\\) and grows with the sample,\nFinite-vertex methods do not generalize automatically.\n\nExisting methods\n\nLeonardi et al. (2023): Penalized pseudo-likelihood for discrete MRFs. Graph estimated based on local neighborhood estimation.\nSeverino & Leonardi (2025): Developed theoretical results for global estimation of discrete MRFs over finite graphs.\n\nObjective: Extend the penalized pseudo-likelihood framework to \\(V = \\{1,2,\\dots\\}.\\)"
   },
   {
-    "objectID": "03_pesquisa_v2.html#proposal-1-main-questions",
-    "href": "03_pesquisa_v2.html#proposal-1-main-questions",
+    "objectID": "03_pesquisa_v2.html#proposal-1-main-questions-todo-verificar",
+    "href": "03_pesquisa_v2.html#proposal-1-main-questions-todo-verificar",
     "title": "Projeto de Pesquisa",
-    "section": "Proposal 1 – Main questions:",
-    "text": "Proposal 1 – Main questions:\n\nerror control when restricting to \\(V_n\\),\nconsistency limits for global estimators,\nadaptation of typicality arguments to infinite vertex sets."
+    "section": "Proposal 1 – Main questions: (TODO: verificar)",
+    "text": "Proposal 1 – Main questions: (TODO: verificar)\n\nerror control when restricting to \\(V_n\\),\nconsistency limits for global estimators,\nadaptation of typicality arguments to infinite vertex sets."
   },
   {
     "objectID": "03_pesquisa_v2.html#proposal-1-expected-advances",
