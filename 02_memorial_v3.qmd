@@ -130,21 +130,30 @@ lang: pt-br
 
 ## Durante o doutorado {.smaller}
 
-  - Atuei como monitor e estagiário PAE em disciplinas de
-graduação durante 7 semestres
+<div style="text-align: left; font-size: 95%;">
 
-  - Monitor da disciplina de pós-graduação Aprendizagem Estatística em Altas Dimensões (MAE0501) por 2 semestres
+- **Monitorias e Estágio PAE**
 
-  - Fui contemplado com bolsa PRINT-USP para estágio na UBA, Argentina em 2020
+  - 7 semestres em disciplinas de graduação (MAE116, MAE5904, MAE0219, MAE0699)
+  - 2 semestres em pós-graduação (MAE0501: Aprendizagem Estatística em Altas Dimensões)
+
+- **Pesquisa e Internacionalização**
+
+  - Contemplado com Bolsa PRINT-USP para estágio na UBA (2020)
+
+  - Apresentação de trabalhos em eventos nacionais e internacionais (ISI, CLAPEM, SINAPE)
+
+- **Representante discente**:
   
-  - Apresentei trabalhos em congressos nacionais e internacionais
+  - Comissão de Recepção da Pós-Graduação (RPG)
   
-  - Representante discente:
-    
-    - Comissão de Recepção da Pós-Graduação (RPG)
-    -  Comissão Coordenadora do Programa de Pós-Graduação em Estatística (CPP-MAE)
-    - Conselho do Departamento de Estatística
+  -  Comissão Coordenadora do Programa de Pós-Graduação em Estatística (CPP-MAE)
   
+  - Conselho do Departamento de Estatística
+
+</div>
+  
+
 # Atividades de Pesquisa
 
 ## Artigos publicados {.smaller}
@@ -236,14 +245,17 @@ Pesquisa que vira software: diferencial forte.
 
 Eventos selecionados:
 
+
 :::: {.columns}
 ::: {.column width="6%"}
 📌
 :::
 ::: {.column width="94%"}
 
+<div style="text-align: left; font-size: 80%;">
 **EBEB – Rio de Janeiro (2018)**  
 _Pôster: Extending JAGS for spatial data_
+</div>
 
 :::
 ::::
@@ -256,8 +268,10 @@ _Pôster: Extending JAGS for spatial data_
 :::
 ::: {.column width="94%"}
 
+<div style="text-align: left; font-size: 80%;">
 **EMR – Pirenópolis (2019)**  
 _Pôster: As desigualdades existentes no Brasil vistas no ENEM 2017_
+</div>
 
 :::
 ::::
@@ -270,8 +284,10 @@ _Pôster: As desigualdades existentes no Brasil vistas no ENEM 2017_
 :::
 ::: {.column width="94%"}
 
+<div style="text-align: left; font-size: 80%;">
 **Bernoulli–IMS One World Symposium (2020)**  
 _Apresentação oral: Independent block identification in multivariate time series_
+</div>
 
 :::
 ::::
@@ -284,8 +300,10 @@ _Apresentação oral: Independent block identification in multivariate time seri
 :::
 ::: {.column width="94%"}
 
+<div style="text-align: left; font-size: 80%;">
 **CLAPEM – São Paulo (2023)**  
 _Pôster: Estimation and model selection for mixing graphical models_
+</div>
 
 :::
 ::::
@@ -298,11 +316,14 @@ _Pôster: Estimation and model selection for mixing graphical models_
 :::
 ::: {.column width="94%"}
 
+<div style="text-align: left; font-size: 80%;">
 **SINAPE – Fortaleza (2024)**  
 _Tutorial: Modelos de IA Generativa com R e Python_
+</div>
 
 :::
 ::::
+
 
 
 # Atividades de Ensino
@@ -372,8 +393,11 @@ _Tutorial: Modelos de IA Generativa com R e Python_
 
 **Níveis e Instituições** 
 
+<span style="font-size:70%;"> 
 - Graduação: DEST UFMG, MAE IME USP, Insper  
 - Pós-graduação: MAE IME USP (stricto sensu), Insper (lato sensu)
+</span>
+
 
 **Disciplinas**  
 
@@ -401,9 +425,11 @@ _Tutorial: Modelos de IA Generativa com R e Python_
 
 **Níveis e Instituições**  
 
+<span style="font-size:70%;"> 
 - Graduação: IME USP (programa de verão)  
 - Pós-graduação: Insper (lato sensu)  
 - Educação Executiva: Insper
+</span>
 
 **Disciplinas**  
 
@@ -461,9 +487,7 @@ _Tutorial: Modelos de IA Generativa com R e Python_
 
 # Atividades de Extensão
 
-## Extensão e impacto
-
-
+## Extensão e impacto {.smaller}
 
 - Curso de Nivelamento Pré-Cálculo (UFMG, 2012)
 
@@ -502,7 +526,7 @@ Mostra impacto real e compromisso social.
 Experiência que te humaniza e te diferencia.
 :::
 
-# Como isso fortalece minha atuação acadêmica
+# Como isso fortalece minha atuação acadêmica {.smaller}
 
 - Visão prática do ciclo completo de modelagem  
 - Experiência com dados massivos e sistemas reais  
