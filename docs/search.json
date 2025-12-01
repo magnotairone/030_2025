@@ -322,13 +322,6 @@
     "text": "Motivation\n\nModern dependence analysis involves:\n\nhigh dimensionality,\ntemporal dependence,\ncontinuous data,\ncomplex structures.\n\n\n\n\nThese challenges arise naturally in modern data science problems, including multivariate time series, sensor networks, neurodata, and large-scale systems where statistical models must remain both theoretically sound and computationally scalable.\n\n\n\n\nProbabilistic graphical models (MRFs) are a natural tool for representing such dependencies.\n\n\n\n\nChallenge: existing methods mostly address:\n\ndiscrete data\nfinite number of vertices,\nindependence or weak dependence structures."
   },
   {
-    "objectID": "03_pesquisa_v2.html#recent-work",
-    "href": "03_pesquisa_v2.html#recent-work",
-    "title": "Projeto de Pesquisa",
-    "section": "Recent Work",
-    "text": "Recent Work\n\n\n📄\n\n Model selection for Markov random fields on graphs under a mixing condition\nStochastic Processes and their Applications, 2025.\nSeverino, M. T. F., & Leonardi, F.\n\n\n\nAdvances:\n\nglobal criterion based on penalized pseudo-likelihood;\nconsistency theorem under a mixing condition;\napplications to discrete multivariate processes.\n\n\n\nLimitations:\n\nrestriction to the finite vertex case,\ndiscrete variables.\n\n\n\nThis project aims to overcome both limitations in two proposals."
-  },
-  {
     "objectID": "03_pesquisa_v2.html#vector-processes-and-the-underlying-graph",
     "href": "03_pesquisa_v2.html#vector-processes-and-the-underlying-graph",
     "title": "Projeto de Pesquisa",
@@ -340,21 +333,21 @@
     "href": "03_pesquisa_v2.html#mixing-condition",
     "title": "Projeto de Pesquisa",
     "section": "Mixing Condition",
-    "text": "Mixing Condition\n\n\n\n\\(X^{(i:j)}\\) denote the sequence of vectors \\(X^{(i)}, X^{(i+1)}, \\ldots, X^{(j)}.\\)\n\\(\\bf X = \\{X^{(i)}\\colon -\\infty &lt; i &lt; \\infty\\}\\) satisfies a mixing condition with rate \\(\\{\\psi(\\ell)\\}_{\\ell \\in \\mathbb R}\\) if \\[\\begin{equation*}\n\\begin{split}\n  \\Bigl| \\mathbb P \\bigl(X^{(n:(n+k-1))}=x^{(1:k)}\\, |\\, X^{(1:m)}=x^{(1:m)}&\\bigr) - \\mathbb P \\bigl( X^{(n:(n+k-1))} =x^{(1:k)}\\bigr)\\Bigr| \\\\\n  &\\leq \\psi(n-m) \\mathbb P\\bigl(X^{(n:(n+k-1))}=x^{(1:k)}\\bigr),\n\\end{split}\n\\end{equation*}\\] for \\(n\\geq m+\\ell\\) and for each \\(k, m \\in \\mathbb N\\) and each \\(x^{(1:k)} \\in (A^d)^k\\), \\(x^{(1:m)}\\in (A^d)^m\\) with \\(\\mathbb P(X^{(1:m)}=x^{(1:m)})&gt;0.\\)\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n \\[\n|\\mathbb P(A|B) - \\mathbb P(B) \\leq \\mathbb P(A)|\n\\] \\[\n\\qquad \\leq \\psi(n-m)\\mathbb P(A)\n\\]"
+    "text": "Mixing Condition\n\n\n\n\\(X^{(i:j)}\\) denote the sequence of vectors \\(X^{(i)}, X^{(i+1)}, \\ldots, X^{(j)}.\\)\n\\(\\bf X = \\{X^{(i)}\\colon -\\infty &lt; i &lt; \\infty\\}\\) satisfies a mixing condition with rate \\(\\{\\psi(\\ell)\\}_{\\ell \\in \\mathbb R}\\) if \\[\\begin{equation*}\n\\begin{split}\n  \\Bigl| \\mathbb P \\bigl(X^{(n:(n+k-1))}=x^{(1:k)}\\, |\\, X^{(1:m)}=x^{(1:m)}&\\bigr) - \\mathbb P \\bigl( X^{(n:(n+k-1))} =x^{(1:k)}\\bigr)\\Bigr| \\\\\n  &\\leq \\psi(n-m) \\mathbb P\\bigl(X^{(n:(n+k-1))}=x^{(1:k)}\\bigr),\n\\end{split}\n\\end{equation*}\\] for \\(n\\geq m+\\ell\\) and for each \\(k, m \\in \\mathbb N\\) and each \\(x^{(1:k)} \\in (A^d)^k\\), \\(x^{(1:m)}\\in (A^d)^m\\) with \\(\\mathbb P(X^{(1:m)}=x^{(1:m)})&gt;0.\\)\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n \\[\n|\\mathbb P(A|B) - \\mathbb P(B) |\n\\] \\[\n\\qquad \\leq \\psi(n-m)\\mathbb P(A)\n\\]"
   },
   {
     "objectID": "03_pesquisa_v2.html#empirical-probabilities",
     "href": "03_pesquisa_v2.html#empirical-probabilities",
     "title": "Projeto de Pesquisa",
     "section": " Empirical Probabilities",
-    "text": "Empirical Probabilities\n\n\n\nGiven a graph \\(G=(V,E)\\) and \\(v \\in V,\\) define \\[G(v) = \\big\\{u \\in V: (u,v) \\in E \\big\\},\\] the set of neighbors of \\(v\\) in graph \\(G.\\)\n\nFor \\(v=X_1,\\) then \\(G(v)=\\{X_2, X_3\\}.\\)\n\n\n\n\nThen \\[\\begin{equation*}\n    \\widehat\\pi(a_v|a_{G(v)})  = \\frac{\\widehat\\pi(a_{\\{v\\}\\cup G(v)})}{\\widehat\\pi(a_{G(v)})}.\n\\end{equation*}\\]"
+    "text": "Empirical Probabilities\n\n\n\nGiven a sample of size \\(n\\) and graph \\(G=(V,E)\\) and \\(v \\in V,\\) define \\[G(v) = \\big\\{u \\in V: (u,v) \\in E \\big\\},\\] the set of neighbors of \\(v\\) in graph \\(G.\\)\n\\[\n\\pi(X_1=x_1) = \\frac{N(X_1=x_1)}{n}.\n\\]\nFor \\(v=X_1,\\) we have \\(G(v)=\\{X_2, X_3\\}.\\)\n\n\n\nThen \\[\\begin{equation*}\n    \\widehat\\pi(a_v|a_{G(v)})  = \\frac{\\widehat\\pi(a_{\\{v\\}\\cup G(v)})}{\\widehat\\pi(a_{G(v)})}.\n\\end{equation*}\\]"
   },
   {
     "objectID": "03_pesquisa_v2.html#penalized-pseudo-likelihood",
     "href": "03_pesquisa_v2.html#penalized-pseudo-likelihood",
     "title": "Projeto de Pesquisa",
     "section": "Penalized Pseudo-Likelihood",
-    "text": "Penalized Pseudo-Likelihood\nFor a candidate graph \\(G\\): \\[\n\\log L(G)\n=\n\\sum_{v\\in V}\n\\sum_{a_v}\\sum_{a_{G(v)}}\nN(a_v,a_{G(v)})\n\\log \\pi(a_v\\mid a_{G(v)}).\n\\]\nWe estimate \\(\\pi\\) empirically: \\[\n\\log \\widehat L(G)\n=\n\\sum_{v\\in V}\n\\sum_{a_v}\\sum_{a_{G(v)}}\nN(a_v,a_{G(v)})\\,\n\\log \\widehat\\pi(a_v\\mid a_{G(v)}).\n\\]\nSelection criterion (Severino & Leonardi, 2025): \\[\n\\widehat G = \\arg\\max_G\n\\big\\{\\log\\widehat L(G) - \\lambda_n \\sum_{v\\in V}|A|^{|G(v)|}\\big\\}.\n\\]"
+    "text": "Penalized Pseudo-Likelihood\nFor a candidate graph \\(G\\): \\[\nL(G) \\;=\\;  \\prod_{i=1}^n \\prod_{v \\in V}  \\pi(x^{(i)}_v | x^{(i)}_{G(v)})\\,,\n\\]\nWe estimate \\(\\pi\\) empirically: \\[\n\\widehat L(G) \\;=\\;  \\prod_{i=1}^n \\prod_{v \\in V}  \\widehat\\pi(x^{(i)}_v | x^{(i)}_{G(v)})\\,,\n\\]\nSelection criterion (Severino & Leonardi, 2025): \\[\n\\widehat G = \\arg\\max_G\n\\big\\{\\log\\widehat L(G) - \\lambda_n \\sum_{v\\in V}|A|^{|G(v)|}\\big\\}.\n\\]"
   },
   {
     "objectID": "03_pesquisa_v2.html#consistency-theorem",
@@ -364,32 +357,39 @@
     "text": "Consistency Theorem\n\n\n\n\n\n\n\n\n\n\n\n\n\nTheorem (Severino & Leonardi, 2025, Stochastic Processes and their Applications):\nLet \\(\\{X^{(i)}: i \\in \\mathbb{N}\\}\\) be a stationary process that satisfies the mixing condition presented before with rate \\(\\psi(\\ell) = O(1/\\ell^{1+\\epsilon})\\) for some \\(\\epsilon&gt;0.\\)\nThen, by taking \\(\\lambda_n = c \\log n,\\) for \\(c&gt;0,\\) we have that \\[\\begin{equation*}\n  \\widehat G = \\underset{G}{\\arg\\max}\\Big\\{\\log \\widehat L(G) - \\lambda_n \\sum_{v \\in V} |A|^{|G(v)|}\\Big\\}\n\\end{equation*}\\] satisfies \\(\\widehat G=G^*\\) eventually almost surely as \\(n\\to \\infty.\\)"
   },
   {
+    "objectID": "03_pesquisa_v2.html#recent-work",
+    "href": "03_pesquisa_v2.html#recent-work",
+    "title": "Projeto de Pesquisa",
+    "section": "Recent Work",
+    "text": "Recent Work\n\n\n📄\n\n Model selection for Markov random fields on graphs under a mixing condition\nStochastic Processes and their Applications, 2025.\nSeverino, M. T. F., & Leonardi, F.\n\n\n\nAdvances:\n\nglobal criterion based on penalized pseudo-likelihood;\nconsistency theorem under a mixing condition;\napplications to discrete multivariate processes.\n\n\n\nLimitations:\n\nrestriction to the finite vertex case,\ndiscrete variables.\n\n\n\nThis project aims to overcome both limitations in two proposals."
+  },
+  {
     "objectID": "03_pesquisa_v2.html#model-selection-for-mrfs-with-countably-infinite-vertex-sets-under-mixing-condition",
     "href": "03_pesquisa_v2.html#model-selection-for-mrfs-with-countably-infinite-vertex-sets-under-mixing-condition",
     "title": "Projeto de Pesquisa",
     "section": "Model Selection for MRFs with Countably Infinite Vertex Sets under Mixing Condition ",
-    "text": "Model Selection for MRFs with Countably Infinite Vertex Sets under Mixing Condition \nMotivation:\n\nMassive networks (social, biological, IoT),\nStructures where \\(|V| = \\infty\\) and grows with the sample,\nFinite-vertex methods do not generalize automatically.\n\nExisting methods\n\nLeonardi et al. (2023): Penalized pseudo-likelihood for discrete MRFs. Graph estimated based on local neighborhood estimation.\nSeverino & Leonardi (2025): Developed theoretical results for global estimation of discrete MRFs over finite graphs."
+    "text": "Model Selection for MRFs with Countably Infinite Vertex Sets under Mixing Condition \nMotivation\n\nMassive networks (social, biological, IoT),\nStructures where \\(|V| = \\infty\\) and grows with the sample,\nFinite-vertex methods do not generalize automatically.\n\nExisting methods\n\nLeonardi et al. (2023): Penalized pseudo-likelihood for discrete MRFs. Graph estimated based on local neighborhood estimation.\nSeverino & Leonardi (2025): Developed theoretical results for global estimation of discrete MRFs over finite graphs."
   },
   {
     "objectID": "03_pesquisa_v2.html#model-selection-for-mrfs-with-countably-infinite-vertex-sets-under-mixing-condition-1",
     "href": "03_pesquisa_v2.html#model-selection-for-mrfs-with-countably-infinite-vertex-sets-under-mixing-condition-1",
     "title": "Projeto de Pesquisa",
     "section": "Model Selection for MRFs with Countably Infinite Vertex Sets under Mixing Condition ",
-    "text": "Model Selection for MRFs with Countably Infinite Vertex Sets under Mixing Condition \nResearch goal\n\nGeneralize the results from finite to countably infinite graphs.\n\nImprove global estimation, possibly reducing errors from local neighborhood estimation.\n\nAlgorithm development and evaluation\n\nimplementation in R or Python,\nsimulations on large synthetic networks."
+    "text": "Model Selection for MRFs with Countably Infinite Vertex Sets under Mixing Condition \nResearch goal\n\nGeneralize the results from finite to countably infinite graphs.\n\nImprove global estimation, possibly reducing errors from local neighborhood estimation.\n\nProposed estimation framework\n\nLet \\(V\\) be infinite and \\({V_n}, {n \\in \\mathbb{N}}\\) be a sequence of finite subsets of \\(V\\).\nAssume \\(V_n \\uparrow V\\) as \\(n \\to \\infty\\).\nSample: \\(\\{\\mathbf{X} = \\{X_v: v \\in V_n\\}\\}\\), assuming that \\({\\mathrm{ne}(v)}\\) is finite.\nAdaptation of key theorems to handle countably infinite vertex sets."
   },
   {
     "objectID": "03_pesquisa_v2.html#proposal-1-expected-advances",
     "href": "03_pesquisa_v2.html#proposal-1-expected-advances",
     "title": "Projeto de Pesquisa",
     "section": "Proposal 1 – Expected Advances",
-    "text": "Proposal 1 – Expected Advances\nProposed estimation framework\n\nLet \\(V\\) be infinite and \\({V_n}, {n \\in \\mathbb{N}}\\) be a sequence of finite subsets of \\(V\\).\nAssume \\(V_n \\uparrow V\\) as \\(n \\to \\infty\\).\nSample: \\(\\{\\mathbf{X} = \\{X_v: v \\in V_n\\}\\}\\), assuming that \\({\\mathrm{ne}(v)}\\) is finite.\nAdaptation of key theorems to handle countably infinite vertex sets.\n\nAlgorithms\n\nimplementation in R or Python,\nsimulations on large synthetic networks.\n\n\nApplications\n\nsocial networks,\nneuroscience (large neural connectivity),\nsensor systems."
+    "text": "Proposal 1 – Expected Advances\nAlgorithms\n\nimplementation in R or Python,\nsimulations on large synthetic networks.\n\n\nApplications\n\nsocial networks,\nneuroscience (large neural connectivity),\nsensor systems."
   },
   {
     "objectID": "03_pesquisa_v2.html#model-selection-for-continuous-mrfs-under-mixing",
     "href": "03_pesquisa_v2.html#model-selection-for-continuous-mrfs-under-mixing",
     "title": "Projeto de Pesquisa",
     "section": "Model Selection for Continuous MRFs under Mixing",
-    "text": "Model Selection for Continuous MRFs under Mixing\nCurrent limitations\n\nclassical pseudo-likelihood is defined for finite alphabets,\ndiscretization leads to information loss.\n\nObjective\n\ndevelop a consistent estimator without discretization.\n\nChallenges:\n\nreplacing summations with integrals,\ndefining neighborhood structure in conditional densities,\nadapting consistency proofs to the continuous setting."
+    "text": "Model Selection for Continuous MRFs under Mixing\nCurrent limitations\n\nclassical pseudo-likelihood is defined for finite alphabets,\ndiscretization leads to information loss.\n\nObjective\n\ndevelop a consistent estimator without discretization.\n\nChallenges\n\nreplacing summations with integrals,\ndefining neighborhood structure in conditional densities,\nadapting consistency proofs to the continuous setting."
   },
   {
     "objectID": "03_pesquisa_v2.html#proposal-2-impact",
@@ -399,8 +399,8 @@
     "text": "Proposal 2 – Impact\nBenefits\n\nhigher inferential precision,\nno discretization required,\napplicability to finance, hydrology, neuroscience, and bioinformatics.\n\nExpected results\n\nconsistency theorems analogous to the discrete case,\nscalable algorithm,\nR or Python package."
   },
   {
-    "objectID": "03_pesquisa_v2.html#viability",
-    "href": "03_pesquisa_v2.html#viability",
+    "objectID": "03_pesquisa_v2.html#viability-1",
+    "href": "03_pesquisa_v2.html#viability-1",
     "title": "Projeto de Pesquisa",
     "section": "Viability",
     "text": "Viability\nResources:\n\nconsolidated background in MRFs, mixing processes, and asymptotic theory,\n\n\n\naccess to computational infrastructure at IME-USP (low budget project),\na collaborative research environment (Neuromat, UFRJ, UFRN, UBA).\n\nExpected output:\n\ntwo international journal articles,\ntwo R or Python packages,\npresentations at scientific conferences."

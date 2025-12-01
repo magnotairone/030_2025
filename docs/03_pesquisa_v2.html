@@ -186,36 +186,6 @@
 </div>
 </div>
 </section>
-<section id="recent-work" class="slide level2 smaller">
-<h2>Recent Work</h2>
-<div class="columns">
-<div class="column" style="width:10%;">
-<p><span style="font-size:240%;">📄</span></p>
-</div><div class="column" style="width:90%;">
-<p><span style="font-size:100%;"> <strong>Model selection for Markov random fields on graphs under a mixing condition</strong><br>
-<em>Stochastic Processes and their Applications</em>, 2025.<br>
-<strong>Severino, M. T. F.</strong>, &amp; Leonardi, F.<br>
-</span></p>
-</div></div>
-<div class="fragment">
-<p>Advances:</p>
-<ul>
-<li>global criterion based on penalized pseudo-likelihood;</li>
-<li>consistency theorem under a mixing condition;</li>
-<li>applications to discrete multivariate processes.</li>
-</ul>
-</div>
-<div class="fragment">
-<p>Limitations:</p>
-<ul>
-<li>restriction to the <strong>finite</strong> vertex case,</li>
-<li><strong>discrete</strong> variables.</li>
-</ul>
-</div>
-<div class="fragment">
-<p>This project aims to overcome both limitations in <strong>two proposals</strong>.</p>
-</div>
-</section>
 <section>
 <section id="background-and-definitions" class="title-slide slide level1 center">
 <h1>Background and Definitions</h1>
@@ -264,7 +234,7 @@ X_v \perp X_{V\setminus(\{v\}\cup G^*(v))} \mid X_{G^*(v)}.
 </div>
 </div><div class="column" style="width:30%;">
 <p><br> <span class="math display">\[
-|\mathbb P(A|B) - \mathbb P(B) \leq \mathbb P(A)|
+|\mathbb P(A|B) - \mathbb P(B) |
 \]</span> <span class="math display">\[
 \qquad \leq \psi(n-m)\mathbb P(A)
 \]</span></p>
@@ -281,13 +251,14 @@ X_v \perp X_{V\setminus(\{v\}\cup G^*(v))} \mid X_{G^*(v)}.
 <p><br></p>
 <div class="columns">
 <div class="column" style="width:60%;">
-<p>Given a graph <span class="math inline">\(G=(V,E)\)</span> and <span class="math inline">\(v \in V,\)</span> define <span class="math display">\[G(v) = \big\{u \in V: (u,v) \in E \big\},\]</span> the set of neighbors of <span class="math inline">\(v\)</span> in graph <span class="math inline">\(G.\)</span></p>
-<p><br></p>
-<p>For <span class="math inline">\(v=X_1,\)</span> then <span class="math inline">\(G(v)=\{X_2, X_3\}.\)</span></p>
+<p>Given a sample of size <span class="math inline">\(n\)</span> and graph <span class="math inline">\(G=(V,E)\)</span> and <span class="math inline">\(v \in V,\)</span> define <span class="math display">\[G(v) = \big\{u \in V: (u,v) \in E \big\},\]</span> the set of neighbors of <span class="math inline">\(v\)</span> in graph <span class="math inline">\(G.\)</span></p>
+<p><span class="math display">\[
+\pi(X_1=x_1) = \frac{N(X_1=x_1)}{n}.
+\]</span></p>
+<p>For <span class="math inline">\(v=X_1,\)</span> we have <span class="math inline">\(G(v)=\{X_2, X_3\}.\)</span></p>
 </div><div class="column" style="width:30%;">
 <p><img data-src="img/ex1_graph.png" style="width:180.0%"></p>
 </div></div>
-<p><br></p>
 <p>Then <span class="math display">\[\begin{equation*}
     \widehat\pi(a_v|a_{G(v)})  = \frac{\widehat\pi(a_{\{v\}\cup G(v)})}{\widehat\pi(a_{G(v)})}.
 \end{equation*}\]</span></p>
@@ -295,20 +266,10 @@ X_v \perp X_{V\setminus(\{v\}\cup G^*(v))} \mid X_{G^*(v)}.
 <section id="penalized-pseudo-likelihood" class="slide level2 smaller">
 <h2>Penalized Pseudo-Likelihood</h2>
 <p>For a candidate graph <span class="math inline">\(G\)</span>: <span class="math display">\[
-\log L(G)
-=
-\sum_{v\in V}
-\sum_{a_v}\sum_{a_{G(v)}}
-N(a_v,a_{G(v)})
-\log \pi(a_v\mid a_{G(v)}).
+L(G) \;=\;  \prod_{i=1}^n \prod_{v \in V}  \pi(x^{(i)}_v | x^{(i)}_{G(v)})\,,
 \]</span></p>
 <p>We estimate <span class="math inline">\(\pi\)</span> empirically: <span class="math display">\[
-\log \widehat L(G)
-=
-\sum_{v\in V}
-\sum_{a_v}\sum_{a_{G(v)}}
-N(a_v,a_{G(v)})\,
-\log \widehat\pi(a_v\mid a_{G(v)}).
+\widehat L(G) \;=\;  \prod_{i=1}^n \prod_{v \in V}  \widehat\pi(x^{(i)}_v | x^{(i)}_{G(v)})\,,
 \]</span></p>
 <p>Selection criterion (Severino &amp; Leonardi, 2025): <span class="math display">\[
 \widehat G = \arg\max_G
@@ -335,6 +296,36 @@ N(a_v,a_{G(v)})\,
 <p>Then, by taking <span class="math inline">\(\lambda_n = c \log n,\)</span> for <span class="math inline">\(c&gt;0,\)</span> we have that <span class="math display">\[\begin{equation*}
   \widehat G = \underset{G}{\arg\max}\Big\{\log \widehat L(G) - \lambda_n \sum_{v \in V} |A|^{|G(v)|}\Big\}
 \end{equation*}\]</span> satisfies <span class="math inline">\(\widehat G=G^*\)</span> eventually almost surely as <span class="math inline">\(n\to \infty.\)</span></p>
+</section>
+<section id="recent-work" class="slide level2 smaller">
+<h2>Recent Work</h2>
+<div class="columns">
+<div class="column" style="width:10%;">
+<p><span style="font-size:240%;">📄</span></p>
+</div><div class="column" style="width:90%;">
+<p><span style="font-size:100%;"> <strong>Model selection for Markov random fields on graphs under a mixing condition</strong><br>
+<em>Stochastic Processes and their Applications</em>, 2025.<br>
+<strong>Severino, M. T. F.</strong>, &amp; Leonardi, F.<br>
+</span></p>
+</div></div>
+<div class="fragment">
+<p>Advances:</p>
+<ul>
+<li>global criterion based on penalized pseudo-likelihood;</li>
+<li>consistency theorem under a mixing condition;</li>
+<li>applications to discrete multivariate processes.</li>
+</ul>
+</div>
+<div class="fragment">
+<p>Limitations:</p>
+<ul>
+<li>restriction to the <strong>finite</strong> vertex case,</li>
+<li><strong>discrete</strong> variables.</li>
+</ul>
+</div>
+<div class="fragment">
+<p>This project aims to overcome both limitations in <strong>two proposals</strong>.</p>
+</div>
 </section></section>
 <section>
 <section id="proposal-1" class="title-slide slide level1 center">
@@ -343,7 +334,7 @@ N(a_v,a_{G(v)})\,
 </section>
 <section id="model-selection-for-mrfs-with-countably-infinite-vertex-sets-under-mixing-condition" class="slide level2 smaller">
 <h2><span class="small-title">Model Selection for MRFs with Countably Infinite Vertex Sets under Mixing Condition <span></span></span></h2>
-<p><strong>Motivation</strong>:</p>
+<p><strong>Motivation</strong></p>
 <ul>
 <li>Massive networks (social, biological, IoT),</li>
 <li>Structures where <span class="math inline">\(|V| = \infty\)</span> and grows with the sample,</li>
@@ -363,14 +354,6 @@ N(a_v,a_{G(v)})\,
 </li>
 <li>Improve global estimation, possibly reducing errors from local neighborhood estimation.</li>
 </ul>
-<p><strong>Algorithm development and evaluation</strong></p>
-<ul>
-<li>implementation in R or Python,</li>
-<li>simulations on large synthetic networks.</li>
-</ul>
-</section>
-<section id="proposal-1-expected-advances" class="slide level2 smaller">
-<h2>Proposal 1 – Expected Advances</h2>
 <p><strong>Proposed estimation framework</strong></p>
 <ul>
 <li>Let <span class="math inline">\(V\)</span> be infinite and <span class="math inline">\({V_n}, {n \in \mathbb{N}}\)</span> be a sequence of finite subsets of <span class="math inline">\(V\)</span>.</li>
@@ -378,6 +361,9 @@ N(a_v,a_{G(v)})\,
 <li>Sample: <span class="math inline">\(\{\mathbf{X} = \{X_v: v \in V_n\}\}\)</span>, assuming that <span class="math inline">\({\mathrm{ne}(v)}\)</span> is finite.</li>
 <li>Adaptation of key theorems to handle countably infinite vertex sets.</li>
 </ul>
+</section>
+<section id="proposal-1-expected-advances" class="slide level2 smaller">
+<h2>Proposal 1 – Expected Advances</h2>
 <p><strong>Algorithms</strong></p>
 <ul>
 <li>implementation in R or Python,</li>
@@ -405,9 +391,9 @@ N(a_v,a_{G(v)})\,
 </ul>
 <p><strong>Objective</strong></p>
 <ul>
-<li>develop a consistent estimator <strong>without discretization</strong>.</li>
+<li>develop a consistent estimator without discretization.</li>
 </ul>
-<p>Challenges:</p>
+<p><strong>Challenges</strong></p>
 <ul>
 <li>replacing summations with integrals,</li>
 <li>defining neighborhood structure in conditional densities,</li>
@@ -429,7 +415,6 @@ N(a_v,a_{G(v)})\,
 <li>R or Python package.</li>
 </ul>
 </section></section>
-<section>
 <section id="final-integration" class="title-slide slide level1 smaller center">
 <h1>Final Integration</h1>
 <p>Medium-term goal: <span class="math display">\[
@@ -442,7 +427,13 @@ N(a_v,a_{G(v)})\,
 <li>general framework for complex real-world data.</li>
 </ul>
 </section>
-<section id="viability" class="slide level2 smaller">
+
+<section>
+<section id="viability" class="title-slide slide level1 center">
+<h1>Viability</h1>
+
+</section>
+<section id="viability-1" class="slide level2 smaller">
 <h2>Viability</h2>
 <p><strong>Resources</strong>:</p>
 <ul>

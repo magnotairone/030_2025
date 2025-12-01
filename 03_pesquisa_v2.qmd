@@ -65,43 +65,6 @@ Probabilistic graphical models (MRFs) are a natural tool for representing such d
 - independence or weak dependence structures.
 :::
 
-
-## Recent Work {.smaller}
-
-:::: {.columns}
-::: {.column width="10%"}
-<span style="font-size:240%;">📄</span>
-:::
-
-::: {.column width="90%"}
-<span style="font-size:100%;">
-**Model selection for Markov random fields on graphs under a mixing condition**  
-*Stochastic Processes and their Applications*, 2025.  
-**Severino, M. T. F.**, & Leonardi, F.  
-</span>
-:::
-::::
-
-. . .
-
-Advances:
-
-- global criterion based on penalized pseudo-likelihood;
-- consistency theorem under a mixing condition;
-- applications to discrete multivariate processes.
-
-. . .
-
-Limitations:
-
-- restriction to the **finite** vertex case,
-- **discrete** variables.
-
-. . .
-
-This project aims to overcome both limitations in **two proposals**.
-
-
 # Background and Definitions
 
 ## Vector Processes and the Underlying Graph {.smaller}
@@ -277,7 +240,7 @@ for $n\geq m+\ell$ and for each $k, m \in \mathbb N$ and each $x^{(1:k)} \in (A^
 ::: {.column width="30%"}
 <br>
 $$
-|\mathbb P(A|B) - \mathbb P(B) \leq \mathbb P(A)|
+|\mathbb P(A|B) - \mathbb P(B) |
 $$
 $$
 \qquad \leq \psi(n-m)\mathbb P(A)
@@ -307,13 +270,16 @@ $$
 
 ::: {.column width="60%"}
 
-Given a graph $G=(V,E)$ and $v \in V,$ define
+Given a sample of size $n$ and graph $G=(V,E)$ and $v \in V,$ define
 $$G(v) = \big\{u \in V: (u,v) \in E \big\},$$
 the set of neighbors of $v$ in graph $G.$
 
-<br>
+$$
+\pi(X_1=x_1) = \frac{N(X_1=x_1)}{n}.
+$$
 
-For $v=X_1,$ then $G(v)=\{X_2, X_3\}.$
+
+For $v=X_1,$ we have $G(v)=\{X_2, X_3\}.$
 
 :::
 
@@ -323,8 +289,6 @@ For $v=X_1,$ then $G(v)=\{X_2, X_3\}.$
 :::
 
 :::: 
-
-<br>
 
 Then 
 \begin{equation*}
@@ -336,22 +300,12 @@ Then
 
 For a candidate graph $G$:
 $$
-\log L(G)
-=
-\sum_{v\in V}
-\sum_{a_v}\sum_{a_{G(v)}}
-N(a_v,a_{G(v)})
-\log \pi(a_v\mid a_{G(v)}).
+L(G) \;=\;  \prod_{i=1}^n \prod_{v \in V}  \pi(x^{(i)}_v | x^{(i)}_{G(v)})\,,
 $$
 
 We estimate $\pi$ empirically:
 $$
-\log \widehat L(G)
-=
-\sum_{v\in V}
-\sum_{a_v}\sum_{a_{G(v)}}
-N(a_v,a_{G(v)})\,
-\log \widehat\pi(a_v\mid a_{G(v)}).
+\widehat L(G) \;=\;  \prod_{i=1}^n \prod_{v \in V}  \widehat\pi(x^{(i)}_v | x^{(i)}_{G(v)})\,,
 $$
 
 Selection criterion (Severino & Leonardi, 2025):
@@ -391,12 +345,47 @@ Then, by taking $\lambda_n = c \log n,$ for $c>0,$ we have that
 \end{equation*}
 satisfies $\widehat G=G^*$ eventually almost surely as $n\to \infty.$
 
+## Recent Work {.smaller}
+
+:::: {.columns}
+::: {.column width="10%"}
+<span style="font-size:240%;">📄</span>
+:::
+
+::: {.column width="90%"}
+<span style="font-size:100%;">
+**Model selection for Markov random fields on graphs under a mixing condition**  
+*Stochastic Processes and their Applications*, 2025.  
+**Severino, M. T. F.**, & Leonardi, F.  
+</span>
+:::
+::::
+
+. . .
+
+Advances:
+
+- global criterion based on penalized pseudo-likelihood;
+- consistency theorem under a mixing condition;
+- applications to discrete multivariate processes.
+
+. . .
+
+Limitations:
+
+- restriction to the **finite** vertex case,
+- **discrete** variables.
+
+. . .
+
+This project aims to overcome both limitations in **two proposals**.
+
 
 # Proposal 1  
 
 ## <span class="small-title">Model Selection for MRFs with Countably Infinite Vertex Sets under Mixing Condition <span> {.smaller}
 
-**Motivation**:
+**Motivation**
 
 - Massive networks (social, biological, IoT),
 - Structures where $|V| = \infty$ and grows with the sample,
@@ -415,21 +404,15 @@ satisfies $\widehat G=G^*$ eventually almost surely as $n\to \infty.$
   - Generalize the results from finite to countably infinite graphs.  
   - Improve global estimation, possibly reducing errors from local neighborhood estimation.
   
-
-**Algorithm development and evaluation**  
-
-  - implementation in R or Python, 
-  - simulations on large synthetic networks.
-
-
-## Proposal 1 – Expected Advances {.smaller}
-
 **Proposed estimation framework**
 
   - Let $V$ be infinite and ${V_n}, {n \in \mathbb{N}}$ be a sequence of finite subsets of $V$.
   - Assume $V_n \uparrow V$ as $n \to \infty$.
   - Sample: $\{\mathbf{X} = \{X_v: v \in V_n\}\}$, assuming that ${\mathrm{ne}(v)}$ is finite.
   - Adaptation of key theorems to handle countably infinite vertex sets.
+
+
+## Proposal 1 – Expected Advances {.smaller}
 
 **Algorithms**
 
@@ -455,9 +438,9 @@ satisfies $\widehat G=G^*$ eventually almost surely as $n\to \infty.$
 
 **Objective**
 
-- develop a consistent estimator **without discretization**.
+- develop a consistent estimator without discretization.
 
-Challenges:
+**Challenges**
 
 - replacing summations with integrals,
 - defining neighborhood structure in conditional densities,
@@ -490,6 +473,8 @@ Deliverables:
 - unified theoretical framework,
 - consistent algorithms for genuinely large-scale systems,
 - general framework for complex real-world data.
+
+# Viability
 
 ## Viability {.smaller}
 
