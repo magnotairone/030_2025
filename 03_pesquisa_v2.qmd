@@ -35,7 +35,7 @@ cor = "#004D4D"
 ## Motivation {.smaller}
 
 ::: {style="font-size:90%"}
-Modern dependence analysis involves:
+Modern dependence analysis, including multivariate time series, sensor networks, neurodata, and large-scale, involves:
 
 - high dimensionality,
 - temporal dependence,
@@ -45,11 +45,11 @@ Modern dependence analysis involves:
 
 . . .
 
-::: {style="font-size:90%"}
-These challenges arise naturally in modern data science problems, including multivariate time series, sensor networks, neurodata, and large-scale systems where statistical models must remain both theoretically sound and computationally scalable.
-:::
+<!-- ::: {style="font-size:90%"} -->
+<!-- These challenges arise naturally in modern data science problems, including multivariate time series, sensor networks, neurodata, and large-scale systems where statistical models must remain both theoretically sound and computationally scalable. -->
+<!-- ::: -->
 
-. . . 
+<!-- . . .  -->
 
 ::: {style="font-size:90%"}
 Probabilistic graphical models (MRFs) are a natural tool for representing such dependencies.
@@ -240,7 +240,7 @@ for $n\geq m+\ell$ and for each $k, m \in \mathbb N$ and each $x^{(1:k)} \in (A^
 ::: {.column width="30%"}
 <br>
 $$
-|\mathbb P(A|B) - \mathbb P(B) |
+|\mathbb P(A|B) - \mathbb P(A) |
 $$
 $$
 \qquad \leq \psi(n-m)\mathbb P(A)
@@ -275,7 +275,7 @@ $$G(v) = \big\{u \in V: (u,v) \in E \big\},$$
 the set of neighbors of $v$ in graph $G.$
 
 $$
-\pi(X_1=x_1) = \frac{N(X_1=x_1)}{n}.
+\hat\pi(X_1=a_1) = \frac{N(X_1=a_1)}{n}.
 $$
 
 
@@ -333,7 +333,7 @@ $$
 <!-- This result provides the theoretical foundation for the extensions proposed in this project. -->
 
 <!-- ## `r fontawesome::fa("diagram-project", cor)` Graph Estimator Consistency  -->
-**Theorem (Severino & Leonardi, 2025, Stochastic Processes and their Applications):** 
+**Theorem (Severino & Leonardi, 2025):** 
 
 Let $\{X^{(i)}: i \in \mathbb{N}\}$ be a stationary process that satisfies the mixing condition presented before
 with rate $\psi(\ell) = O(1/\ell^{1+\epsilon})$ for some $\epsilon>0.$
@@ -446,7 +446,7 @@ This project aims to overcome both limitations in **two proposals**.
 - defining neighborhood structure in conditional densities,
 - adapting consistency proofs to the continuous setting.
 
-## Proposal 2 – Impact {.smaller}
+## Proposal 2 – Expected Advances {.smaller}
 
 **Benefits**
 
@@ -481,8 +481,6 @@ Deliverables:
 **Resources**:
 
 - consolidated background in MRFs, mixing processes, and asymptotic theory,
-
-<!-- - previous experience with international publications, -->
 
 - access to computational infrastructure at IME-USP (low budget project),
 
@@ -553,8 +551,7 @@ $a_W \in A^{W}$ and $a_{W'} \in A^{{W'}}$ we have that
 eventually almost surely as $n \rightarrow \infty.$
 
 
-## Intuitive Ove
-rview of Theorem Proof  {.smaller visibility="uncounted"}
+## Intuitive Overview of Theorem Proof  {.smaller visibility="uncounted"}
 
 Consider $\{\widehat G\neq G^*\} = \big\{G^* \subsetneq \widehat G \big\} \cup  \big\{G^* \not\subset \widehat G \big\}.$
 

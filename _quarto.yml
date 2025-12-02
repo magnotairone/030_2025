@@ -7,7 +7,13 @@ website:
   navbar:
     left:
       - href: index.qmd
-        text: Início
+        text: "Início"
+      - href: 01_aula.qmd
+        text: "Prova Didática"
+      - href: 02_memorial_v3.qmd
+        text: "Memorial Circunstaciado"
+      - href: 03_pesquisa_v2.qmd
+        text: "Projeto de Pesquisa"
 
 format:
   html:

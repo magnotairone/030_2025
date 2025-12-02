@@ -14,6 +14,18 @@ format:
 lang: pt-br
 ---
 
+# Agenda
+
+- Formação Acadêmica
+
+- Atividades de Pesquisa
+
+- Atividades de Ensino
+
+- Atividades de Extensão
+
+- Experiência Profissional
+
 # Formação Acadêmica
 
 <!-- Fotos: -->
@@ -513,7 +525,7 @@ Covid-19 (2020) <br> <span style="font-size:80%;">Vencedor do _Prêmio vídeo: p
 Mostra impacto real e compromisso social.
 :::
 
-# Experiência profissional
+# Experiência Profissional
 
 :::: {.columns}
 ::: {.column width="45%"}

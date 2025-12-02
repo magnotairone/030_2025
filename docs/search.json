@@ -1,5 +1,12 @@
 [
   {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Material",
+    "section": "",
+    "text": "Prova Didática\nMemorial Circunstaciado\nProjeto de Pesquisa"
+  },
+  {
     "objectID": "03_pesquisa.html#motivação",
     "href": "03_pesquisa.html#motivação",
     "title": "Projeto de Pesquisa",
@@ -319,7 +326,7 @@
     "href": "03_pesquisa_v2.html#motivation",
     "title": "Projeto de Pesquisa",
     "section": "Motivation",
-    "text": "Motivation\n\nModern dependence analysis involves:\n\nhigh dimensionality,\ntemporal dependence,\ncontinuous data,\ncomplex structures.\n\n\n\n\nThese challenges arise naturally in modern data science problems, including multivariate time series, sensor networks, neurodata, and large-scale systems where statistical models must remain both theoretically sound and computationally scalable.\n\n\n\n\nProbabilistic graphical models (MRFs) are a natural tool for representing such dependencies.\n\n\n\n\nChallenge: existing methods mostly address:\n\ndiscrete data\nfinite number of vertices,\nindependence or weak dependence structures."
+    "text": "Motivation\n\nModern dependence analysis, including multivariate time series, sensor networks, neurodata, and large-scale, involves:\n\nhigh dimensionality,\ntemporal dependence,\ncontinuous data,\ncomplex structures.\n\n\n\n\n\n\n\n\nProbabilistic graphical models (MRFs) are a natural tool for representing such dependencies.\n\n\n\n\nChallenge: existing methods mostly address:\n\ndiscrete data\nfinite number of vertices,\nindependence or weak dependence structures."
   },
   {
     "objectID": "03_pesquisa_v2.html#vector-processes-and-the-underlying-graph",
@@ -333,14 +340,14 @@
     "href": "03_pesquisa_v2.html#mixing-condition",
     "title": "Projeto de Pesquisa",
     "section": "Mixing Condition",
-    "text": "Mixing Condition\n\n\n\n\\(X^{(i:j)}\\) denote the sequence of vectors \\(X^{(i)}, X^{(i+1)}, \\ldots, X^{(j)}.\\)\n\\(\\bf X = \\{X^{(i)}\\colon -\\infty &lt; i &lt; \\infty\\}\\) satisfies a mixing condition with rate \\(\\{\\psi(\\ell)\\}_{\\ell \\in \\mathbb R}\\) if \\[\\begin{equation*}\n\\begin{split}\n  \\Bigl| \\mathbb P \\bigl(X^{(n:(n+k-1))}=x^{(1:k)}\\, |\\, X^{(1:m)}=x^{(1:m)}&\\bigr) - \\mathbb P \\bigl( X^{(n:(n+k-1))} =x^{(1:k)}\\bigr)\\Bigr| \\\\\n  &\\leq \\psi(n-m) \\mathbb P\\bigl(X^{(n:(n+k-1))}=x^{(1:k)}\\bigr),\n\\end{split}\n\\end{equation*}\\] for \\(n\\geq m+\\ell\\) and for each \\(k, m \\in \\mathbb N\\) and each \\(x^{(1:k)} \\in (A^d)^k\\), \\(x^{(1:m)}\\in (A^d)^m\\) with \\(\\mathbb P(X^{(1:m)}=x^{(1:m)})&gt;0.\\)\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n \\[\n|\\mathbb P(A|B) - \\mathbb P(B) |\n\\] \\[\n\\qquad \\leq \\psi(n-m)\\mathbb P(A)\n\\]"
+    "text": "Mixing Condition\n\n\n\n\\(X^{(i:j)}\\) denote the sequence of vectors \\(X^{(i)}, X^{(i+1)}, \\ldots, X^{(j)}.\\)\n\\(\\bf X = \\{X^{(i)}\\colon -\\infty &lt; i &lt; \\infty\\}\\) satisfies a mixing condition with rate \\(\\{\\psi(\\ell)\\}_{\\ell \\in \\mathbb R}\\) if \\[\\begin{equation*}\n\\begin{split}\n  \\Bigl| \\mathbb P \\bigl(X^{(n:(n+k-1))}=x^{(1:k)}\\, |\\, X^{(1:m)}=x^{(1:m)}&\\bigr) - \\mathbb P \\bigl( X^{(n:(n+k-1))} =x^{(1:k)}\\bigr)\\Bigr| \\\\\n  &\\leq \\psi(n-m) \\mathbb P\\bigl(X^{(n:(n+k-1))}=x^{(1:k)}\\bigr),\n\\end{split}\n\\end{equation*}\\] for \\(n\\geq m+\\ell\\) and for each \\(k, m \\in \\mathbb N\\) and each \\(x^{(1:k)} \\in (A^d)^k\\), \\(x^{(1:m)}\\in (A^d)^m\\) with \\(\\mathbb P(X^{(1:m)}=x^{(1:m)})&gt;0.\\)\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n \\[\n|\\mathbb P(A|B) - \\mathbb P(A) |\n\\] \\[\n\\qquad \\leq \\psi(n-m)\\mathbb P(A)\n\\]"
   },
   {
     "objectID": "03_pesquisa_v2.html#empirical-probabilities",
     "href": "03_pesquisa_v2.html#empirical-probabilities",
     "title": "Projeto de Pesquisa",
     "section": " Empirical Probabilities",
-    "text": "Empirical Probabilities\n\n\n\nGiven a sample of size \\(n\\) and graph \\(G=(V,E)\\) and \\(v \\in V,\\) define \\[G(v) = \\big\\{u \\in V: (u,v) \\in E \\big\\},\\] the set of neighbors of \\(v\\) in graph \\(G.\\)\n\\[\n\\pi(X_1=x_1) = \\frac{N(X_1=x_1)}{n}.\n\\]\nFor \\(v=X_1,\\) we have \\(G(v)=\\{X_2, X_3\\}.\\)\n\n\n\nThen \\[\\begin{equation*}\n    \\widehat\\pi(a_v|a_{G(v)})  = \\frac{\\widehat\\pi(a_{\\{v\\}\\cup G(v)})}{\\widehat\\pi(a_{G(v)})}.\n\\end{equation*}\\]"
+    "text": "Empirical Probabilities\n\n\n\nGiven a sample of size \\(n\\) and graph \\(G=(V,E)\\) and \\(v \\in V,\\) define \\[G(v) = \\big\\{u \\in V: (u,v) \\in E \\big\\},\\] the set of neighbors of \\(v\\) in graph \\(G.\\)\n\\[\n\\hat\\pi(X_1=a_1) = \\frac{N(X_1=a_1)}{n}.\n\\]\nFor \\(v=X_1,\\) we have \\(G(v)=\\{X_2, X_3\\}.\\)\n\n\n\nThen \\[\\begin{equation*}\n    \\widehat\\pi(a_v|a_{G(v)})  = \\frac{\\widehat\\pi(a_{\\{v\\}\\cup G(v)})}{\\widehat\\pi(a_{G(v)})}.\n\\end{equation*}\\]"
   },
   {
     "objectID": "03_pesquisa_v2.html#penalized-pseudo-likelihood",
@@ -354,7 +361,7 @@
     "href": "03_pesquisa_v2.html#consistency-theorem",
     "title": "Projeto de Pesquisa",
     "section": "Consistency Theorem",
-    "text": "Consistency Theorem\n\n\n\n\n\n\n\n\n\n\n\n\n\nTheorem (Severino & Leonardi, 2025, Stochastic Processes and their Applications):\nLet \\(\\{X^{(i)}: i \\in \\mathbb{N}\\}\\) be a stationary process that satisfies the mixing condition presented before with rate \\(\\psi(\\ell) = O(1/\\ell^{1+\\epsilon})\\) for some \\(\\epsilon&gt;0.\\)\nThen, by taking \\(\\lambda_n = c \\log n,\\) for \\(c&gt;0,\\) we have that \\[\\begin{equation*}\n  \\widehat G = \\underset{G}{\\arg\\max}\\Big\\{\\log \\widehat L(G) - \\lambda_n \\sum_{v \\in V} |A|^{|G(v)|}\\Big\\}\n\\end{equation*}\\] satisfies \\(\\widehat G=G^*\\) eventually almost surely as \\(n\\to \\infty.\\)"
+    "text": "Consistency Theorem\n\n\n\n\n\n\n\n\n\n\n\n\n\nTheorem (Severino & Leonardi, 2025):\nLet \\(\\{X^{(i)}: i \\in \\mathbb{N}\\}\\) be a stationary process that satisfies the mixing condition presented before with rate \\(\\psi(\\ell) = O(1/\\ell^{1+\\epsilon})\\) for some \\(\\epsilon&gt;0.\\)\nThen, by taking \\(\\lambda_n = c \\log n,\\) for \\(c&gt;0,\\) we have that \\[\\begin{equation*}\n  \\widehat G = \\underset{G}{\\arg\\max}\\Big\\{\\log \\widehat L(G) - \\lambda_n \\sum_{v \\in V} |A|^{|G(v)|}\\Big\\}\n\\end{equation*}\\] satisfies \\(\\widehat G=G^*\\) eventually almost surely as \\(n\\to \\infty.\\)"
   },
   {
     "objectID": "03_pesquisa_v2.html#recent-work",
@@ -392,18 +399,18 @@
     "text": "Model Selection for Continuous MRFs under Mixing\nCurrent limitations\n\nclassical pseudo-likelihood is defined for finite alphabets,\ndiscretization leads to information loss.\n\nObjective\n\ndevelop a consistent estimator without discretization.\n\nChallenges\n\nreplacing summations with integrals,\ndefining neighborhood structure in conditional densities,\nadapting consistency proofs to the continuous setting."
   },
   {
-    "objectID": "03_pesquisa_v2.html#proposal-2-impact",
-    "href": "03_pesquisa_v2.html#proposal-2-impact",
+    "objectID": "03_pesquisa_v2.html#proposal-2-expected-advances",
+    "href": "03_pesquisa_v2.html#proposal-2-expected-advances",
     "title": "Projeto de Pesquisa",
-    "section": "Proposal 2 – Impact",
-    "text": "Proposal 2 – Impact\nBenefits\n\nhigher inferential precision,\nno discretization required,\napplicability to finance, hydrology, neuroscience, and bioinformatics.\n\nExpected results\n\nconsistency theorems analogous to the discrete case,\nscalable algorithm,\nR or Python package."
+    "section": "Proposal 2 – Expected Advances",
+    "text": "Proposal 2 – Expected Advances\nBenefits\n\nhigher inferential precision,\nno discretization required,\napplicability to finance, hydrology, neuroscience, and bioinformatics.\n\nExpected results\n\nconsistency theorems analogous to the discrete case,\nscalable algorithm,\nR or Python package."
   },
   {
     "objectID": "03_pesquisa_v2.html#viability-1",
     "href": "03_pesquisa_v2.html#viability-1",
     "title": "Projeto de Pesquisa",
     "section": "Viability",
-    "text": "Viability\nResources:\n\nconsolidated background in MRFs, mixing processes, and asymptotic theory,\n\n\n\naccess to computational infrastructure at IME-USP (low budget project),\na collaborative research environment (Neuromat, UFRJ, UFRN, UBA).\n\nExpected output:\n\ntwo international journal articles,\ntwo R or Python packages,\npresentations at scientific conferences."
+    "text": "Viability\nResources:\n\nconsolidated background in MRFs, mixing processes, and asymptotic theory,\naccess to computational infrastructure at IME-USP (low budget project),\na collaborative research environment (Neuromat, UFRJ, UFRN, UBA).\n\nExpected output:\n\ntwo international journal articles,\ntwo R or Python packages,\npresentations at scientific conferences."
   },
   {
     "objectID": "03_pesquisa_v2.html#timeline",
@@ -427,11 +434,11 @@
     "text": "Rate of convergence of the empirical probabilities\nBased on the Law of the Iterated Logarithm for stationary polynomial mixing processes proved in Oodaira and Yoshihara (1971), we can derive the rate of convergence of the empirical probabilities to the true probabilities of the process.\nProposition 1 (Typicality): Assume the process \\(\\{X^{(i)}\\colon  i \\in \\mathbb{Z}\\}\\) satisfies the mixing condition with rate \\(\\psi(\\ell) = O(1/\\ell^{1+\\epsilon}),\\) for some \\(\\epsilon&gt;0.\\) Then, for any \\(W \\subset V\\) and \\(\\delta &gt; 0,\\) \\[\\begin{equation*}\n    \\Big\\vert \\widehat{\\pi}(a_W) - \\pi(a_W) \\Big\\vert &lt; \\sqrt{\\frac{\\delta\\log n}{n}},\n\\end{equation*}\\] eventually almost surely as \\(n \\rightarrow \\infty.\\)\nProposition 2 (Conditional typicality): Then for any \\(\\delta &gt; 0\\), any disjoint sets \\(W, W' \\subset V\\) and any \\(a_W \\in A^{W}\\) and \\(a_{W'} \\in A^{{W'}}\\) we have that \\[\\begin{equation*}\n    \\Big\\vert \\widehat\\pi(a_W|a_{W'}) - \\pi(a_W|a_{W'}) \\Big\\vert &lt; \\sqrt{\\frac{\\delta\\log n}{N(a_W)}},\n\\end{equation*}\\] eventually almost surely as \\(n \\rightarrow \\infty.\\)"
   },
   {
-    "objectID": "03_pesquisa_v2.html#intuitive-ove",
-    "href": "03_pesquisa_v2.html#intuitive-ove",
+    "objectID": "03_pesquisa_v2.html#intuitive-overview-of-theorem-proof",
+    "href": "03_pesquisa_v2.html#intuitive-overview-of-theorem-proof",
     "title": "Projeto de Pesquisa",
-    "section": "Intuitive Ove",
-    "text": "Intuitive Ove\nrview of Theorem Proof {.smaller visibility=“uncounted”}\nConsider \\(\\{\\widehat G\\neq G^*\\} = \\big\\{G^* \\subsetneq \\widehat G \\big\\} \\cup  \\big\\{G^* \\not\\subset \\widehat G \\big\\}.\\)\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nWe prove that, eventually almost surely as \\(n\\to\\infty,\\) neither of the cases above can happen, which implies that \\(\\widehat G = G^*.\\)"
+    "section": "Intuitive Overview of Theorem Proof",
+    "text": "Intuitive Overview of Theorem Proof\nConsider \\(\\{\\widehat G\\neq G^*\\} = \\big\\{G^* \\subsetneq \\widehat G \\big\\} \\cup  \\big\\{G^* \\not\\subset \\widehat G \\big\\}.\\)\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nWe prove that, eventually almost surely as \\(n\\to\\infty,\\) neither of the cases above can happen, which implies that \\(\\widehat G = G^*.\\)"
   },
   {
     "objectID": "03_pesquisa_v2.html#algorithms-for-estimation",

@@ -157,7 +157,7 @@
 <section id="motivation" class="slide level2 smaller">
 <h2>Motivation</h2>
 <div style="font-size:90%">
-<p>Modern dependence analysis involves:</p>
+<p>Modern dependence analysis, including multivariate time series, sensor networks, neurodata, and large-scale, involves:</p>
 <ul>
 <li>high dimensionality,</li>
 <li>temporal dependence,</li>
@@ -166,11 +166,10 @@
 </ul>
 </div>
 <div class="fragment">
-<div style="font-size:90%">
-<p>These challenges arise naturally in modern data science problems, including multivariate time series, sensor networks, neurodata, and large-scale systems where statistical models must remain both theoretically sound and computationally scalable.</p>
-</div>
-</div>
-<div class="fragment">
+<!-- ::: {style="font-size:90%"} -->
+<!-- These challenges arise naturally in modern data science problems, including multivariate time series, sensor networks, neurodata, and large-scale systems where statistical models must remain both theoretically sound and computationally scalable. -->
+<!-- ::: -->
+<!-- . . .  -->
 <div style="font-size:90%">
 <p>Probabilistic graphical models (MRFs) are a natural tool for representing such dependencies.</p>
 </div>
@@ -234,7 +233,7 @@ X_v \perp X_{V\setminus(\{v\}\cup G^*(v))} \mid X_{G^*(v)}.
 </div>
 </div><div class="column" style="width:30%;">
 <p><br> <span class="math display">\[
-|\mathbb P(A|B) - \mathbb P(B) |
+|\mathbb P(A|B) - \mathbb P(A) |
 \]</span> <span class="math display">\[
 \qquad \leq \psi(n-m)\mathbb P(A)
 \]</span></p>
@@ -253,7 +252,7 @@ X_v \perp X_{V\setminus(\{v\}\cup G^*(v))} \mid X_{G^*(v)}.
 <div class="column" style="width:60%;">
 <p>Given a sample of size <span class="math inline">\(n\)</span> and graph <span class="math inline">\(G=(V,E)\)</span> and <span class="math inline">\(v \in V,\)</span> define <span class="math display">\[G(v) = \big\{u \in V: (u,v) \in E \big\},\]</span> the set of neighbors of <span class="math inline">\(v\)</span> in graph <span class="math inline">\(G.\)</span></p>
 <p><span class="math display">\[
-\pi(X_1=x_1) = \frac{N(X_1=x_1)}{n}.
+\hat\pi(X_1=a_1) = \frac{N(X_1=a_1)}{n}.
 \]</span></p>
 <p>For <span class="math inline">\(v=X_1,\)</span> we have <span class="math inline">\(G(v)=\{X_2, X_3\}.\)</span></p>
 </div><div class="column" style="width:30%;">
@@ -291,7 +290,7 @@ L(G) \;=\;  \prod_{i=1}^n \prod_{v \in V}  \pi(x^{(i)}_v | x^{(i)}_{G(v)})\,,
 <!-- $$ -->
 <!-- This result provides the theoretical foundation for the extensions proposed in this project. -->
 <!-- ## `<svg aria-hidden="true" role="img" viewBox="0 0 576 512" style="height:1em;width:1.12em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:#004D4D;overflow:visible;position:relative;"><path d="M0 80C0 53.5 21.5 32 48 32h96c26.5 0 48 21.5 48 48V96H384V80c0-26.5 21.5-48 48-48h96c26.5 0 48 21.5 48 48v96c0 26.5-21.5 48-48 48H432c-26.5 0-48-21.5-48-48V160H192v16c0 1.7-.1 3.4-.3 5L272 288h96c26.5 0 48 21.5 48 48v96c0 26.5-21.5 48-48 48H272c-26.5 0-48-21.5-48-48V336c0-1.7 .1-3.4 .3-5L144 224H48c-26.5 0-48-21.5-48-48V80z"/></svg>`{=html} Graph Estimator Consistency  -->
-<p><strong>Theorem (Severino &amp; Leonardi, 2025, Stochastic Processes and their Applications):</strong></p>
+<p><strong>Theorem (Severino &amp; Leonardi, 2025):</strong></p>
 <p>Let <span class="math inline">\(\{X^{(i)}: i \in \mathbb{N}\}\)</span> be a stationary process that satisfies the mixing condition presented before with rate <span class="math inline">\(\psi(\ell) = O(1/\ell^{1+\epsilon})\)</span> for some <span class="math inline">\(\epsilon&gt;0.\)</span></p>
 <p>Then, by taking <span class="math inline">\(\lambda_n = c \log n,\)</span> for <span class="math inline">\(c&gt;0,\)</span> we have that <span class="math display">\[\begin{equation*}
   \widehat G = \underset{G}{\arg\max}\Big\{\log \widehat L(G) - \lambda_n \sum_{v \in V} |A|^{|G(v)|}\Big\}
@@ -400,8 +399,8 @@ L(G) \;=\;  \prod_{i=1}^n \prod_{v \in V}  \pi(x^{(i)}_v | x^{(i)}_{G(v)})\,,
 <li>adapting consistency proofs to the continuous setting.</li>
 </ul>
 </section>
-<section id="proposal-2-impact" class="slide level2 smaller">
-<h2>Proposal 2 – Impact</h2>
+<section id="proposal-2-expected-advances" class="slide level2 smaller">
+<h2>Proposal 2 – Expected Advances</h2>
 <p><strong>Benefits</strong></p>
 <ul>
 <li>higher inferential precision,</li>
@@ -437,10 +436,7 @@ L(G) \;=\;  \prod_{i=1}^n \prod_{v \in V}  \pi(x^{(i)}_v | x^{(i)}_{G(v)})\,,
 <h2>Viability</h2>
 <p><strong>Resources</strong>:</p>
 <ul>
-<li>consolidated background in MRFs, mixing processes, and asymptotic theory,</li>
-</ul>
-<!-- - previous experience with international publications, -->
-<ul>
+<li><p>consolidated background in MRFs, mixing processes, and asymptotic theory,</p></li>
 <li><p>access to computational infrastructure at IME-USP (low budget project),</p></li>
 <li><p>a collaborative research environment (Neuromat, UFRJ, UFRN, UBA).</p></li>
 </ul>
@@ -488,9 +484,8 @@ L(G) \;=\;  \prod_{i=1}^n \prod_{v \in V}  \pi(x^{(i)}_v | x^{(i)}_{G(v)})\,,
     \Big\vert \widehat\pi(a_W|a_{W'}) - \pi(a_W|a_{W'}) \Big\vert &lt; \sqrt{\frac{\delta\log n}{N(a_W)}},
 \end{equation*}\]</span> eventually almost surely as <span class="math inline">\(n \rightarrow \infty.\)</span></p>
 </section>
-<section id="intuitive-ove" class="slide level2">
-<h2>Intuitive Ove</h2>
-<p>rview of Theorem Proof {.smaller visibility=“uncounted”}</p>
+<section id="intuitive-overview-of-theorem-proof" class="slide level2 smaller" data-visibility="uncounted">
+<h2>Intuitive Overview of Theorem Proof</h2>
 <p>Consider <span class="math inline">\(\{\widehat G\neq G^*\} = \big\{G^* \subsetneq \widehat G \big\} \cup  \big\{G^* \not\subset \widehat G \big\}.\)</span></p>
 <p><br></p>
 <div class="columns">
