@@ -3,13 +3,13 @@ title: "Material"
 ---
 
 <!-- * [Prova Didática](01_aula.qmd) -->
-* [Memorial Circunstaciado](02_memorial_v3.qmd)
-* [Projeto de Pesquisa](03_pesquisa_v2.qmd)
+<!-- * [Memorial Circunstaciado](02_memorial_v3.qmd) -->
+<!-- * [Projeto de Pesquisa](03_pesquisa_v2.qmd) -->
 
 <hr>
 
-* [Memorial PDF](/pdf/memorial.pdf){target="_blank"}
-* [Projeto de Pesquisa PDF](/pdf/projeto_de_pesquisa.pdf){target="_blank"}
+<!-- * [Memorial PDF](/pdf/memorial.pdf){target="_blank"} -->
+<!-- * [Projeto de Pesquisa PDF](/pdf/projeto_de_pesquisa.pdf){target="_blank"} -->
 <!-- _quarto.yml -->
 <!-- - href: 01_aula.qmd -->
 <!--   text: "Prova Didática" -->
@@ -17,3 +17,8 @@ title: "Material"
 <!--   text: "Memorial Circunstaciado" -->
 <!-- - href: 03_pesquisa.qmd -->
 <!--   text: "Projeto de Pesquisa" -->
+
+<!-- - href: 02_memorial_v3.qmd -->
+<!--         text: "Memorial Circunstaciado" -->
+<!--       - href: 03_pesquisa_v2.qmd -->
+<!--         text: "Projeto de Pesquisa" -->
