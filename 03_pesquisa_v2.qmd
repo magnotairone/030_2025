@@ -480,7 +480,7 @@ Deliverables:
 
 **Resources**:
 
-- consolidated background in MRFs, mixing processes, and asymptotic theory,
+- consolidated background in MRFs, mixing processes, and computational expertise,
 
 - access to computational infrastructure at IME-USP (low budget project),
 

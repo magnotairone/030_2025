@@ -4,7 +4,7 @@
     "href": "index.html",
     "title": "Material",
     "section": "",
-    "text": "Prova Didática\nMemorial Circunstaciado\nProjeto de Pesquisa"
+    "text": "Memorial Circunstaciado\nProjeto de Pesquisa\n\n\n\nMemorial PDF\nProjeto de Pesquisa PDF"
   },
   {
     "objectID": "03_pesquisa.html#motivação",
@@ -305,7 +305,7 @@
     "href": "02_memorial_v3.html#extensão-e-impacto",
     "title": "Memorial Circunstanciado",
     "section": "Extensão e impacto",
-    "text": "Extensão e impacto\n\nCurso de Nivelamento Pré-Cálculo (UFMG, 2012)\nCurso de Difusão em Aprendizagem Estatística (USP, 2021-2022)\nDivulgação Científica: Tendência de Novos Casos de Covid-19 (2020)  Vencedor do Prêmio vídeo: pós no combate ao covid-19\n\n\n\nMostra impacto real e compromisso social."
+    "text": "Extensão e impacto\n\nCurso de Nivelamento Pré-Cálculo (UFMG, 2012)\nCurso de Difusão em Aprendizagem Estatística (USP, 2021-2022)\nTradução do livro “R for Data Science”, Hadley Wickahm (trabalho da comunidade de R no Brasil)\nDivulgação Científica: Tendência de Novos Casos de Covid-19 (2020)  Vencedor do Prêmio vídeo: pós no combate ao covid-19\n\n\n\nMostra impacto real e compromisso social."
   },
   {
     "objectID": "02_memorial_v3.html#meu-plano-para-os-próximos-anos",
@@ -410,7 +410,7 @@
     "href": "03_pesquisa_v2.html#viability-1",
     "title": "Projeto de Pesquisa",
     "section": "Viability",
-    "text": "Viability\nResources:\n\nconsolidated background in MRFs, mixing processes, and asymptotic theory,\naccess to computational infrastructure at IME-USP (low budget project),\na collaborative research environment (Neuromat, UFRJ, UFRN, UBA).\n\nExpected output:\n\ntwo international journal articles,\ntwo R or Python packages,\npresentations at scientific conferences."
+    "text": "Viability\nResources:\n\nconsolidated background in MRFs, mixing processes, and computational expertise,\naccess to computational infrastructure at IME-USP (low budget project),\na collaborative research environment (Neuromat, UFRJ, UFRN, UBA).\n\nExpected output:\n\ntwo international journal articles,\ntwo R or Python packages,\npresentations at scientific conferences."
   },
   {
     "objectID": "03_pesquisa_v2.html#timeline",

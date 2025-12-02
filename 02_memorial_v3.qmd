@@ -512,6 +512,8 @@ Minha experiência docente é ampla e diversificada: monitoria de 7 anos, docên
 
 - Curso de Difusão em Aprendizagem Estatística (USP, 2021-2022)
 
+- Tradução do livro "R for Data Science", Hadley Wickahm (trabalho da comunidade de R no Brasil)
+
 - Divulgação Científica: Tendência de Novos Casos de
 Covid-19 (2020) <br> <span style="font-size:80%;">Vencedor do _Prêmio vídeo: pós no combate ao covid-19_<span>
 
